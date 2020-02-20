@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import Navbar from '../components/navbar'
+import '../../stylesheets/pages/mainPage.css'
 
-export default class main extends Component {
+export default class mainPage extends Component {
     constructor(props) {
         super(props)
         // State
@@ -16,9 +18,7 @@ export default class main extends Component {
     // Render elements
     render() {
         return (
-            <div className="main-div" style={{ fontFamily: "regular" }}>
-                <a>DJA</a>
-            </div>
+            <Navbar/>
         )
     }
 }

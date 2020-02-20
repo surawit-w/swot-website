@@ -1,0 +1,175 @@
+.navbar-container { background-color: #363C54; }
+.menu-list-div { height: 100%; }
+
+/* SET ICON TO CENTER */
+.jk-icon { display: block; margin: 0 auto; }
+
+.navbar-container ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #F3B06E;
+    font-family: 'light';
+}
+
+.jk-icon-container {
+    height: 100%;
+    display:flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.menu-list-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-list {
+    padding-left: 30px;
+    margin: 12px 12px;
+    color: #F3B06E;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 1024px) {
+    .menu-list {
+        padding-left: 20px;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .menu-list {
+        display: none;
+    }
+    .res-menu-list-icon-div {
+        background: #F3B06E;
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        display: block;
+        color: #363C54;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .res-menu-list-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .menu-col.col-8 {
+        display: none;
+    }
+    .res-menu-col.col-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .logo-col.col-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .jk-icon { display: block; margin: 0;}
+}
+
+/* STYLE FOR RESPONSIVE MENU */
+.res-menu-list-icon-div {
+    display: block;
+    opacity: 0
+}
+
+.res-menu-list {
+    height: 100%;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.res-menu-icon {
+    width: 18px;
+    height: 18px;
+    color: #3e8e41;
+}
+
+
+.res-menu-dropdown {
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    /* width: 10px; */
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    border-radius: 5px;
+    top: 80%;
+    right: 0;
+}
+
+.res-menu-dropdown a {
+    color: black;
+    /* padding: 10px 20px; */
+    text-decoration: none;
+    display: none;
+    line-height: 200%;
+    transition: 0.4s;
+}
+
+.res-menu-list:hover .res-menu-dropdown { opacity: 1; height: auto; transition: 0.5s; }
+
+/* ถ้า hover res-menu-list .res-menu-dropdown และ a จะ display block */
+.res-menu-list:hover .res-menu-dropdown a { display: block; }
+
+.res-menu-dropdown:hover { background: #e7ffe8;}
+
+.res-menu-dropdown:hover #homeLink { color: #247e28;}
+
+#homeLink { margin-left: 6px;}
+
+/* ถ้า hover res-menu-list จะทำให้ #homeBtn-container ถูกเซ็ตเป็น display flex; */
+.res-menu-list:hover #homeBtn { display : flex; }
+.res-menu-list:hover #categoryBtn { display : flex; }
+
+.FaHome-style {
+    margin: 0px 8px;
+    width: 22px;
+    color: #1c8029;
+    height: 22px;
+    align-items : center;
+}
+
+#homeBtn:hover {
+    color: #38803b;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+#homeBtn {
+    align-items : center;
+    flex-direction: row;
+    color: black;
+    padding: 12px;
+    display: none;
+    width: auto;
+}
+#categoryBtn:hover {
+  color: #38803b;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+#categoryBtn {
+  align-items : center;
+  flex-direction: row;
+  color: black;
+  padding: 12px;
+  display: none;
+  width: auto;
+}

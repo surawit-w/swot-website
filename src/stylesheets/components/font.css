@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "regular";
+    src: url(../../fonts/Prompt-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "light";
+    src: url(../../fonts/Prompt-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "medium";
+    src: url(../../fonts/Prompt-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../../fonts/Prompt-Bold.ttf) format("truetype");
+}
+
+/* italic stuff */
+
+@font-face {
+    font-family: "regularItalic";
+    src: url(../../fonts/Prompt-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "lightItalic";
+    src: url(../../fonts/Prompt-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "mediumItalic";
+    src: url(../../fonts/Prompt-MediumItalic.ttf) format("truetype");
+}
+
+
+@font-face {
+    font-family: "boldItalic";
+    src: url(../../fonts/Prompt-BoldItalic.ttf) format("truetype");
+}
