@@ -1,0 +1,21 @@
+.homeInfo-body {
+  background-color: #f6f6f6;
+}
+
+.about > p {
+  font-family: "light";
+}
+.about > h2 {
+  font-family: "medium";
+  color: #e8b278;
+  text-shadow: black;
+}
+.about {
+  margin-top: 5%;
+}
+.about-info {
+  background-color: rgb(162, 162, 204);
+}
+
+.left-column {
+}
