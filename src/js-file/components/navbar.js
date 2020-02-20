@@ -3,6 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap'
 import kkbsIcon from '../../images/kkbs-icon.png'
 import '../../stylesheets/components/navbar.css'
 import '../../stylesheets/components/font.css'
+
 import { FaUserCircle, FaUser, FaHeart, FaShoppingCart, FaDollarSign, FaSearch, FaGripHorizontal, FaHome, FaThLarge, FaList} from "react-icons/fa";
 
 export default class navbar extends Component {
@@ -37,10 +38,15 @@ export default class navbar extends Component {
                         </Col>
                         <Col className="res-menu-col" xs={2}>
                             <li className="res-menu-list">
-                                <div className="res-menu-list-icon-div"><FaList className="res-menu-list-icon"/>
-                                    <div className="res-menu-list-dropdown">
-                                        <div id="homeBtn"><FaHome className="FaHome-style"/><a href="category/1" id="homeLink">หน้าหลัก</a></div>
-                                        <div id="categoryBtn"><FaThLarge className="FaThLarge-style"/><a href="category/1" id="homeLink">หมวดหมู่สินค้า</a></div>
+                                <div className="dropdown-div">
+                                    <div className="res-menu-list-icon-div"><FaList className="res-menu-list-icon"/>
+                                        <div className="res-menu-list-dropdown">
+                                            <div class="res-menu-list-btn first" id="homeBtn"><a href="category/1" id="homeLink">หน้าหลัก</a></div>
+                                            <div class="res-menu-list-btn" id="categoryBtn"><a href="category/1" id="homeLink">วิธีการใช้งาน</a></div>
+                                            <div class="res-menu-list-btn" id="categoryBtn"><a href="category/1" id="homeLink">SWOT</a></div>
+                                            <div class="res-menu-list-btn" id="categoryBtn"><a href="category/1" id="homeLink">OLC</a></div>
+                                            <div class="res-menu-list-btn last" id="categoryBtn"><a href="category/1" id="homeLink">{"SWOT & OLC"}</a></div>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
