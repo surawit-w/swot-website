@@ -35,21 +35,36 @@
     transition: 0.4s;
 }
 
+@media only screen and (min-width: 1000px) {
+    .res-menu-list {
+        display: none;
+    }
+}
 @media only screen and (max-width: 1024px) {
     .menu-list {
         padding-left: 20px;
     }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1000px) {
     .menu-list {
         display: none;
     }
+    .res-menu-list {
+        height: 100%;
+        padding: 0px 12px;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        justify-content: flex-end;
+    }
+
     .res-menu-list-icon-div {
         background: #F3B06E;
         width: 48px;
         height: 48px;
         border-radius: 10px;
-        display: block;
+        display: flex;
         color: #363C54;
         justify-content: center;
         align-items: center;
@@ -59,6 +74,12 @@
         width: 18px;
         height: 18px;
     }
+    .dropdown-div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    
 }
 @media only screen and (max-width: 768px) {
     .menu-col.col-8 {
@@ -75,101 +96,42 @@
     .jk-icon { display: block; margin: 0;}
 }
 
-/* STYLE FOR RESPONSIVE MENU */
-.res-menu-list-icon-div {
-    display: block;
-    opacity: 0
-}
-
-.res-menu-list {
-    height: 100%;
-    padding: 0px 12px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.res-menu-icon {
-    width: 18px;
-    height: 18px;
-    color: #3e8e41;
-}
-
-
-.res-menu-dropdown {
+.res-menu-list-dropdown {
     opacity: 0;
     height: 0;
     position: absolute;
     background-color: #fff;
-    min-width: 160px;
+    min-width: 180px;
     /* width: 10px; */
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
     border-radius: 5px;
-    top: 80%;
+    top: 100%;
     right: 0;
+    display: block;
+  }
+
+.dropdown-div:hover:hover .res-menu-list-dropdown { opacity: 1; height: auto; transition: 0.5s;}
+.res-menu-list-btn:hover { background-color: #F3B06E; transition: 0.5s;}
+
+.res-menu-list-dropdown > div.res-menu-list-btn {
+    padding: 12px 18px; display: block;
 }
 
-.res-menu-dropdown a {
+.res-menu-list-dropdown > div.res-menu-list-btn.first {
+    border-top-left-radius: 5px; border-top-right-radius: 5px;
+}
+
+.res-menu-list-dropdown > div.res-menu-list-btn.last {
+    border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;
+}
+
+.res-menu-list-dropdown a {
     color: black;
-    /* padding: 10px 20px; */
     text-decoration: none;
-    display: none;
     line-height: 200%;
-    transition: 0.4s;
-}
-
-.res-menu-list:hover .res-menu-dropdown { opacity: 1; height: auto; transition: 0.5s; }
-
-/* ถ้า hover res-menu-list .res-menu-dropdown และ a จะ display block */
-.res-menu-list:hover .res-menu-dropdown a { display: block; }
-
-.res-menu-dropdown:hover { background: #e7ffe8;}
-
-.res-menu-dropdown:hover #homeLink { color: #247e28;}
-
-#homeLink { margin-left: 6px;}
-
-/* ถ้า hover res-menu-list จะทำให้ #homeBtn-container ถูกเซ็ตเป็น display flex; */
-.res-menu-list:hover #homeBtn { display : flex; }
-.res-menu-list:hover #categoryBtn { display : flex; }
-
-.FaHome-style {
-    margin: 0px 8px;
-    width: 22px;
-    color: #1c8029;
-    height: 22px;
-    align-items : center;
-}
-
-#homeBtn:hover {
-    color: #38803b;
     transition: 0.5s;
-    border-radius: 5px;
-}
-
-#homeBtn {
-    align-items : center;
-    flex-direction: row;
-    color: black;
-    padding: 12px;
-    display: none;
-    width: auto;
-}
-#categoryBtn:hover {
-  color: #38803b;
-  transition: 0.5s;
-  border-radius: 5px;
-}
-
-#categoryBtn {
-  align-items : center;
-  flex-direction: row;
-  color: black;
-  padding: 12px;
-  display: none;
-  width: auto;
-}
+    padding: 12px 18px;
+    font-family: 'regular';
+    font-size: 16px;
+  }
