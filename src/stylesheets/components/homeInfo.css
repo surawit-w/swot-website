@@ -1,21 +1,143 @@
+/* css file for homeInfo.js */
+
 .homeInfo-body {
   background-color: #f6f6f6;
+  font-family: "light";
+}
+.all {
+  display: flex;
+}
+/* about info and left column style */
+.left-column {
+  width: 50%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 .about > p {
-  font-family: "light";
+  font-family: "bold";
+  max-width: 100%;
+  text-align: justify;
 }
-.about > h2 {
+.about > h1 {
   font-family: "medium";
   color: #e8b278;
-  text-shadow: black;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.164);
+  margin-bottom: 3%;
 }
 .about {
   margin-top: 5%;
 }
 .about-info {
-  background-color: rgb(162, 162, 204);
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(94, 92, 92, 0.336);
+  font-family: "light";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  color: #485e88;
+  text-align: justify;
 }
 
-.left-column {
+/* button style */
+.home-button {
+  margin-top: 5%;
+
+  text-align: center;
+  width: 100%;
+  font-family: "regular";
+  font-size: 1.5em;
+  border: none;
 }
+.button-swot {
+  background-color: #363c54;
+  box-shadow: 0px 5px 5px rgba(94, 92, 92, 0.726);
+  color: #e8b278;
+  padding: 4%;
+  width: 33%;
+  border: none;
+  border-radius: 10px;
+}
+.button-olc {
+  background-color: #475e86;
+  box-shadow: 0px 5px 5px rgba(94, 92, 92, 0.726);
+  color: #e8b278;
+  padding: 4%;
+  width: 33%;
+  margin-left: 10%;
+  border: none;
+  border-radius: 10px;
+}
+.button-both {
+  background-color: #e8b278;
+  box-shadow: 0px 5px 5px rgba(94, 92, 92, 0.726);
+  color: #363c54;
+  padding: 4%;
+  width: 33%;
+  border: none;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.button-swot:hover,
+.button-olc:hover,
+.button-both:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+/*swotpic&info*/
+.swot-info {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(94, 92, 92, 0.336);
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.swot-pic {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+}
+/*olcpic&info*/
+.olc-info {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(94, 92, 92, 0.336);
+
+  margin-bottom: 5%;
+}
+.olc-pic {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+}
+/* end of about info and left column style */
+
+/* news and content in right column style*/
+.right-column {
+  width: 30%;
+  margin-right: 8%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.news {
+  margin-top: 5%;
+}
+.news > p {
+  font-family: "bold";
+  max-width: 100%;
+  text-align: justify;
+}
+.news > h1 {
+  font-family: "medium";
+  color: #e8b278;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.164);
+  margin-bottom: 3%;
+}
+
+/* end of news and content in right column style*/

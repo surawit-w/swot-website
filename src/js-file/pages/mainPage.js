@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import HomeInfo from "../components/homeInfo";
+import Footer from "../components/footer";
 import "../../stylesheets/pages/mainPage.css";
 
 export default class mainPage extends Component {
@@ -19,6 +20,7 @@ export default class mainPage extends Component {
       <div>
         <Navbar />
         <HomeInfo />
+        <Footer />
       </div>
     );
   }
