@@ -10,9 +10,10 @@
 /* about info and left column style */
 .left-column {
   width: 50%;
-  margin-left: 10%;
   display: flex;
   flex-direction: column;
+  flex: 70%;
+  margin: 4.5% 7%;
 }
 
 .about > p {
@@ -120,10 +121,12 @@
 /* news and content in right column style*/
 .right-column {
   width: 30%;
-  margin-right: 8%;
-  margin-left: 2%;
+  /* margin-right: 8%;
+  margin-left: 2%; */
   display: flex;
   flex-direction: column;
+  flex: 30%;
+  padding: 5% 1%;
 }
 .news {
   margin-top: 5%;

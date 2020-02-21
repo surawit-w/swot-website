@@ -3,7 +3,7 @@ import "../../stylesheets/components/font.css";
 import "../../stylesheets/components/homeInfo.css";
 import swotPic from "../../images/swot-analysis.jpg";
 import olcPic from "../../images/olc-pic.jpg";
-import {Fa}
+import {FacebookProvider, Page} from 'react-facebook'
 
 export default class homeInfo extends Component {
   render() {
