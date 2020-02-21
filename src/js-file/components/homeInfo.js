@@ -15,12 +15,13 @@ export default class homeInfo extends Component {
                 dsakdsaldaodasldaldsaldsaldaldsaldsaldsaldasldsladsaldsaldsaldsa
                 dlasdlsadlsadlsaldsaldasldsaldsaldlsadlsadlsadlsaldsaldsaldsald
               </p>
-              <FacebookProvider appId="1018895865146304">
-                <Page href="https://www.facebook.com" tabs="timeline" />
-              </FacebookProvider>
+              <div>
+              </div>
             </div>
           </div>
-          <div className="info"></div>
+            <FacebookProvider appId="584678505415758">
+              <Page href="https://www.facebook.com/TundermanJudhai/" tabs="timeline"/>
+            </FacebookProvider>
         </div>
 
         <div className="right-column">

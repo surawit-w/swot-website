@@ -28,10 +28,10 @@ export default class navbar extends Component {
                             <div className="menu-list-div">
                                 <ul className="menu-list-container">
                                     <li className="menu-list" onClick={() => window.location.href = "/"}>HOME</li>
-                                    <li className="menu-list">HOW TO USE</li>
-                                    <li className="menu-list">SWOT</li>
-                                    <li className="menu-list">OLC</li>
-                                    <li className="menu-list">{"SWOT & OLC"}</li>
+                                    <li className="menu-list" onClick={() => window.location.href = "/swot-analysis"}>HOW TO USE</li>
+                                    <li className="menu-list" onClick={() => window.location.href = "/swot-analysis"}>SWOT</li>
+                                    <li className="menu-list" onClick={() => window.location.href = "/"}>OLC</li>
+                                    <li className="menu-list" onClick={() => window.location.href = "/"}>{"SWOT & OLC"}</li>
                                 </ul>
                             </div>
                         </Col>
@@ -40,8 +40,8 @@ export default class navbar extends Component {
                                 <div className="dropdown-div">
                                     <div className="res-menu-list-icon-div"><FaList className="res-menu-list-icon"/>
                                         <div className="res-menu-list-dropdown">
-                                            <div class="res-menu-list-btn first" id="homeBtn"><a href="category/1" id="homeLink">หน้าหลัก</a></div>
-                                            <div class="res-menu-list-btn" id="categoryBtn"><a href="category/1" id="homeLink">วิธีการใช้งาน</a></div>
+                                            <div class="res-menu-list-btn first" id="homeBtn"><a href="/" id="homeLink">หน้าหลัก</a></div>
+                                            <div class="res-menu-list-btn" id="categoryBtn"><a href="/swot-analysis" id="homeLink">วิธีการใช้งาน</a></div>
                                             <div class="res-menu-list-btn" id="categoryBtn"><a href="category/1" id="homeLink">SWOT</a></div>
                                             <div class="res-menu-list-btn" id="categoryBtn"><a href="category/1" id="homeLink">OLC</a></div>
                                             <div class="res-menu-list-btn last" id="categoryBtn"><a href="category/1" id="homeLink">{"SWOT & OLC"}</a></div>

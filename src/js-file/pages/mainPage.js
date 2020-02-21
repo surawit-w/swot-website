@@ -12,13 +12,13 @@ export default class mainPage extends Component {
 
   // Before render
   componentDidMount = async () => {};
-
+ 
   // Render elements
   render() {
     return (
       <div>
-        <Navbar />
-        <HomeInfo />
+        <Navbar/>
+        <HomeInfo/>
       </div>
     );
   }
