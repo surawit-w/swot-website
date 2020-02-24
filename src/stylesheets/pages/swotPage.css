@@ -1,3 +1,41 @@
 div.form-check {
-    margin-bottom: 10px;
+    margin: 16px 0;
+}
+.column-divider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 30px;
+}
+.strength-style {
+    width: 100%;
+    display: flex;
+}
+.wrapper-swot-form {
+    flex: 50%;
+    margin: 60px;
+}
+.wrapper-swot-form.strength {
+    background-color: #f1ffe9;
+}
+.wrapper-swot-form.weakness {
+    background-color: rgb(255, 231, 231);
+}
+.wrapper-swot-form.opportunity {
+    background-color: rgb(255, 246, 227);
+}
+.wrapper-swot-form.threat {
+    background-color: rgb(234, 248, 255);
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+}
+.form-label {
+    width: 100%;
+    margin : 4% 0;
+}
+.form-check-label {
+    margin-left: 20px;
 }
