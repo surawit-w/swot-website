@@ -3,9 +3,11 @@
 .homeInfo-body {
   background-color: #f6f6f6;
   font-family: "light";
+  cursor: default;
 }
 .all {
   display: flex;
+  cursor: default;
 }
 /* about info and left column style */
 .left-column {
@@ -13,17 +15,15 @@
   display: flex;
   flex-direction: column;
   flex: 70%;
-  margin: 4.5% 7%;
+  margin-top: 4.5%;
+  margin-bottom: 4.5%;
+  margin-left: 8%;
+  margin-right: 2%;
 }
 
-.about > p {
-  font-family: "bold";
-  max-width: 100%;
-  text-align: justify;
-}
 .about > h1 {
   font-family: "medium";
-  color: #e8b278;
+  color: #f16f20;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.164);
   margin-bottom: 3%;
 }
@@ -33,19 +33,19 @@
 .about-info {
   background-color: white;
   box-shadow: 0px 4px 10px rgba(94, 92, 92, 0.336);
-  font-family: "light";
+  font-family: "exlight";
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5%;
   color: #485e88;
   text-align: justify;
+  font-size: 1.5rem;
 }
 
 /* button style */
 .home-button {
   margin-top: 5%;
-
   text-align: center;
   width: 100%;
   font-family: "regular";
@@ -76,7 +76,7 @@
   box-shadow: 0px 5px 5px rgba(94, 92, 92, 0.726);
   color: #363c54;
   padding: 4%;
-  width: 33%;
+  width: 45%;
   border: none;
   border-radius: 10px;
   margin-top: 40px;
@@ -120,9 +120,8 @@
 
 /* news and content in right column style*/
 .right-column {
-  width: 30%;
-  /* margin-right: 8%;
-  margin-left: 2%; */
+  width: auto;
+  margin-right: 8%;
   display: flex;
   flex-direction: column;
   flex: 30%;
@@ -130,6 +129,12 @@
 }
 .news {
   margin-top: 5%;
+  box-shadow: 0px 4px 10px rgba(94, 92, 92, 0.336);
+  background-color: white;
+  font-family: "light";
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
 }
 .news > p {
   font-family: "bold";
@@ -138,9 +143,179 @@
 }
 .news > h1 {
   font-family: "medium";
-  color: #e8b278;
+  color: #f16f20;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.164);
-  margin-bottom: 3%;
+  margin-bottom: 5%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+.card1 {
+}
+.card1-pic {
+  width: 100%;
+  margin-bottom: 5vh;
+}
+.card1-pic > img {
+  max-width: 100%;
+}
+.card1-pic > h2 {
+  background-color: #363c54;
+  color: #f16f20;
+  font-size: 1.5em;
+  margin-top: 8px;
+  padding: 3%;
+  font-family: "light";
+}
+
+.card2-pic {
+  width: 100%;
+}
+.card2-pic > a > img {
+  background-color: #9d9ea5;
+  max-width: 100%;
+  padding: 10%;
+}
+.card2-pic > h2 {
+  background-color: #363c54;
+  color: #f16f20;
+  font-size: 1.5em;
+  margin-top: 8px;
+  padding: 3%;
+  font-family: "light";
+}
+
+.facebook {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 5vh;
+  width: auto;
+  padding: 5%;
+  box-shadow: 0px 4px 10px rgba(94, 92, 92, 0.336);
+  background-color: white;
+  text-align: center;
+}
+.facebook > h1 {
+  font-family: "medium";
+  color: #f16f20;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.164);
+  margin-bottom: 5%;
+  text-align: left;
+}
+.fb-page.page1 {
+  display: block;
+}
+.fb-page.page2 {
+  display: none;
 }
 
 /* end of news and content in right column style*/
+
+/* responsive foe ipad below*/
+
+@media only screen and (max-width: 1024px) {
+  .all {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-column {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 5%;
+  }
+  .about-info {
+    width: 100%;
+    justify-content: center;
+  }
+  .right-column {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 5%;
+  }
+  .news {
+    margin-top: 0%;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .button-swot {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .button-olc {
+    width: 100%;
+
+    align-items: center;
+    margin: 0 auto;
+  }
+  .button-both {
+    width: 100%;
+  }
+  .card1-pic > h2,
+  .card2-pic > h2 {
+    font-size: 1.5rem;
+  }
+  .fb-page.page1 {
+    display: block;
+  }
+  .fb-page.page2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about > h1 {
+    font-size: 1.5rem;
+  }
+  .about-info {
+    font-size: 1rem;
+  }
+  .fb-page.page1 {
+    display: none;
+  }
+  .fb-page.page2 {
+    display: block;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .button-swot {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .button-olc {
+    width: 100%;
+
+    align-items: center;
+    margin: 0 auto;
+  }
+  .button-both {
+    width: 100%;
+  }
+  .right-column {
+    font-size: 0.8rem;
+  }
+  .news > h1 {
+    font-size: 1.5rem;
+  }
+
+  .facebook > h1 {
+    font-size: 1.5rem;
+  }
+}
