@@ -1,22 +1,17 @@
 div.form-check {
     margin: 16px 0;
 }
-.column-divider {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 20px 30px;
-}
 .strength-style {
     width: 100%;
     display: flex;
 }
 .wrapper-swot-form {
-    flex: 50%;
+    flex: 100%;
     margin: 60px;
 }
 .wrapper-swot-form.strength {
     background-color: #f1ffe9;
+    box-shadow: 0 0 10px rgb(199, 199, 199);
 }
 .wrapper-swot-form.weakness {
     background-color: rgb(255, 231, 231);
@@ -38,4 +33,12 @@ div.form-check {
 }
 .form-check-label {
     margin-left: 20px;
+}
+
+.option-checkbox {
+    display:flex;
+    flex-direction: row;
+}
+.option-checkbox > p {
+    margin-left: 16px;
 }

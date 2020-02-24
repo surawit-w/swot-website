@@ -3,6 +3,7 @@ import contactPic from "../../images/contact.png";
 import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from 'react-bootstrap'
+import '../../stylesheets/components/checkbox.scss'
 
 export default class strength extends Component {
   constructor(props) {
@@ -10,8 +11,6 @@ export default class strength extends Component {
     this.state = {
       totalScore: parseFloat(0).toFixed(2),
       alreadyChecked_arr: [],
-      quiz_arr: [],
-      point_arr: [],
       s_option_arr: ["s-option1","s-option2","s-option3","s-option4","s-option5","s-option6","s-option7","s-option8","s-option9"],
       left_option_arr: [],
       left_score_arr: []
@@ -20,6 +19,8 @@ export default class strength extends Component {
 
   // เหลือทำฟังก์ชันเชคว่า กดได้อีกกี่ปุ่มที่บวกไม่เกิน 1 ****
   handleClick = async(button) => {
+    console.log(button);
+    
     this.state.left_score_arr = []
     let totalScore = 0
     let checkedArr = this.state.alreadyChecked_arr
@@ -57,16 +58,11 @@ export default class strength extends Component {
           default:
         }
     } else if (!button.target.checked){
-      // checkedArr.pop(`${button.target.id}`)
       let tempUnCheckedArr = [`${button.target.id}`]
       this.setState({
         alreadyChecked_arr: checkedArr.filter(n => !tempUnCheckedArr.includes(n))
       })
       console.log(this.state.alreadyChecked_arr)
-      // await console.log(this.state.alreadyChecked_arr)
-      // await this.setState({
-      //   alreadyChecked_arr: checkedArr.filter(n => !tempUnCheckArr.includes(n))
-      // }, console.log(this.state.alreadyChecked_arr))
       switch(button.target.id) {
         case "s-option1":
           totalScore = -0.25
@@ -99,19 +95,11 @@ export default class strength extends Component {
       }
     }
 
-    
-  // console.log(this.state.s_option_arr.filter(n => !this.state.alreadyChecked_arr.includes(n)))
-  
-  // console.log(this.state.left_option_arr) // Array ที่เก็บตัวที่ยังไม่ติ้ก
-  
-
     await this.setState({
       totalScore: (parseFloat(this.state.totalScore) + parseFloat(totalScore)).toFixed(2)
     })
-    // console.log(this.state.totalScore, this.state.alreadyChecked_arr)
 
     await this.checkLeft()
-    // console.log(this.state.left_option_arr)
     
 }
 
@@ -230,7 +218,7 @@ export default class strength extends Component {
 
   render() {
     return (
-          <div className="wrapper-swot-form strength" style={{ border: 'solid 2px', padding: '60px', borderRadius: '20px'}}>
+          <div className="wrapper-swot-form strength" style={{  padding: '60px', borderRadius: '20px'}}>
             <h2 style={{fontFamily: 'regular'}}>S: Strength (จุดแข็ง)</h2>
             <div className="form-wrapper" style={{ padding: '16px 20px'}}>
             <Form style={{ fontFamily: 'light'}}>
@@ -240,66 +228,85 @@ export default class strength extends Component {
                         จุดแข็งของทางร้าน (เลือกข้อที่ถูกต้องที่สุด)
                     </Form.Label>
                     <Col>
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="สวัสดีนะยังสบายดีรึเปล่า ยังได้ยินข่าวคราวตอนที่เพื่อนเธอบอกกล่าว (0.25)"
-                        id="s-option1"
-                        disabled={this.state.option1Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 2 (0.15)"
-                        id="s-option2"
-                        disabled={this.state.option2Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 3 (0.10)"
-                        id="s-option3"
-                        disabled={this.state.option3Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 4 (0.30)"
-                        id="s-option4"
-                        disabled={this.state.option4Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 5 (0.15)"
-                        id="s-option5"
-                        disabled={this.state.option5Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 6 (0.20)"
-                        id="s-option6"
-                        disabled={this.state.option6Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 7 (0.20)"
-                        id="s-option7"
-                        disabled={this.state.option7Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 8 (0.25)"
-                        id="s-option8"
-                        disabled={this.state.option8Disable}
-                        />
-                        <Form.Check
-                        onClick={(event) => this.handleClick(event)}
-                        label="คำถามข้อที่ 9 (0.15)"
-                        id="s-option9"
-                        disabled={this.state.option9Disable}
-                        />
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option1" disabled={this.state.option1Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option1Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option1Disable === true ? {color: '#888'} : {}}>สวัสดีนะยังสบายดีรึเปล่า ยังได้ยินข่าวคราวตอนที่เพื่อนเธอบอกกล่าว (0.25)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option2" disabled={this.state.option2Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option2Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option2Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 2 (0.15)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option3" disabled={this.state.option3Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option3Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option3Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 3 (0.10)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option4" disabled={this.state.option4Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option4Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option4Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 4 (0.30)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option5" disabled={this.state.option5Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option5Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option5Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 5 (0.15)</p>
+                    </div>
+                    
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option6" disabled={this.state.option6Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option6Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option6Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 6 (0.20)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option7" disabled={this.state.option7Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option7Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option7Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 7 (0.20)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option8" disabled={this.state.option8Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option8Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option8Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 8 (0.25)</p>
+                    </div>
+
+                    <div className="option-checkbox">
+                      <label class="check">
+                          <input type="checkbox" id="s-option9" disabled={this.state.option9Disable} onClick={(event) => this.handleClick(event)}/>
+                          <div class="box" style={this.state.option9Disable === true ? {backgroundColor: '#888'} : {}}/>
+                        </label>
+                        <p style={this.state.option9Disable === true ? {color: '#888'} : {}}>คำถามข้อที่ 9 (0.15)</p>
+                    </div>
+
                     </Col>
                     </Form.Group>
                 </fieldset>
                 </Form>
                 <p style={{textAlign:'end'}}>{`Total = ${this.state.totalScore}`}</p>
             </div>
+            
             
             
         </div>
