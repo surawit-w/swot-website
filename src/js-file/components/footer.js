@@ -14,7 +14,8 @@ export default class footer extends Component {
               <tr>
                 <td id="iconColumn">
                   {" "}
-                  <img alt="" src={teamPic} />
+                  {/* <img alt="" src={teamPic} /> */}
+                  <img alt="" src={contactPic} />
                 </td>
                 <td>
                   <p id="footerText">จัดทำโดยกลุ่ม............</p>
@@ -41,7 +42,7 @@ export default class footer extends Component {
           <div id="separator" />
 
           {/* Right panel contains working time, email and phone number. */}
-          <div id="rightPanel">
+          {/* <div id="rightPanel">
             <table>
               <tr>
                 <td id="iconColumn">
@@ -64,7 +65,7 @@ export default class footer extends Component {
                 </td>
               </tr>
             </table>
-          </div>
+          </div> */}
         </div>
       </div>
     );
