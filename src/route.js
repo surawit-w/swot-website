@@ -4,6 +4,7 @@ import mainPage from "./js-file/pages/mainPage";
 import swotPage from "./js-file/pages/swotPage";
 import swotInfoPage from "./js-file/pages/swotInfoPage";
 import olcInfoPage from "./js-file/pages/olcInfoPage";
+import preswotPage from "./js-file/pages/preswotPage";
 
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
@@ -15,6 +16,7 @@ export default class route extends Component {
           <Route exact path="/swot-analysis" component={swotPage} />
           <Route exact path="/swot-info" component={swotInfoPage} />
           <Route exact path="/olc-info" component={olcInfoPage} />
+          <Route exact path="/pre-swot" component={preswotPage} />
         </Switch>
       </Router>
     );

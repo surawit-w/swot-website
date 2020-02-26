@@ -7,3 +7,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+.footer {
+  top: 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}

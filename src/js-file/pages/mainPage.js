@@ -13,14 +13,14 @@ export default class mainPage extends Component {
 
   // Before render
   componentDidMount = async () => {};
- 
+
   // Render elements
   render() {
     return (
       <div>
         <Navbar />
         <HomeInfo />
-        <Footer />
+        <Footer className="footer" />
       </div>
     );
   }

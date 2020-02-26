@@ -98,7 +98,7 @@ export default class olcInfoPage extends Component {
             </button>
           </div>
         </div>
-        <Footer />
+        <Footer className="footer" />
       </div>
     );
   }
