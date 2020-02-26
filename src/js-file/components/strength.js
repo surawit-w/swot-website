@@ -13,19 +13,24 @@ export default class strength extends Component {
       alreadyChecked_arr: [],
       s_option_arr: ["s-option1","s-option2","s-option3","s-option4","s-option5","s-option6","s-option7","s-option8","s-option9"],
       left_option_arr: [],
-      left_score_arr: []
+      alreadyCheckText_arr: [],
+      type: 'strength'
     }
   }
 
   // เหลือทำฟังก์ชันเชคว่า กดได้อีกกี่ปุ่มที่บวกไม่เกิน 1 ****
   handleClick = async(button) => {
     console.log(button);
-    
     this.state.left_score_arr = []
     let totalScore = 0
     let checkedArr = this.state.alreadyChecked_arr
     // console.log(checkedArr)
     if (button.target.checked) {
+
+        console.log(this.state.totalScore, this.state.totalScore === 1.00)
+        if(this.state.totalScore === 1.00) {
+            console.log(true)
+        }
       checkedArr.push(`${button.target.id}`)
       switch(button.target.id) {
           case "s-option1":
@@ -107,11 +112,8 @@ export default class strength extends Component {
     this.setState({
       left_option_arr: this.state.s_option_arr.filter(n => !this.state.alreadyChecked_arr.includes(n))
     })
-    console.log(this.state.alreadyChecked_arr)
-    console.log(this.state.left_option_arr)
-    var i
   // check ว่าตัวไหนบวกกันแล้วเกิน 1
-  for(i=0; i<this.state.left_option_arr.length;i++) {
+  for(let i=0; i<this.state.left_option_arr.length;i++) {
     let totalCheck = 0.00
     switch(this.state.left_option_arr[i]) {
       case "s-option1":
@@ -144,9 +146,6 @@ export default class strength extends Component {
       default:
     }
     totalCheck = (parseFloat(this.state.totalScore)+parseFloat(totalCheck)).toFixed(2)
-    // console.log(`${this.state.left_option_arr[i]} = ${totalCheck}`)
-    await this.state.left_score_arr.push({idOption: this.state.left_option_arr[i], scoreLeft: parseFloat(totalCheck)})
-    // console.log(this.state.left_score_arr)
     if(totalCheck > 1.00) {
       switch(this.state.left_option_arr[i]) {
         case "s-option1":
@@ -210,11 +209,81 @@ export default class strength extends Component {
         default:
       }
     }
-    
-    // option1 > 1.00 { disable ตัวนั้น }
-    // ตัวไหนเกินก็ disable ตัวไหนพอดีก้ไม่ต้องเสร็จซะทีอีเวรรร
   }
 }
+handleSubmit = () => {
+    this.state.alreadyCheckText_arr = []
+    if(parseFloat(this.state.totalScore) === parseFloat(1.00)) {
+        for(let i = 0; i < this.state.alreadyChecked_arr.length;i++) {
+            // console.log(this.state.alreadyCheck_arr)
+            switch(this.state.alreadyChecked_arr[i]) {
+                case "s-option1":
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 1`,
+                        score: 0.25
+                    })
+                  break
+                case 's-option2':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 2`,
+                        score: 0.15
+                    })
+                  break
+                case 's-option3':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 3`,
+                        score: 0.10
+                    })
+                  break
+                case 's-option4':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 4`,
+                        score: 0.30
+                    })
+                  break
+                case 's-option5':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 5`,
+                        score: 0.15
+                    })
+                  break
+                case 's-option6':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 6`,
+                        score: 0.20
+                    })
+                  break
+                case 's-option7':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 7`,
+                        score: 0.20
+                    })
+                  break
+                case 's-option8':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 8`,
+                        score: 0.25
+                    })
+                  break
+                case 's-option9':
+                    this.state.alreadyCheckText_arr.push({
+                        option: `คำถามข้อที่ 9`,
+                        score: 0.15
+                    })
+                  break
+                default:
+              }
+        }
+        // console.log(true)
+        localStorage.setItem('strength_result', JSON.stringify(this.state))
+        let details = JSON.parse(localStorage.getItem('strength_result'))
+        console.log(details.alreadyCheckText_arr) // ได้ค่ามาละ 5555 
+        
+        
+        document.location.href = '/swot-analysis-weakness'
+    }
+}
+
 
   render() {
     return (
@@ -233,7 +302,7 @@ export default class strength extends Component {
                           <input type="checkbox" id="s-option1" disabled={this.state.option1Disable} onClick={(event) => this.handleClick(event)}/>
                           <div class="box" style={this.state.option1Disable === true ? {backgroundColor: '#888'} : {}}/>
                         </label>
-                        <p style={this.state.option1Disable === true ? {color: '#888'} : {}}>สวัสดีนะยังสบายดีรึเปล่า ยังได้ยินข่าวคราวตอนที่เพื่อนเธอบอกกล่าว (0.25)</p>
+                        <p style={this.state.option1Disable === true ? {color: '#888'} : {}}>คำถามที่ 1 (0.25)</p>
                     </div>
 
                     <div className="option-checkbox">
@@ -306,6 +375,9 @@ export default class strength extends Component {
                 </Form>
                 <p style={{textAlign:'end'}}>{`Total = ${this.state.totalScore}`}</p>
             </div>
+            <button onClick={this.handleSubmit}>
+                ถัดไป
+            </button>
             
             
             

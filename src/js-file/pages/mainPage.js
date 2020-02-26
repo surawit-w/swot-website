@@ -16,6 +16,8 @@ export default class mainPage extends Component {
  
   // Render elements
   render() {
+    console.log(this.props);
+    
     return (
       <div>
         <Navbar />

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Navbar from "../components/navbar";
-import Strength from '../components/strength'
+import React, { Component } from "react"
+import Navbar from "../components/navbar"
+import Opportunity from '../components/opportunity'
 import "../../stylesheets/pages/swotPage.css"
 
 export default class swotPage extends Component {
@@ -19,7 +19,7 @@ export default class swotPage extends Component {
         <div>
         <Navbar/>
         <div className="column-divider">
-            <Strength/>
+            <Opportunity/>
         </div>
         </div>
     );
