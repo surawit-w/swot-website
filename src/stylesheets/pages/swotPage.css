@@ -25,11 +25,11 @@ div.form-check {
 .form-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 16px 0;
+    padding: 8px 0;
 }
 .form-label {
     width: 100%;
-    margin : 4% 0;
+    margin-bottom: 24px;
 }
 .form-check-label {
     margin-left: 20px;
@@ -42,3 +42,19 @@ div.form-check {
 .option-checkbox > p {
     margin-left: 16px;
 }
+
+@media only screen and (max-width: 767px) {
+    .graph-swot {
+        width: 100% !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .graph-swot {
+        width: 80% !important;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .graph-swot {
+        width: 50% !important;
+    }
+  }
