@@ -13,7 +13,7 @@ export default class mainPage extends Component {
 
   // Before render
   componentDidMount = async () => {};
- 
+
   // Render elements
   render() {
     console.log(this.props);
@@ -22,7 +22,7 @@ export default class mainPage extends Component {
       <div>
         <Navbar />
         <HomeInfo />
-        <Footer />
+        <Footer className="footer" />
       </div>
     );
   }

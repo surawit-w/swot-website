@@ -112,3 +112,21 @@ body {
     width: 50%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .swot-infobox > h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .swot-infobox > p {
+    font-size: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+.footer {
+  top: 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}

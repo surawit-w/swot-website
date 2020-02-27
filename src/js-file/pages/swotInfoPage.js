@@ -96,13 +96,13 @@ export default class swotInfoPage extends Component {
             </p>
             <button
               className="button"
-              onClick={() => (window.location = "/swot-analysis")}
+              onClick={() => (window.location = "/pre-swot")}
             >
               <span>เริ่มการวิเคราะห์</span>
             </button>
           </div>
         </div>
-        <Footer />
+        <Footer className="footer" />
       </div>
     );
   }
