@@ -15,7 +15,7 @@ export default class strength extends Component {
       textOptionArr: ['คำถามข้อที่ 1', 'คำถามข้อที่ 2', 'คำถามข้อที่ 3', 'คำถามข้อที่ 4', 'คำถามข้อที่ 5', 'คำถามข้อที่ 6', 'คำถามข้อที่ 7', 'คำถามข้อที่ 8', 'คำถามข้อที่ 9'],
       option_arr: [],
       score_arr: [0.25, 0.15, 0.10, 0.30, 0.15, 0.20, 0.20, 0.25, 0.15],
-      totalScore: 0.00,
+      totalScore: 0.00.toFixed(2),
       left_option_arr: [],
       alreadyCheckText_arr: [],
       optionInfoArr: [],
@@ -56,12 +56,12 @@ export default class strength extends Component {
       await this.setState({
         alreadyChecked_arr: checkedArr.filter(n => !tempUnCheckedArr.includes(n))
       })
-      await console.log(this.state.alreadyChecked_arr)
+      // await console.log(this.state.alreadyChecked_arr)
       for(var i = 0; i < this.state.alreadyChecked_arr.length; i++) {
         for(var j = 0; j < this.state.s_option_arr.length; j++) {
           let tempCheck = this.state.alreadyChecked_arr[i]
-          console.log(tempUnCheckedArr[0], `s-option${j+1}`)
-          console.log(this.state.totalScore, this.state.score_arr[j])
+          // console.log(tempUnCheckedArr[0], `s-option${j+1}`)
+          // console.log(this.state.totalScore, this.state.score_arr[j])
           if(tempUnCheckedArr[0] === `s-option${j+1}`) {
             totalScore = this.state.totalScore - this.state.score_arr[j]
           }
@@ -74,8 +74,9 @@ export default class strength extends Component {
           }
         }
       }
+      console.log(this.state.optionInfoArr)
       await this.setState({totalScore : parseFloat(totalScore).toFixed(2)})
-      await console.log(this.state.alreadyChecked_arr)
+      console.log(this.state.totalScore)
     }
   }
 
