@@ -40,7 +40,6 @@ const options = {
             max: 5,
             min: -5,
             fontColor: '#363C54',
-            padding: 10,
             fontSize: 18
           },
           gridLines: {
