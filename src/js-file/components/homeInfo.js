@@ -6,29 +6,33 @@ import olcPic from "../../images/olc-pic.jpg";
 import manualPic from "../../images/manual.jpg";
 import kkbsLogo from "../../images/kkbs-logo.png";
 import { FacebookProvider, Page } from "react-facebook";
+import { Loader, Transition } from "semantic-ui-react";
 
 export default class homeInfo extends Component {
-  // constructor(props) {
-  //   this.state = {};
-  // }
-
+  state = { visible: true };
   render() {
+    const { visible } = this.state;
+
     return (
       <div className="all">
         {/* left column */}
         <div className="left-column">
           <div className="about">
             <h1>เกี่ยวกับเรา</h1>
+
             <div className="about-info">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <Transition visible={visible} animation="scale" duration={1000}>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </Transition>
             </div>
           </div>
           <div className="home-button">
@@ -108,7 +112,7 @@ export default class homeInfo extends Component {
                 className="fb-page page1"
                 data-href="https://www.facebook.com/facebook"
                 data-tabs="timeline"
-                data-width="700px"
+                data-width="800px"
                 data-height=""
                 data-small-header="false"
                 data-adapt-container-width="true"
