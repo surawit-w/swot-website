@@ -88,7 +88,7 @@ handleSubmit = () => {
         localStorage.setItem('strength_result', JSON.stringify(optionInfoArr))
         let details = JSON.parse(localStorage.getItem('strength_result'))
         console.log(details) // ได้ค่ามาละ 5555 
-        
+        this.props.callbackFromParent(details);
         
         // document.location.href = '/swot-analysis-weakness'
 }
@@ -97,13 +97,13 @@ handleSubmit = () => {
   render() {
     return (
           <div className="wrapper-swot-form strength" style={{  padding: '60px', borderRadius: '20px'}}>
-            <h2 style={{fontFamily: 'regular'}}>S: Strength (จุดแข็ง)</h2>
+            <h2 style={{fontFamily: 'regular'}}>Strength (จุดแข็ง)</h2>
             <div className="form-wrapper" style={{ padding: '16px 20px'}}>
             <Form style={{ fontFamily: 'light'}}>
                 <fieldset>
                     <Form.Group as={Row}>
                     <Form.Label as="legend" style={{fontSize: '18px', fontFamily: 'regularItalic'}}>
-                        จุดแข็งของทางร้าน (เลือกข้อที่ถูกต้องที่สุด)
+                        จุดแข็งของทางร้านมีอะไรบ้าง (สามารถเลือกได้มากกว่า 1 ข้อ)
                     </Form.Label>
                     <Col>
                     <div className="option-checkbox">
