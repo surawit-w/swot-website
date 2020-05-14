@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
-import Strength from "../components/strength";
-import Weakness from "../components/weakness";
-import Opportunity from "../components/opportunity";
-import Threat from "../components/threat";
+import Strength2 from "../components/strength2";
+import Weakness2 from "../components/weakness2";
+import Opportunity2 from "../components/opportunity2";
+import Threat2 from "../components/threat2";
 import "../../stylesheets/pages/swotPage.css";
 import { ProgressBar } from "react-bootstrap";
 
-export default class swotPage extends Component {
+export default class swotPage2 extends Component {
   constructor(props) {
     super(props);
     // State
@@ -16,10 +16,10 @@ export default class swotPage extends Component {
       style: {
         fontFamily: "bold",
       },
-      isStrength: false,
-      isWeakness: false,
-      isOpportunity: false,
-      isThreat: false,
+      isStrength2: false,
+      isWeakness2: false,
+      isOpportunity2: false,
+      isThreat2: false,
       progressValue: 0,
       result_arr: [],
     };
@@ -28,7 +28,7 @@ export default class swotPage extends Component {
   // Before render
   componentDidMount = async () => {
     await this.setState({
-      isStrength: true,
+      isStrength2: true,
       progressValue: 25,
       progressColor: "success",
     });
@@ -37,8 +37,8 @@ export default class swotPage extends Component {
   myStrengthCallback = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
-      isStrength: false,
-      isWeakness: true,
+      isStrength2: false,
+      isWeakness2: true,
       progressValue: 50,
       progressColor: "warning",
     });
@@ -47,8 +47,8 @@ export default class swotPage extends Component {
   myWeaknessCallback = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
-      isWeakness: false,
-      isOpportunity: true,
+      isWeakness2: false,
+      isOpportunity2: true,
       progressValue: 75,
       progressColor: "info",
     });
@@ -57,8 +57,8 @@ export default class swotPage extends Component {
   myOpportunityCallback = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
-      isOpportunity: false,
-      isThreat: true,
+      isOpportunity2: false,
+      isThreat2: true,
       progressValue: 100,
       progressColor: "danger",
     });
@@ -67,25 +67,25 @@ export default class swotPage extends Component {
   myThreatCallback = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
-      isOpportunity: false,
-      isThreat: true,
+      isOpportunity2: false,
+      isThreat2: true,
       progressValue: 100,
       progressColor: "danger",
     });
     await this.state.result_arr.push(dataFromChild);
     localStorage.setItem("swot-result", JSON.stringify(this.state.result_arr));
 
-    document.location.href = "/swot-score";
+    document.location.href = "/swot-score2";
   };
 
   // Render elements
   render() {
     let { btnActive } = this.state;
     let {
-      isStrength,
-      isWeakness,
-      isOpportunity,
-      isThreat,
+      isStrength2,
+      isWeakness2,
+      isOpportunity2,
+      isThreat2,
       progressValue,
       progressColor,
     } = this.state;
@@ -93,38 +93,38 @@ export default class swotPage extends Component {
       <div>
         <Navbar swot={btnActive} />
         <div className="header">
-          <h1 style={{ fontFamily: "bold" }}>วิเคราะห์ SWOT ธุรกิจผลิต</h1>
+          <h1 style={{ fontFamily: "bold" }}>วิเคราะห์ SWOT ธุรกิจบริการ</h1>
         </div>
         <div className="progressBarDiv">
           <div className="progressBarInfoDiv">
             <div className="progressBarInfo">
-              <span style={isStrength ? this.state.style : {}}>Strength</span>
+              <span style={isStrength2 ? this.state.style : {}}>Strength</span>
             </div>
             <div className="progressBarInfo">
-              <span style={isWeakness ? this.state.style : {}}>Weakness</span>
+              <span style={isWeakness2 ? this.state.style : {}}>Weakness</span>
             </div>
             <div className="progressBarInfo">
-              <span style={isOpportunity ? this.state.style : {}}>
+              <span style={isOpportunity2 ? this.state.style : {}}>
                 Opportunity
               </span>
             </div>
             <div className="progressBarInfo">
-              <span style={isThreat ? this.state.style : {}}>Threat</span>
+              <span style={isThreat2 ? this.state.style : {}}>Threat</span>
             </div>
           </div>
           <ProgressBar variant={progressColor} now={progressValue} />
         </div>
         <div className="column-divider">
-          {isStrength && (
-            <Strength callbackFromParent={this.myStrengthCallback} />
+          {isStrength2 && (
+            <Strength2 callbackFromParent={this.myStrengthCallback2} />
           )}
-          {isWeakness && (
-            <Weakness callbackFromParent={this.myWeaknessCallback} />
+          {isWeakness2 && (
+            <Weakness2 callbackFromParent={this.myWeaknessCallback2} />
           )}
-          {isOpportunity && (
-            <Opportunity callbackFromParent={this.myOpportunityCallback} />
+          {isOpportunity2 && (
+            <Opportunity2 callbackFromParent={this.myOpportunityCallback2} />
           )}
-          {isThreat && <Threat callbackFromParent={this.myThreatCallback} />}
+          {isThreat2 && <Threat2 callbackFromParent={this.myThreatCallback2} />}
         </div>
       </div>
     );

@@ -5,7 +5,7 @@ import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
 
-export default class opportunity extends Component {
+export default class threat2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,37 +25,43 @@ export default class opportunity extends Component {
         "s-option11",
         "s-option12",
         "s-option13",
+        "s-option14",
+        "s-option15",
       ],
       textOptionArr: [
-        "1)	ภาครัฐส่งเสริมการลงทุนและการพัฒนา",
-        "2)	การแข่งขันในตลาดยังมีน้อย",
-        "3)	ยังไม่มีผู้ประกอบการที่ผลิตผลิตภัณฑ์ประเภทเดียวกันในเขตพื้นที่",
-        "4)	อำนาจต่อรองกับบริษัทโลจิสติกส์สูง",
-        "5)	สินค้าที่ผลิตอยู่ในช่วงเติบโต",
-        "6)	ผู้บริโภคในตลาดมีทรรศนะคติที่ดีต่อสินค้าที่ผลิต",
-        "7)	คู่แข่งขัน ไม่มีมาตรฐานในการผลิต ขาดน่าเชื่อถือ",
-        "8)	มีคนกลาง และตัวแทนในการจำหน่ายจำนวนมาก ",
-        "9)	สินค้าที่บริการกำลังเป็นที่นิยมอย่างมากในตลาด ",
-        "10)	มีเทคโนโลยีหรือวิชาการใหม่ที่เอื้ออำนวยประโยชน์ต่อการผลิต",
-        "11)	ความก้าวหน้าเทคโนโลยี ทำให้ผู้บริโภคเข้าถึงข้อมูลและเชื่อมต่อถึงกันไ",
-        "12)	การเลือกใช้วัตถุดิบที่เป็นมิตรต่อสิ่งแวดล้อมทำให้ได้รับการยอมรับจากผู้บริโภค ",
-        "13)	การเปิด AEC ทำให้ตลาดกว้างขึ้น ",
+        "1)	ไม่ได้รับการสนับสนุนจากภาครัฐ ",
+        "2)	สถานการณ์ทางการเมืองที่ไม่แน่นอน ",
+        "3)	คู่แข่งขันหลายรายในตลาดประเภทเดียวกัน ",
+        "4)	มีภัยคุกคามจากคู่แข่งขันรายใหม่เข้ามาในตลาดสูง ",
+        "5)	สินค้าที่ผลิตสามารถเลียนแบบได้ง่าย ",
+        "6)	สภาพเศรษฐกิจในปัจจุบันทำให้การดำเนินธุรกิจเป็นไปอย่างยากลำบาก เนื่องจากเศรษฐกิจส่งผลต่อการจับจ่ายใช้สอยของผู้บริโภค ",
+        "7)	ความผันผวนของราคาวัตถุดิบ ",
+        "8)	วัตถุดิบขาดตลาด ",
+        "9)	คู่แข่งมีการจัดลดราคาสินค้า ",
+        "10)	คู่แข่งขันมีประสิทธิภาพอย่างมาก ",
+        "11)	พฤติกรรมผู้บริโภคเปลี่ยนไป และมีทัศนคติที่เปลี่ยนไป ",
+        "12)	ปริมาณความต้องการของผู้บริโภคยังมีสูงกว่าความสามารถในการผลิต ",
+        "13)	เทคโนโลยีมีข้อจำกัดในการใช้งาน ",
+        "14)	เกิดภัยพิบัติทางธรรมชาติบ่อยครั้ง และส่งผลกระทบต่อธุรกิจโดยตรง เช่น สถานการณ์อุทกภัยทำให้ต้องหยุดการผลิตชั่วคราว ",
+        "15)	การเพิ่มอัตราการเก็บภาษี ",
       ],
       option_arr: [],
       score_arr: [
-        0.01,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.06,
         0.1,
-        0.15,
+        0.08,
+        0.1,
         0.08,
         0.02,
         0.08,
-        0.08,
-        0.08,
         0.1,
         0.1,
-        0.08,
-        0.1,
-        0.02,
       ],
       totalScore: (0.0).toFixed(2),
       left_option_arr: [],
@@ -132,8 +138,8 @@ export default class opportunity extends Component {
         optionInfoArr[i].optionScore / totalScore
       ).toFixed(2);
     }
-    localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
-    let details = JSON.parse(localStorage.getItem("strength_result"));
+    localStorage.setItem("strength_result2", JSON.stringify(optionInfoArr));
+    let details = JSON.parse(localStorage.getItem("strength_result2"));
     console.log(details); // ได้ค่ามาละ 5555
     this.props.callbackFromParent(details);
     window.scrollTo(0, 0);
@@ -143,14 +149,14 @@ export default class opportunity extends Component {
   render() {
     return (
       <div
-        className="wrapper-swot-form opportunity"
+        className="wrapper-swot-form threat"
         style={{
           padding: "60px",
           borderRadius: "20px",
           color: this.state.color,
         }}
       >
-        <h2 style={{ fontFamily: "regular" }}>Opportunity (โอกาส)</h2>
+        <h2 style={{ fontFamily: "regular" }}>Threat (อุปสรรค)</h2>
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
           <Form style={{ fontFamily: "light" }}>
             <fieldset>
@@ -159,7 +165,7 @@ export default class opportunity extends Component {
                   as="legend"
                   style={{ fontSize: "18px", fontFamily: "regularItalic" }}
                 >
-                  โอกาสของทางร้านมีอะไรบ้าง (สามารถเลือกได้มากกว่า 1 ข้อ)
+                  อุปสรรคของทางร้านมีอะไรบ้าง (สามารถเลือกได้มากกว่า 1 ข้อ)
                 </Form.Label>
                 <Col>
                   <div className="option-checkbox">
@@ -171,7 +177,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(1) ภาครัฐส่งเสริมการลงทุนและการพัฒนา </p>
+                    <p>(1) ไม่ได้รับการสนับสนุนจากภาครัฐ </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -183,7 +189,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(2) การแข่งขันในตลาดยังมีน้อย </p>
+                    <p>(2) สถานการณ์ทางการเมืองที่ไม่แน่นอน </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -195,10 +201,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>
-                      (3)
-                      ยังไม่มีผู้ประกอบการที่ผลิตผลิตภัณฑ์ประเภทเดียวกันในเขตพื้นที่{" "}
-                    </p>
+                    <p>(3) คู่แข่งขันหลายรายในตลาดประเภทเดียวกัน</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -210,7 +213,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(4) อำนาจต่อรองกับบริษัทโลจิสติกส์สูง </p>
+                    <p>(4) มีภัยคุกคามจากคู่แข่งขันรายใหม่เข้ามาในตลาดสูง </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -222,7 +225,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(5) สินค้าที่ผลิตอยู่ในช่วงเติบโต </p>
+                    <p>(5) สินค้าที่ผลิตสามารถเลียนแบบได้ง่าย</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -234,7 +237,11 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(6) ผู้บริโภคในตลาดมีทรรศนะคติที่ดีต่อสินค้าที่ผลิต </p>
+                    <p>
+                      (6)
+                      สภาพเศรษฐกิจในปัจจุบันทำให้การดำเนินธุรกิจเป็นไปอย่างยากลำบาก
+                      เนื่องจากเศรษฐกิจส่งผลต่อการจับจ่ายใช้สอยของผู้บริโภค{" "}
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -246,7 +253,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(7) คู่แข่งขัน ไม่มีมาตรฐานในการผลิต ขาดน่าเชื่อถือ </p>
+                    <p>(7) ความผันผวนของราคาวัตถุดิบ </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -258,7 +265,7 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(8) มีคนกลาง และตัวแทนในการจำหน่ายจำนวนมาก </p>
+                    <p>(8) วัตถุดิบขาดตลาด </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -270,9 +277,8 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(9) สินค้าที่บริการกำลังเป็นที่นิยมอย่างมากในตลาด</p>
+                    <p>(9) คู่แข่งมีการจัดลดราคาสินค้า </p>
                   </div>
-
                   <div className="option-checkbox">
                     <label class="check">
                       <input
@@ -282,12 +288,8 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>
-                      (10)
-                      มีเทคโนโลยีหรือวิชาการใหม่ที่เอื้ออำนวยประโยชน์ต่อการผลิต
-                    </p>
+                    <p>(10) แข่งขันมีประสิทธิภาพอย่างมาก </p>
                   </div>
-
                   <div className="option-checkbox">
                     <label class="check">
                       <input
@@ -298,11 +300,9 @@ export default class opportunity extends Component {
                       <div class="box" />
                     </label>
                     <p>
-                      (11) ความก้าวหน้าเทคโนโลยี
-                      ทำให้ผู้บริโภคเข้าถึงข้อมูลและเชื่อมต่อถึงกันได้{" "}
+                      (11) พฤติกรรมผู้บริโภคเปลี่ยนไป และมีทัศนคติที่เปลี่ยนไป{" "}
                     </p>
                   </div>
-
                   <div className="option-checkbox">
                     <label class="check">
                       <input
@@ -314,10 +314,9 @@ export default class opportunity extends Component {
                     </label>
                     <p>
                       (12)
-                      การเลือกใช้วัตถุดิบที่เป็นมิตรต่อสิ่งแวดล้อมทำให้ได้รับการยอมรับจากผู้บริโภค{" "}
+                      ปริมาณความต้องการของผู้บริโภคยังมีสูงกว่าความสามารถในการผลิต{" "}
                     </p>
                   </div>
-
                   <div className="option-checkbox">
                     <label class="check">
                       <input
@@ -327,12 +326,41 @@ export default class opportunity extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(13) การเปิด AEC ทำให้ตลาดกว้างขึ้น </p>
+                    <p>(13) เทคโนโลยีมีข้อจำกัดในการใช้งาน </p>
+                  </div>
+                  <div className="option-checkbox">
+                    <label class="check">
+                      <input
+                        type="checkbox"
+                        id="s-option14"
+                        onClick={(event) => this.handleClick(event)}
+                      />
+                      <div class="box" />
+                    </label>
+                    <p>
+                      (14) เกิดภัยพิบัติทางธรรมชาติบ่อยครั้ง
+                      และส่งผลกระทบต่อธุรกิจโดยตรง เช่น
+                      สถานการณ์อุทกภัยทำให้ต้องหยุดการผลิตชั่วคราว{" "}
+                    </p>
+                  </div>
+                  <div className="option-checkbox">
+                    <label class="check">
+                      <input
+                        type="checkbox"
+                        id="s-option15"
+                        onClick={(event) => this.handleClick(event)}
+                      />
+                      <div class="box" />
+                    </label>
+                    <p>(15) การเพิ่มอัตราการเก็บภาษี </p>
                   </div>
                 </Col>
               </Form.Group>
             </fieldset>
           </Form>
+          <p
+            style={{ textAlign: "end" }}
+          >{`Total = ${this.state.totalScore}`}</p>
         </div>
         <div id="buttonNextCenter">
           <button onClick={this.handleSubmit} id="buttonNext">

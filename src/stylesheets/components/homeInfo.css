@@ -11,7 +11,7 @@
 }
 /* about info and left column style */
 .left-column {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   flex: 70%;

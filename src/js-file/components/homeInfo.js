@@ -6,7 +6,7 @@ import olcPic from "../../images/olc-pic.jpg";
 import manualPic from "../../images/manual.jpg";
 import kkbsLogo from "../../images/kkbs-logo.png";
 import { FacebookProvider, Page } from "react-facebook";
-import { Loader, Transition } from "semantic-ui-react";
+import { Transition } from "semantic-ui-react";
 
 export default class homeInfo extends Component {
   state = { visible: true };
@@ -21,24 +21,20 @@ export default class homeInfo extends Component {
             <h1>เกี่ยวกับเรา</h1>
 
             <div className="about-info">
-              <Transition visible={visible} animation="scale" duration={1000}>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </Transition>
+              <p>
+                โปรแกรมวิเคราะห์สิ่งแวดล้อมและศักยภาพขององค์กรด้วยเครื่องมือทางการจัดการเพื่อพัฒนาการดำเนินธุรกิจขององค์กรและพัฒนากลยุทธ์ทางการตลาดเป็นโปรแกรมที่สร้างขึ้นเพื่อช่วยให้ผู้ประกอบการธุรกิจ
+                SMEs สามารถเข้าถึงการใช้เครื่องมือทางการจัดการ (Swot Analysis
+                ,Organization Life Cycle)
+                เข้ามาช่วยวิเคราะห์ธุรกิจของตนเองได้อย่างมีหลักการโดยใช้โปรแกรมสำเร็จรูป
+                ส่งผลให้ผู้ประกอบการสามารถทราบถึงแนวทางในการแก้ไขปัญหาที่องค์กรกำลังประสบอยู่
+                รวมถึงแนวทางในการพัฒนาองค์กรในด้านต่างๆให้มีประสิทธิภาพมากยิ่งขึ้น
+              </p>
             </div>
           </div>
           <div className="home-button">
             <div className="buttons">
               <button
-                className="button-swot"
+                className="button-swot "
                 id="button-swot"
                 onClick={() => (window.location = "/swot-info")}
               >
@@ -98,7 +94,7 @@ export default class homeInfo extends Component {
               style={{
                 display: "block",
                 margin: "0 auto",
-                width: "100%"
+                width: "100%",
               }}
             >
               {/* <FacebookProvider appId="584678505415758">
