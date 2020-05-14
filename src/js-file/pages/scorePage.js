@@ -23,6 +23,9 @@ export default class scorePage extends Component {
     };
   }
   componentDidMount = async () => {
+    if(Boolean(localStorage.getItem('swotolcBoolean'))) {
+      await this.setState({ btnActive: 4 })
+    }
     let {
       strengthResult,
       weaknessResult,
@@ -322,7 +325,14 @@ export default class scorePage extends Component {
     }
     console.log(finalScore);
     localStorage.setItem("finalScore", JSON.stringify(finalScore));
-    document.location.href = "/swot-result";
+    // console.log(localStorage.getItem('swotolcBoolean'))
+    if (localStorage.getItem('swotolcBoolean') === 'true') {
+      console.log("1")
+      document.location.href = "/olc-analysis"
+    } else if(localStorage.getItem('swotolcBoolean') === 'false') {
+      console.log("2")
+      document.location.href = "/swot-result"
+    }
   };
 
   // Render elements

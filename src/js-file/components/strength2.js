@@ -195,6 +195,13 @@ export default class strength2 extends Component {
     }
   };
 
+  componentDidMount = async() => {
+        console.log(this.props.swotolc)
+        localStorage.setItem('swotolcBoolean', false)
+        if(this.props.swotolc) {
+            localStorage.setItem('swotolcBoolean', true)
+        }
+    }
   handleSubmit = () => {
     let { totalScore, alreadyChecked_arr, optionInfoArr } = this.state;
     for (var i = 0; i < optionInfoArr.length; i++) {

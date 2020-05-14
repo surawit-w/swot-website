@@ -90,7 +90,7 @@ export default class navbar extends Component {
                   </li>
                   <li
                     className="menu-list"
-                    onClick={() => (window.location.href = "/swot-info")}
+                    onClick={() => (window.location.href = "/swot-website/swot-info")}
                     style={
                       swot === 2 && btnActive === 0
                         ? { color: "#f16f20" }
@@ -112,7 +112,12 @@ export default class navbar extends Component {
                   </li>
                   <li
                     className="menu-list"
-                    onClick={() => (window.location.href = "/")}
+                    onClick={() => (window.location.href = "/pre-swotolc")}
+                    style={
+                      swot === 4 && btnActive === 0
+                        ? { color: "#f16f20" }
+                        : { color: "#F3B06E" }
+                    }
                   >
                     {"SWOT & OLC"}
                   </li>

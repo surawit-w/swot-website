@@ -170,7 +170,13 @@ export default class strength extends Component {
       color: "#f6f6f6",
     };
   }
-
+  componentDidMount = async() => {
+        console.log(this.props.swotolc)
+        localStorage.setItem('swotolcBoolean', false)
+        if(this.props.swotolc) {
+            localStorage.setItem('swotolcBoolean', true)
+        }
+    }
   handleClick = async (button) => {
     this.state.left_score_arr = [];
     let checkedArr = this.state.alreadyChecked_arr;
