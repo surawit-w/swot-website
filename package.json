@@ -1,12 +1,14 @@
 {
   "name": "swot-website",
   "version": "0.1.0",
+  "homepage": "https://sirapobjar.github.io/swot-website/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "chart.js": "^2.9.3",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "plotly.js": "^1.52.2",
     "react": "^16.12.0",
@@ -27,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
