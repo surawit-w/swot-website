@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
-import HomeInfo from "../components/homeInfo";
 import Footer from "../components/footer";
 import "../../stylesheets/pages/swotInfoPage.css";
 

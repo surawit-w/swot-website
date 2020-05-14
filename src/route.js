@@ -12,27 +12,25 @@ import Opportunity from './js-file/pages/opporPage'
 import Threat from './js-file/components/threat'
 import scorePage from './js-file/pages/scorePage'
 import resultPage from './js-file/pages/resultPage'
-
+import olcPage from './js-file/pages/olcPage'
+import olcScore from './js-file/pages/olcScore'
 
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-
-          <Route exact path="/" component={mainPage}/>
-          <Route exact path="/swot-analysis" component={swotPage}/>
-          <Route exact path="/swot-info" component={swotInfoPage}/>
-          <Route exact path="/olc-info" component={olcInfoPage}/>
-          <Route exact path="/swot-analysis-weakness" component={Weakness}/>
-          <Route exact path="/swot-analysis-opportunity" component={Opportunity}/>
-          <Route exact path="/swot-analysis-threat" component={Threat}/>
-          <Route exact path="/swot-score" component={scorePage}/>
-          <Route exact path="/swot-result" component={resultPage}/>
-
-        </Switch>
-      </Router>
-    );
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={mainPage}/>
+                    <Route exact path="/swot-analysis" component={swotPage}/>
+                    <Route exact path="/swot-info" component={swotInfoPage}/>
+                    <Route exact path="/olc-info" component={olcInfoPage}/>
+                    <Route exact path="/swot-score" component={scorePage}/>
+                    <Route exact path="/swot-result" component={resultPage}/>
+                    <Route exact path="/olc-analysis" component={olcPage}/>
+                    <Route exact path="/olc-score" component={olcScore}/>
+                </Switch>
+            </Router>
+        );
   }
 }

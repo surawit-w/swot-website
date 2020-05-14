@@ -9,6 +9,9 @@ div.form-check {
     flex: 100%;
     margin: 60px;
 }
+select {
+    background-color: white;
+}
 .wrapper-swot-form.strength {
     background-color: #e0ffea;
     box-shadow: 0 0 5px rgb(216, 216, 216);

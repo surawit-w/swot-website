@@ -120,9 +120,10 @@ export default class resultPage extends Component {
         ]
       }
     })
-    // detailsArr.sort(function(a,b){return Math.abs(b.number) - Math.abs(a.number)})
-    // console.log(detailsArr)
-    // console.log(detailsArr[0].name)
+    console.log(detailsArr)
+    detailsArr.sort(function(a,b){return Math.abs(b.number) - Math.abs(a.number)})
+    console.log(detailsArr)
+    console.log(detailsArr[0].name)
     // console.log(this.state.data.datasets[0].data[0])
 
     // await this.setState({

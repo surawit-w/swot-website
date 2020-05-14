@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
-import HomeInfo from "../components/homeInfo";
 import Footer from "../components/footer";
 import "../../stylesheets/pages/swotInfoPage.css";
 
@@ -18,7 +17,7 @@ export default class olcInfoPage extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar/>
         <div className="linkback">
           <p>
             HOME >{" "}
@@ -92,7 +91,7 @@ export default class olcInfoPage extends Component {
             </p>
             <button
               className="button"
-              onClick={() => (window.location = "/swot-analysis")}
+              onClick={() => (window.location = "/olc-analysis")}
             >
               <span>เริ่มการวิเคราะห์</span>
             </button>

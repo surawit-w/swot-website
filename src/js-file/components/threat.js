@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import contactPic from "../../images/contact.png";
 import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
-import { Form, Row, Col, Button } from 'react-bootstrap'
+import { Form, Row, Col } from 'react-bootstrap'
 import '../../stylesheets/components/checkbox.scss'
 
 export default class threat extends Component {
@@ -81,7 +81,7 @@ export default class threat extends Component {
   }
 
 handleSubmit = () => {
-  let { totalScore, alreadyChecked_arr, optionInfoArr } = this.state
+  let { totalScore, optionInfoArr } = this.state
   for (var i = 0; i < optionInfoArr.length; i++) {
     optionInfoArr[i].optionScore = parseFloat(optionInfoArr[i].optionScore / totalScore).toFixed(2)
   }
