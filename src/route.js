@@ -21,9 +21,9 @@ import howtoPage from "./js-file/pages/howtoPage";
 export default class route extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/swot-website" component={mainPage} />
+          <Route exact path="/" component={mainPage} />
           <Route exact path="/howto" component={howtoPage} />
           <Route exact path="/swot-analysis" component={swotPage} />
           <Route exact path="/swot-analysis2" component={swotPage2} />
