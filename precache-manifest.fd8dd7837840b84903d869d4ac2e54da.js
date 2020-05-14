@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fdff5688d84c6006c7138f5e6d13cf41",
+    "revision": "4ee4c8140306f76681069fc2560e0581",
     "url": "/swot-website/index.html"
   },
   {
-    "revision": "b91a36e00cd7da4b9354",
+    "revision": "1c95e5a97cc3c3ae5a48",
     "url": "/swot-website/static/css/main.ac9b9745.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/swot-website/static/js/2.a9d1792e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b91a36e00cd7da4b9354",
-    "url": "/swot-website/static/js/main.598357a6.chunk.js"
+    "revision": "1c95e5a97cc3c3ae5a48",
+    "url": "/swot-website/static/js/main.68827ab2.chunk.js"
   },
   {
     "revision": "b23e66bdf5f7823ef620",
