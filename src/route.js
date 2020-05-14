@@ -25,7 +25,7 @@ import swotolcPage3 from "./js-file/pages/swotolcPage3";
 export default class route extends Component {
   render() {
     return (
-      <Router basename="swot-website">
+      <Router basename="/swot-website">
         <Route exact path="/" component={mainPage} />
         <Route path="/howto" component={howtoPage} />
         <Route path="/swot-analysis" component={swotPage} />
