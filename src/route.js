@@ -23,7 +23,7 @@ export default class route extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={mainPage} />
+          <Route exact path="/swot-website" component={mainPage} />
           <Route exact path="/howto" component={howtoPage} />
           <Route exact path="/swot-analysis" component={swotPage} />
           <Route exact path="/swot-analysis2" component={swotPage2} />
