@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/swot-website/static/css/main.ac9b9745.chunk.css",
+    "main.js": "/swot-website/static/js/main.598357a6.chunk.js",
+    "main.js.map": "/swot-website/static/js/main.598357a6.chunk.js.map",
+    "runtime-main.js": "/swot-website/static/js/runtime-main.0b656908.js",
+    "runtime-main.js.map": "/swot-website/static/js/runtime-main.0b656908.js.map",
+    "static/js/2.a9d1792e.chunk.js": "/swot-website/static/js/2.a9d1792e.chunk.js",
+    "static/js/2.a9d1792e.chunk.js.map": "/swot-website/static/js/2.a9d1792e.chunk.js.map",
+    "index.html": "/swot-website/index.html",
+    "precache-manifest.babb1068b33513e2e9a2675ccc7ffe45.js": "/swot-website/precache-manifest.babb1068b33513e2e9a2675ccc7ffe45.js",
+    "service-worker.js": "/swot-website/service-worker.js",
+    "static/css/main.ac9b9745.chunk.css.map": "/swot-website/static/css/main.ac9b9745.chunk.css.map",
+    "static/js/2.a9d1792e.chunk.js.LICENSE.txt": "/swot-website/static/js/2.a9d1792e.chunk.js.LICENSE.txt",
+    "static/media/font.css": "/swot-website/static/media/Prompt-Regular.cd5b6e1c.ttf",
+    "static/media/iconMGT.ico": "/swot-website/static/media/iconMGT.03228e7d.ico",
+    "static/media/kkbs-logo.png": "/swot-website/static/media/kkbs-logo.d371fb23.png",
+    "static/media/logoMGT.ico": "/swot-website/static/media/logoMGT.030ed762.ico",
+    "static/media/manual.jpg": "/swot-website/static/media/manual.f5ffa09e.jpg",
+    "static/media/olc-pic.jpg": "/swot-website/static/media/olc-pic.f82266bd.jpg",
+    "static/media/swot-analysis.jpg": "/swot-website/static/media/swot-analysis.27d5049f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b656908.js",
+    "static/js/2.a9d1792e.chunk.js",
+    "static/css/main.ac9b9745.chunk.css",
+    "static/js/main.598357a6.chunk.js"
+  ]
+}
