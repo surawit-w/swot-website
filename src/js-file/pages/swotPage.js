@@ -6,6 +6,7 @@ import Opportunity from "../components/opportunity";
 import Threat from "../components/threat";
 import "../../stylesheets/pages/swotPage.css";
 import { ProgressBar } from "react-bootstrap";
+import Footer from "../components/footer";
 
 export default class swotPage extends Component {
   constructor(props) {
@@ -126,6 +127,7 @@ export default class swotPage extends Component {
           )}
           {isThreat && <Threat callbackFromParent={this.myThreatCallback} />}
         </div>
+        <Footer className="footer" />
       </div>
     );
   }

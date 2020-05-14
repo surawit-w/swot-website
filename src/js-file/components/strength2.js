@@ -703,9 +703,6 @@ export default class strength2 extends Component {
               </Form.Group>
             </fieldset>
           </Form>
-          <p
-            style={{ textAlign: "end" }}
-          >{`Total = ${this.state.totalScore}`}</p>
         </div>
         <div id="buttonNextCenter">
           <button id="buttonNext" onClick={this.handleSubmit}>

@@ -188,7 +188,7 @@ export default class resultPage extends Component {
             "หากธุรกิจหรือกิจการของท่านอยู่ในช่วงที่ผลิตภัณฑ์มีอัตราการเจริญเติบโตของยอดขายที่น่าเป็นห่วงมากที่สุด และสามารถทำกำไรได้ต่ำ ซึ่งก็คือ Dog  ซึ่งควรแก่การพิจารณาแผนการผลิตโดยเลือกตัดสินใจว่าจะผลิตผลิตภัณฑ์นี้ต่อไปหรือตัดผลิตภัณฑ์นี้ออกจากสายการผลิต พิจารณาปรับปรุงแก้ไขภายในองค์กร พิจารณาเป้าหมายในอนาคต และการแก้ไขปัญหาการเจริญเติบโตของยอดขายให้ดีขึ้น",
         });
         break;
-      default :
+      default:
     }
   };
 
@@ -282,7 +282,7 @@ export default class resultPage extends Component {
         <div id="buttonNextCenter" style={{ marginTop: "100px" }}>
           <button
             onClick={(event) => (window.location.href = "/swot-info")}
-            id="buttonNext"
+            id="buttonNext2"
             style={{
               marginBottom: "5%",
               width: "30%",
@@ -294,7 +294,7 @@ export default class resultPage extends Component {
 
           <button
             onClick={(event) => (window.location.href = "/swot-info")}
-            id="buttonNext"
+            id="buttonNext2"
             style={{
               marginBottom: "5%",
               width: "30%",

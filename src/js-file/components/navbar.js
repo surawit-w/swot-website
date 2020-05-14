@@ -79,7 +79,12 @@ export default class navbar extends Component {
                   </li>
                   <li
                     className="menu-list"
-                    onClick={() => (window.location.href = "/swot-analysis")}
+                    onClick={() => (window.location.href = "/howto")}
+                    style={
+                      home === 2 && btnActive === 0
+                        ? { color: "#f16f20" }
+                        : { color: "#F3B06E" }
+                    }
                   >
                     HOW TO USE
                   </li>
@@ -97,6 +102,11 @@ export default class navbar extends Component {
                   <li
                     className="menu-list"
                     onClick={() => (window.location.href = "/olc-info")}
+                    style={
+                      swot === 3 && btnActive === 0
+                        ? { color: "#f16f20" }
+                        : { color: "#F3B06E" }
+                    }
                   >
                     OLC
                   </li>

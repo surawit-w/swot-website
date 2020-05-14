@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import contactPic from "../../images/contact.png";
+import contactPic from "../../images/logoMGT.ico";
 import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 
@@ -13,24 +13,19 @@ export default class footer extends Component {
             <table>
               <tr>
                 <td id="iconColumn">
-                  {" "}
-                  {/* <img alt="" src={teamPic} /> */}
                   <img alt="" src={contactPic} />
                 </td>
-                <td>
-                  <p id="footerText">จัดทำโดยกลุ่ม............</p>
-                </td>
+
+                <p id="footerText">
+                  MADE BY MANAGEMENT <br />
+                  Faculty of business administration and accountancy <br />
+                  Khon Kaen University
+                </p>
               </tr>
               <tr>
                 <td id="iconColumn" />
                 <td>
-                  <p id="footerText">คณะบริหารธุรกิจและการบัญชี </p>
-                </td>
-              </tr>
-              <tr>
-                <td id="iconColumn" />
-                <td>
-                  <p id="footerText">มหาวิทยาลัยขอนแก่น</p>
+                  <p id="footerText"></p>
                 </td>
               </tr>
               <tr id="extraRow">

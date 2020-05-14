@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import mainPage from "./js-file/pages/mainPage";
 import swotPage from "./js-file/pages/swotPage";
 import swotPage2 from "./js-file/pages/swotPage2";
-import swotPage3 from './js-file/pages/swotPage3'
+import swotPage3 from "./js-file/pages/swotPage3";
 import swotInfoPage from "./js-file/pages/swotInfoPage";
 import olcInfoPage from "./js-file/pages/olcInfoPage";
 import Weakness from "./js-file/components/weakness";
@@ -14,10 +14,9 @@ import scorePage2 from "./js-file/pages/scorePage2";
 import resultPage from "./js-file/pages/resultPage";
 import resultPage2 from "./js-file/pages/resultPage2";
 import preswot from "./js-file/pages/preswotPage";
-
 import olcPage from "./js-file/pages/olcPage";
 import olcScore from "./js-file/pages/olcScore";
-
+import howtoPage from "./js-file/pages/howtoPage";
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
   render() {
@@ -25,9 +24,10 @@ export default class route extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={mainPage} />
+          <Route exact path="/howto" component={howtoPage} />
           <Route exact path="/swot-analysis" component={swotPage} />
           <Route exact path="/swot-analysis2" component={swotPage2} />
-            <Route exact path="/swot-analysis3" component={swotPage3}/>
+          <Route exact path="/swot-analysis3" component={swotPage3} />
           <Route exact path="/swot-info" component={swotInfoPage} />
           <Route exact path="/olc-info" component={olcInfoPage} />
           <Route exact path="/swot-analysis-weakness" component={Weakness} />

@@ -9,7 +9,7 @@ export default class mainPage extends Component {
     super(props);
     // State
     this.state = {
-      btnActive: 1
+      btnActive: 1,
     };
   }
 
