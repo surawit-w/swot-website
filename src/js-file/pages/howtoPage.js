@@ -3,8 +3,10 @@ import "../../stylesheets/components/font.css";
 import "../../stylesheets/components/homeInfo.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-
-export default class howtoPage extends Component {
+import {
+  withRouter
+} from 'react-router-dom'
+class howtoPage extends Component {
   constructor(props) {
     super(props);
 
@@ -185,3 +187,4 @@ export default class howtoPage extends Component {
     );
   }
 }
+export default withRouter(howtoPage)
