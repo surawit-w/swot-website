@@ -3,6 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import logoIcon from "../../images/iconMGT.ico";
 import "../../stylesheets/components/navbar.css";
 import "../../stylesheets/components/font.css";
+import { Link } from "react-router-dom";
 
 import {
   FaUserCircle,
@@ -88,6 +89,7 @@ export default class navbar extends Component {
                   >
                     HOW TO USE
                   </li>
+                  <Link to="/swot-info">sadadsd</Link>
                   <li
                     className="menu-list"
                     onClick={() => (window.location.href = "/swot-info")}
