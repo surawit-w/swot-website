@@ -27,7 +27,7 @@ export default class route extends Component {
     return (
       <Router basename="/swot-website">
         <Route exact path="/" component={mainPage} />
-        <Route path="/howto" component={howtoPage} />
+        <Route exact path="/howto" component={howtoPage} />
         <Route path="/swot-analysis" component={swotPage} />
         <Route path="/swot-analysis2" component={swotPage2} />
         <Route path="/swot-analysis3" component={swotPage3} />
