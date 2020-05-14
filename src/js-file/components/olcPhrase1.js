@@ -107,6 +107,7 @@ export default class olcPhrase1 extends Component {
     
     render() {
         let {textOptionArr} = this.state
+        console.log(textOptionArr)
         return (
             <div className="wrapper-swot-form strength" style={{  padding: '60px', borderRadius: '20px'}}>
                 <h2 style={{fontFamily: 'regular'}}>แบบทดสอบประเมิน OLC ของธุรกิจ</h2>
