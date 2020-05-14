@@ -52,28 +52,28 @@ export default class scorePage extends Component {
         case 0:
           for (let j = 0; j < strengthResult.length; j++) {
             await strengthScore.push(
-              parseFloat(strengthResult[j].optionScore).toFixed(2)
+              parseFloat(strengthResult[j].optionScore).toFixed(3)
             );
           }
           break;
         case 1:
           for (let j = 0; j < weaknessResult.length; j++) {
             await weaknessScore.push(
-              parseFloat(weaknessResult[j].optionScore).toFixed(2)
+              parseFloat(weaknessResult[j].optionScore).toFixed(3)
             );
           }
           break;
         case 2:
           for (let j = 0; j < opportunityResult.length; j++) {
             await opportunityScore.push(
-              parseFloat(opportunityResult[j].optionScore).toFixed(2)
+              parseFloat(opportunityResult[j].optionScore).toFixed(3)
             );
           }
           break;
         case 3:
           for (let j = 0; j < threatResult.length; j++) {
             await threatScore.push(
-              parseFloat(threatResult[j].optionScore).toFixed(2)
+              parseFloat(threatResult[j].optionScore).toFixed(3)
             );
           }
           break;
@@ -104,7 +104,7 @@ export default class scorePage extends Component {
           marginRight: "5%",
         }}
       >
-        <p>{parseFloat(e.optionScore).toFixed(2)}</p>
+        <p>{parseFloat(e.optionScore).toFixed(3)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
         <select
@@ -128,7 +128,6 @@ export default class scorePage extends Component {
       <div style={{ flex: "0 0 70%", marginBottom: "20px" }}>
         <p>
           {e.optionText}
-          {parseFloat(e.optionScore).toFixed(2)}
         </p>
       </div>
 
@@ -140,7 +139,7 @@ export default class scorePage extends Component {
           marginRight: "5%",
         }}
       >
-        <p>{parseFloat(e.optionScore).toFixed(2)}</p>
+        <p>{parseFloat(e.optionScore).toFixed(3)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
         <select
@@ -173,7 +172,7 @@ export default class scorePage extends Component {
           marginRight: "5%",
         }}
       >
-        <p>{parseFloat(e.optionScore).toFixed(2)}</p>
+        <p>{parseFloat(e.optionScore).toFixed(3)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
         <select
@@ -211,7 +210,7 @@ export default class scorePage extends Component {
           marginRight: "5%",
         }}
       >
-        <p>{parseFloat(e.optionScore).toFixed(2)}</p>
+        <p>{parseFloat(e.optionScore).toFixed(3)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
         <select
@@ -262,7 +261,7 @@ export default class scorePage extends Component {
             totalScoreStrength = (
               parseFloat(totalScoreStrength) +
               parseFloat(optionBarScore[j].value) * parseFloat(strengthScore[j])
-            ).toFixed(2);
+            ).toFixed(3);
             // console.log(totalScoreStrength)
           }
           finalScore.push(totalScoreStrength);
@@ -279,7 +278,7 @@ export default class scorePage extends Component {
             totalScoreWeakness = (
               parseFloat(totalScoreWeakness) +
               parseFloat(optionBarScore[j].value) * parseFloat(weaknessScore[j])
-            ).toFixed(2);
+            ).toFixed(3);
             // console.log(totalScoreWeakness)
           }
           finalScore.push(totalScoreWeakness);
@@ -296,7 +295,7 @@ export default class scorePage extends Component {
               parseFloat(totalScoreOpportunity) +
               parseFloat(optionBarScore[j].value) *
                 parseFloat(opportunityScore[j])
-            ).toFixed(2);
+            ).toFixed(3);
             // console.log(totalScoreOpportunity)
           }
           finalScore.push(totalScoreOpportunity);
@@ -313,7 +312,7 @@ export default class scorePage extends Component {
             totalScoreThreat = (
               parseFloat(totalScoreThreat) +
               parseFloat(optionBarScore[j].value) * parseFloat(threatScore[j])
-            ).toFixed(2);
+            ).toFixed(3);
             // console.log(totalScoreThreat)
           }
           finalScore.push(totalScoreThreat);

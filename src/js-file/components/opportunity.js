@@ -9,7 +9,7 @@ export default class opportunity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalScore: parseFloat(0).toFixed(2),
+      totalScore: parseFloat(0).toFixed(3),
       alreadyChecked_arr: [],
       s_option_arr: [
         "s-option1",
@@ -57,7 +57,7 @@ export default class opportunity extends Component {
         0.1,
         0.02,
       ],
-      totalScore: (0.0).toFixed(2),
+      totalScore: (0.0).toFixed(3),
       left_option_arr: [],
       alreadyCheckText_arr: [],
       optionInfoArr: [],
@@ -89,7 +89,7 @@ export default class opportunity extends Component {
         }
       }
       console.log(this.state.optionInfoArr);
-      await this.setState({ totalScore: parseFloat(totalScore).toFixed(2) });
+      await this.setState({ totalScore: parseFloat(totalScore).toFixed(3) });
       console.log(this.state.totalScore);
 
       // If checkbox is unchecked.
@@ -120,7 +120,7 @@ export default class opportunity extends Component {
         }
       }
       console.log(this.state.optionInfoArr);
-      await this.setState({ totalScore: parseFloat(totalScore).toFixed(2) });
+      await this.setState({ totalScore: parseFloat(totalScore).toFixed(3) });
       console.log(this.state.totalScore);
     }
   };
@@ -130,7 +130,7 @@ export default class opportunity extends Component {
     for (var i = 0; i < optionInfoArr.length; i++) {
       optionInfoArr[i].optionScore = parseFloat(
         optionInfoArr[i].optionScore / totalScore
-      ).toFixed(2);
+      ).toFixed(3);
     }
     localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result"));
