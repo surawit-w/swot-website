@@ -25,7 +25,7 @@ import swotolcPage3 from './js-file/pages/swotolcPage3'
 export default class route extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={mainPage} />
           <Route exact path="/howto" component={howtoPage} />
