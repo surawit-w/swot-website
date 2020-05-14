@@ -83,28 +83,28 @@ export default class weakness2 extends Component {
         0.03, //4
         0.02, //5
         0.02, //6
-        0.02, //7
-        0.025, //8
-        0.1, //9
-        0.1, //10
-        0.025, //11
-        0.025, //12
-        0.025, //13
-        0.028, //14
-        0.025, //15
+        0.1, //7
+        0.02, //8
+        0.02, //9
+        0.02, //10
+        0.05, //11
+        0.05, //12
+        0.02, //13
+        0.02, //14
+        0.02, //15
         0.02, //16
-        0.025, //17
+        0.02, //17
         0.02, //18
-        0.028, //19
-        0.025, //20
-        0.025, //21
-        0.025, //22
-        0.025, //23
+        0.02, //19
+        0.02, //20
+        0.02, //21
+        0.02, //22
+        0.1, //23
         0.02, //24
-        0.025, //25
-        0.025, //26
-        0.025, //27
-        0.025, //28
+        0.05, //25
+        0.1, //26
+        0.05, //27
+        0.05, //28
         0.02, //29
         0.02, //30
       ],
@@ -205,7 +205,7 @@ export default class weakness2 extends Component {
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
           <Form style={{ fontFamily: "light" }}>
             <fieldset>
-              <Form.Group as={Row}>
+              <Form.Group as={Row} style={{ fontSize: "1.5em" }}>
                 <Form.Label
                   as="legend"
                   style={{ fontSize: "18px", fontFamily: "regularItalic" }}
@@ -223,8 +223,8 @@ export default class weakness2 extends Component {
                       <div class="box" />
                     </label>
                     <p>
-                      (1)
-                      มีการรับวัตถุดิบที่มาจากทุกแหล่งทำให้ยากต่อการคัดหรองและควบคุมคุณภาพ
+                      (1) กิจการมีระยะเวลาที่จัดตั้งได้ไม่นาน
+                      ทำให้ไม่มีฐานลูกค้า
                     </p>
                   </div>
 
@@ -237,9 +237,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>
-                      (2) ไม่ตรวจคุณภาพเพราะใช้ความไว้เนื้อเชื่อใจจากแหล่งผลิต
-                    </p>
+                    <p>(2) การบริการไม่มีมาตรฐาน</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -251,7 +249,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(3) ไม่มีรูปแบบในการจัดวางคลังสินค้า</p>
+                    <p>(3) สินค้าและบริการสามารถลอกเลียนแบบได้ง่าย</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -263,7 +261,10 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(4) ค่าใช้จ่ายในการซ่อมบำรุงสูง</p>
+                    <p>
+                      (4)
+                      ราคาสินค้าและบริการสูงกว่าคู่แข่งในท้องตลาดประเภทเดียวกัน{" "}
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -275,7 +276,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(5) ใช้กำลังการผลิตไม่เต็มที่</p>
+                    <p>(5) ไม่มีการจัดทำส่วนลดราคาสำหรับลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -287,7 +288,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(6) เทคโนโลยีมีความล้าสมัย</p>
+                    <p>(6) ช่องทางการชำระเงินยังไม่หลากหลา</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -299,10 +300,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>
-                      (7)
-                      สถานที่ผลิตอยู่ในย่านชุมชนทำให้เกิดข้อจำกัดในการขยายกำลังผลิต
-                    </p>
+                    <p>(7) ทำเลที่ตั้งร้านอยู่ในตำแหน่งที่ไม่เหมาะสม</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -315,8 +313,8 @@ export default class weakness2 extends Component {
                       <div class="box" />
                     </label>
                     <p>
-                      (8) สถานที่ในการจัดเก็บสินค้าไม่มีมาตรฐาน
-                      ทั้งด้านอุณหภูมิกรือรบบการนำเข้า-ออก
+                      (8) พื้นที่ภายในร้านไม่เหมาะสม
+                      เพียงพอต่อการให้บริการลูกค้า
                     </p>
                   </div>
 
@@ -329,7 +327,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(9) การจัดเก็บสินค้าไม่เป็นหมวดหมู่ ทำให้ค้นหายาก</p>
+                    <p>(9) ที่จอดรถไม่เพียงพอต่อจำนวนลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -341,7 +339,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(10) กิจการยังไม่เป็นที่รู้จัก</p>
+                    <p>(10) ห้องสุขาไม่สะอาด ไม่สะดวกสบาย</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -353,7 +351,10 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(11) ขาดการทำการประชาสัมพันธ์ที่ดี</p>
+                    <p>
+                      (11)
+                      ไม่มีการจัดทำการตลาดด้านการประชาสัมพันธ์อย่างต่อเนื่อง
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -365,7 +366,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(12) การจัดทำโปรโมชั่นไม่น่าสนใจ</p>
+                    <p>(12) ไม่มีการจัดทำโปรโมชั่นเพื่อดึงดูดลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -377,7 +378,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(13) มีช่องทางการจัดจำหน่ายไม่มากพอ</p>
+                    <p>(13) ไม่มีตราสินค้าที่สร้างความทรงจำให้แก่ลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -389,10 +390,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>
-                      (14)
-                      ตราสินค้าของกิจการยังไม่เป็นที่รู้จักของผู้บริโภคมากนัก
-                    </p>
+                    <p>(14) พนักงานมีจำนวนจำกัด ไม่เพียงพอต่อการบริหารลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -404,7 +402,9 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(15) ไม่มีบริการติดตั้งสินค้าให้กับลูกค้า</p>
+                    <p>
+                      (15) ขาดการทำวิจัยและพัฒนาจึงไม่ทราบความต้องการของลูกค้า
+                    </p>
                   </div>
                   <div className="option-checkbox">
                     <label class="check">
@@ -415,7 +415,10 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(16) ไม่มีการบริการซ่อมหรือรับแลกเปลี่ยนสินค้า</p>
+                    <p>
+                      (16)
+                      ไม่มีการจัดเตรียมสินค้าให้พร้อมต่อการบริการไม่มีการเช็คสินค้าในการบริการอย่างต่อเนื่องทำให้บางครั้งไม่สามารถให้บริการลูกค้าและสูญเสียรายได้
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -427,7 +430,10 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(17) ไม่มีบริการขนส่งสินค้า</p>
+                    <p>
+                      (17)
+                      เครื่องอำนวยความสะดวกของลูกค้ายังไม่เพียงพอต่อความต้องการ
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -439,7 +445,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(18) ทุนในการดำเนินกิจการมีอย่างจำกัด</p>
+                    <p>(18) ไม่มีเอกลักษณ์เป็นของตนเอง</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -451,7 +457,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(19) ไม่มีการบันทึกบัญชีที่เป็นมาตรฐาน</p>
+                    <p>(19) บรรยากาศรอบนอกร้านไม่เหมาะสม มองเห็นได้ยาก</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -463,7 +469,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(20) ระบบบริหารจัดการไม่มีประสิทธิภาพ</p>
+                    <p>(20) ประสบปัญหามลพิษทางกลิ่น</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -475,7 +481,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(21) กิจการขาดระบบบัญชีการเงินที่เป็นมาตรฐาน</p>
+                    <p>(21) สภาพแวดล้อมโดยรอบไม่เหมาะสมกับทางร้าน</p>
                   </div>
                   <div className="option-checkbox">
                     <label class="check">
@@ -486,7 +492,10 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(22) ต้นทุนการผลิตด้่านวัตถุดิบสูง</p>
+                    <p>
+                      (22) พนักงานไม่มีความจงรักภักดีต่อองค์กร
+                      ส่งผลให้มีอัตราลาออกจากงานสูง
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -498,7 +507,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(23) ราคาสินค้าต่ำเกินไป</p>
+                    <p>(23) พนักงานมีจำนวนจำกัด ไม่เพียงพอต่อการบริหารลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -510,7 +519,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(24) ค่าจ้างแรงงานสูง</p>
+                    <p>(24) พนักงานไม่มีความรู้เกี่ยวกับสินค้าที่ขาย</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -522,7 +531,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(25) บุคลาการขาดความรู้เกี่ยวกับเทคโนโลยี</p>
+                    <p>(25) พนักงานไม่เอาใจใส่ในการบริการลูกค้า</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -534,7 +543,9 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(26) ผู้บริหารมีความรู้และความเชี่ยวชาญอย่างจำกัด</p>
+                    <p>
+                      (26) ผู้ประกอบการขาดความรู้ความเข้าใจในด้านการบริหารธุรกิจ
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -546,7 +557,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(27) ขาดแคลนแรงงาน</p>
+                    <p>(27) มีต้นทุนในการดำเนินงานอย่างจำกัด</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -558,7 +569,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(28) ใช้ระยะเวลานานในการพัฒนาทักษะฝีมือของแรงงาน</p>
+                    <p>(28) ธุรกิจมีต้นทุนสูง</p>
                   </div>
                   <div className="option-checkbox">
                     <label class="check">
@@ -569,10 +580,7 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>
-                      (29) พนักงานส่วนใหญ่เป็นพนักงานระดับแรงงาน
-                      ทำให้ต้องใช้เวลาในการพัฒนาฝีมือ
-                    </p>
+                    <p>(29) รายได้ไม่แน่นอน</p>
                   </div>
                   <div className="option-checkbox">
                     <label class="check">
@@ -583,41 +591,10 @@ export default class weakness2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(30) ใช้เงินลงทุนสูงในการพัฒนาผลิต</p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option31"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(31) ไม่มีทุนในการวิจัยและพัฒนาผลิตภัณฑ์</p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option32"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(32) กิจการอยู่ห่างไกลกับแหล่งวัตถุดิบ</p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option33"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(33) อำนาจต่อรองของซับพลายเออร์สูง</p>
+                    <p>
+                      (30) ขาดการวางแผนในการประกอบธุรกิจ
+                      ทำให้ต้นทุนของการประกอบธุรกิจมีจำนวนมาก
+                    </p>
                   </div>
                 </Col>
               </Form.Group>

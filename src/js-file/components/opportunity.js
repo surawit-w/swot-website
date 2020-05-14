@@ -154,7 +154,7 @@ export default class opportunity extends Component {
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
           <Form style={{ fontFamily: "light" }}>
             <fieldset>
-              <Form.Group as={Row}>
+              <Form.Group as={Row} style={{ fontSize: "1.5em" }}>
                 <Form.Label
                   as="legend"
                   style={{ fontSize: "18px", fontFamily: "regularItalic" }}

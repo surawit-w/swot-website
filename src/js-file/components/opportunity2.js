@@ -19,44 +19,18 @@ export default class opportunity2 extends Component {
         "s-option5",
         "s-option6",
         "s-option7",
-        "s-option8",
-        "s-option9",
-        "s-option10",
-        "s-option11",
-        "s-option12",
-        "s-option13",
       ],
       textOptionArr: [
-        "1)	ภาครัฐส่งเสริมการลงทุนและการพัฒนา",
-        "2)	การแข่งขันในตลาดยังมีน้อย",
-        "3)	ยังไม่มีผู้ประกอบการที่ผลิตผลิตภัณฑ์ประเภทเดียวกันในเขตพื้นที่",
-        "4)	อำนาจต่อรองกับบริษัทโลจิสติกส์สูง",
-        "5)	สินค้าที่ผลิตอยู่ในช่วงเติบโต",
-        "6)	ผู้บริโภคในตลาดมีทรรศนะคติที่ดีต่อสินค้าที่ผลิต",
-        "7)	คู่แข่งขัน ไม่มีมาตรฐานในการผลิต ขาดน่าเชื่อถือ",
-        "8)	มีคนกลาง และตัวแทนในการจำหน่ายจำนวนมาก ",
-        "9)	สินค้าที่บริการกำลังเป็นที่นิยมอย่างมากในตลาด ",
-        "10)	มีเทคโนโลยีหรือวิชาการใหม่ที่เอื้ออำนวยประโยชน์ต่อการผลิต",
-        "11)	ความก้าวหน้าเทคโนโลยี ทำให้ผู้บริโภคเข้าถึงข้อมูลและเชื่อมต่อถึงกันไ",
-        "12)	การเลือกใช้วัตถุดิบที่เป็นมิตรต่อสิ่งแวดล้อมทำให้ได้รับการยอมรับจากผู้บริโภค ",
-        "13)	การเปิด AEC ทำให้ตลาดกว้างขึ้น ",
+        "1)	ได้รับการส่งเสริมจากภาครัฐ  ",
+        "2)	ธุรกิจที่บริการมีอัตราเจริญเติบโตสูง",
+        "3)	พฤติกรรมลูกค้าที่เปลี่ยนไป ทำให้เกิดไอเดียการทำธุรกิจแบบใหม่",
+        "4)	ค่านิยมของคนไทย ที่เน้นใช้บริการของร้าน ความสะดวก และ บริการที่ดี ทำให้เกิดความประทับใจ และ กลับมาใช้บริการอีก",
+        "5)	การสื่อสารผ่านโลกออนไลน์ที่รวดเร็ว หากกิจการมีเอกลักษณ์ และบริการที่ดี ลูกค้าสามารถมีการบอกต่อกันได้อย่างรวดเร็ว  ",
+        "6)	ปัจจุบันมีเทคโนโลยีที่ทันสมัย และ เอื้อต่อการให้บริการลูกค้า",
+        "7)	สถานที่ตั้งของธุรกิจมีสถานที่ท่องเที่ยวที่สวยงามทั้งด้านธรรมชาติและด้านวัฒนธรรม",
       ],
       option_arr: [],
-      score_arr: [
-        0.01,
-        0.1,
-        0.15,
-        0.08,
-        0.02,
-        0.08,
-        0.08,
-        0.08,
-        0.1,
-        0.1,
-        0.08,
-        0.1,
-        0.02,
-      ],
+      score_arr: [0.1, 0.12, 0.15, 0.14, 0.18, 0.2, 0.11],
       totalScore: (0.0).toFixed(3),
       left_option_arr: [],
       alreadyCheckText_arr: [],
@@ -154,7 +128,7 @@ export default class opportunity2 extends Component {
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
           <Form style={{ fontFamily: "light" }}>
             <fieldset>
-              <Form.Group as={Row}>
+              <Form.Group as={Row} style={{ fontSize: "1.5em" }}>
                 <Form.Label
                   as="legend"
                   style={{ fontSize: "18px", fontFamily: "regularItalic" }}
@@ -171,7 +145,7 @@ export default class opportunity2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(1) ภาครัฐส่งเสริมการลงทุนและการพัฒนา </p>
+                    <p>(1) ได้รับการส่งเสริมจากภาครัฐ </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -183,7 +157,7 @@ export default class opportunity2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(2) การแข่งขันในตลาดยังมีน้อย </p>
+                    <p>(2) ธุรกิจที่บริการมีอัตราเจริญเติบโตสูง</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -196,8 +170,8 @@ export default class opportunity2 extends Component {
                       <div class="box" />
                     </label>
                     <p>
-                      (3)
-                      ยังไม่มีผู้ประกอบการที่ผลิตผลิตภัณฑ์ประเภทเดียวกันในเขตพื้นที่{" "}
+                      (3) พฤติกรรมลูกค้าที่เปลี่ยนไป
+                      ทำให้เกิดไอเดียการทำธุรกิจแบบใหม่{" "}
                     </p>
                   </div>
 
@@ -210,7 +184,10 @@ export default class opportunity2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(4) อำนาจต่อรองกับบริษัทโลจิสติกส์สูง </p>
+                    <p>
+                      (4) ค่านิยมของคนไทย ที่เน้นใช้บริการของร้าน ความสะดวก และ
+                      บริการที่ดี ทำให้เกิดความประทับใจ และ กลับมาใช้บริการอีก{" "}
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -222,7 +199,11 @@ export default class opportunity2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(5) สินค้าที่ผลิตอยู่ในช่วงเติบโต </p>
+                    <p>
+                      (5) การสื่อสารผ่านโลกออนไลน์ที่รวดเร็ว
+                      หากกิจการมีเอกลักษณ์ และบริการที่ดี
+                      ลูกค้าสามารถมีการบอกต่อกันได้อย่างรวดเร็ว
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -234,7 +215,10 @@ export default class opportunity2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(6) ผู้บริโภคในตลาดมีทรรศนะคติที่ดีต่อสินค้าที่ผลิต </p>
+                    <p>
+                      (6) ปัจจุบันมีเทคโนโลยีที่ทันสมัย และ
+                      เอื้อต่อการให้บริการลูกค้า{" "}
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -246,88 +230,10 @@ export default class opportunity2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(7) คู่แข่งขัน ไม่มีมาตรฐานในการผลิต ขาดน่าเชื่อถือ </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option8"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(8) มีคนกลาง และตัวแทนในการจำหน่ายจำนวนมาก </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option9"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(9) สินค้าที่บริการกำลังเป็นที่นิยมอย่างมากในตลาด</p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option10"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
                     <p>
-                      (10)
-                      มีเทคโนโลยีหรือวิชาการใหม่ที่เอื้ออำนวยประโยชน์ต่อการผลิต
+                      (7)
+                      สถานที่ตั้งของธุรกิจมีสถานที่ท่องเที่ยวที่สวยงามทั้งด้านธรรมชาติและด้านวัฒนธรรม
                     </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option11"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>
-                      (11) ความก้าวหน้าเทคโนโลยี
-                      ทำให้ผู้บริโภคเข้าถึงข้อมูลและเชื่อมต่อถึงกันได้{" "}
-                    </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option12"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>
-                      (12)
-                      การเลือกใช้วัตถุดิบที่เป็นมิตรต่อสิ่งแวดล้อมทำให้ได้รับการยอมรับจากผู้บริโภค{" "}
-                    </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option13"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(13) การเปิด AEC ทำให้ตลาดกว้างขึ้น </p>
                   </div>
                 </Col>
               </Form.Group>

@@ -34,7 +34,7 @@ export default class swotPage2 extends Component {
     });
   };
 
-  myStrengthCallback = async (dataFromChild) => {
+  myStrengthCallback2 = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
       isStrength2: false,
@@ -44,7 +44,7 @@ export default class swotPage2 extends Component {
     });
     await this.state.result_arr.push(dataFromChild);
   };
-  myWeaknessCallback = async (dataFromChild) => {
+  myWeaknessCallback2 = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
       isWeakness2: false,
@@ -54,7 +54,7 @@ export default class swotPage2 extends Component {
     });
     await this.state.result_arr.push(dataFromChild);
   };
-  myOpportunityCallback = async (dataFromChild) => {
+  myOpportunityCallback2 = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
       isOpportunity2: false,
@@ -64,7 +64,7 @@ export default class swotPage2 extends Component {
     });
     await this.state.result_arr.push(dataFromChild);
   };
-  myThreatCallback = async (dataFromChild) => {
+  myThreatCallback2 = async (dataFromChild) => {
     console.log(dataFromChild);
     await this.setState({
       isOpportunity2: false,
@@ -73,7 +73,7 @@ export default class swotPage2 extends Component {
       progressColor: "danger",
     });
     await this.state.result_arr.push(dataFromChild);
-    localStorage.setItem("swot-result", JSON.stringify(this.state.result_arr));
+    localStorage.setItem("swot-result2", JSON.stringify(this.state.result_arr));
 
     document.location.href = "/swot-score2";
   };

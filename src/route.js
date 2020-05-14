@@ -9,11 +9,13 @@ import Weakness from "./js-file/components/weakness";
 import Opportunity from "./js-file/pages/opporPage";
 import Threat from "./js-file/components/threat";
 import scorePage from "./js-file/pages/scorePage";
+import scorePage2 from "./js-file/pages/scorePage2";
 import resultPage from "./js-file/pages/resultPage";
+import resultPage2 from "./js-file/pages/resultPage2";
 import preswot from "./js-file/pages/preswotPage";
 
-import olcPage from './js-file/pages/olcPage'
-import olcScore from './js-file/pages/olcScore'
+import olcPage from "./js-file/pages/olcPage";
+import olcScore from "./js-file/pages/olcScore";
 
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
@@ -34,10 +36,12 @@ export default class route extends Component {
           />
           <Route exact path="/swot-analysis-threat" component={Threat} />
           <Route exact path="/swot-score" component={scorePage} />
+          <Route exact path="/swot-score2" component={scorePage2} />
           <Route exact path="/swot-result" component={resultPage} />
+          <Route exact path="/swot-result2" component={resultPage2} />
           <Route exact path="/pre-swot" component={preswot} />
-            <Route exact path="/olc-analysis" component={olcPage}/>
-            <Route exact path="/olc-score" component={olcScore}/>
+          <Route exact path="/olc-analysis" component={olcPage} />
+          <Route exact path="/olc-score" component={olcScore} />
         </Switch>
       </Router>
     );
