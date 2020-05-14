@@ -5,7 +5,7 @@ import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
 
-export default class opportunity extends Component {
+export default class opportunity2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -132,8 +132,8 @@ export default class opportunity extends Component {
         optionInfoArr[i].optionScore / totalScore
       ).toFixed(2);
     }
-    localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
-    let details = JSON.parse(localStorage.getItem("strength_result"));
+    localStorage.setItem("strength_result2", JSON.stringify(optionInfoArr));
+    let details = JSON.parse(localStorage.getItem("strength_result2"));
     console.log(details); // ได้ค่ามาละ 5555
     this.props.callbackFromParent(details);
     window.scrollTo(0, 0);
@@ -333,6 +333,9 @@ export default class opportunity extends Component {
               </Form.Group>
             </fieldset>
           </Form>
+          <p
+            style={{ textAlign: "end" }}
+          >{`Total = ${this.state.totalScore}`}</p>
         </div>
         <div id="buttonNextCenter">
           <button onClick={this.handleSubmit} id="buttonNext">

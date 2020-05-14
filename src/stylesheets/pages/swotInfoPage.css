@@ -86,12 +86,22 @@ body {
   right: 0;
 }
 
+.button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
 .swot-infobox > p {
   font-family: "exlight";
   color: #f16f20;
   max-width: 70%;
   text-align: justify;
   font-size: 2rem;
+}
+.footer {
+  top: 0;
+  bottom: 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -106,7 +116,7 @@ body {
     margin-bottom: 20px;
   }
   .swot-infobox > p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     max-width: 100%;
   }
   .swot-infobox > button {
@@ -121,14 +131,16 @@ body {
   }
 
   .swot-infobox > p {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     max-width: 100%;
   }
-}
-
-.footer {
-  height: 100%;
-  bottom: 0;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -50px;
+    transition: 0.5s;
+    display: none;
+  }
 }

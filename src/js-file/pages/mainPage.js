@@ -8,7 +8,9 @@ export default class mainPage extends Component {
   constructor(props) {
     super(props);
     // State
-    this.state = {};
+    this.state = {
+      btnActive: 1
+    };
   }
 
   // Before render
@@ -16,11 +18,12 @@ export default class mainPage extends Component {
 
   // Render elements
   render() {
+    let { btnActive } = this.state;
     console.log(this.props);
 
     return (
       <div>
-        <Navbar />
+        <Navbar home={btnActive} />
 
         <HomeInfo />
 

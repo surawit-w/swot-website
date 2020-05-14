@@ -1,3 +1,86 @@
+#buttonNextCenter {
+  display: flex;
+  justify-content: center;
+}
+#buttonNext {
+  display: inline-block;
+  background-color: #e8b278;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: "medium";
+}
+#buttonNext span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#buttonNext span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#buttonNext:hover {
+  background-color: #f16f20;
+}
+#buttonNext:hover span {
+  padding-right: 25px;
+}
+#buttonNext:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#buttonNext2 {
+  display: inline-block;
+  background-color: #363c54;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: "medium";
+}
+#buttonNext2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#buttonNext2 span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#buttonNext2:hover {
+  background-color: #e8b278;
+}
+#buttonNext2:hover span {
+  padding-right: 25px;
+}
+#buttonNext2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 .content {
   min-height: calc(100vh - 250px);
 }
@@ -91,7 +174,7 @@
 .progressBarInfo {
   text-align: center;
   width: 100%;
-  font-family: 'light';
+  font-family: "light";
   font-size: 18px;
   margin-bottom: 1%;
 }
