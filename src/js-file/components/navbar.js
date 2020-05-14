@@ -90,7 +90,7 @@ export default class navbar extends Component {
                   </li>
                   <li
                     className="menu-list"
-                    onClick={() => (window.location.href = "/swot-website/swot-info")}
+                    onClick={() => (window.location.href = "/swot-info")}
                     style={
                       swot === 2 && btnActive === 0
                         ? { color: "#f16f20" }
