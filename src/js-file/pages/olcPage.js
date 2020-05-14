@@ -26,7 +26,7 @@ export default class olcPage extends Component {
       allTotalScore: [],
       totalResult: [],
       optionResult: [],
-      btnActive: "3",
+      btnActive: 3,
     };
   }
 

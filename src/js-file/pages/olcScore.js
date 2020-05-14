@@ -231,7 +231,6 @@ export default class olcScore extends Component {
         console.log(Object.keys(this.refs).length)
         let optionResult = JSON.parse(localStorage.getItem('optionResult'))
 		console.log(optionResult)
-		if(firstSubmit) {
 			for (var i = 0; i < 5; i++) {
 				var j;
 				switch (i) {
@@ -341,8 +340,15 @@ export default class olcScore extends Component {
 			}
 			if(this.state.checkFinal.length === 1) {
 				console.log(finalScore)
-				localStorage.setItem('finalScoreOLC', JSON.stringify(finalScore))
-				document.location.href = "/olc-result"
+                localStorage.setItem('finalScoreOLC', JSON.stringify(finalScore))
+                if (localStorage.getItem('swotolcBoolean') === 'true') {
+                    console.log("1")
+                    await localStorage.setItem('swotolcBoolean', false)
+                    document.location.href = "/swotolc-result"
+                } else if(localStorage.getItem('swotolcBoolean') === 'false') {
+                    console.log("2")
+                    document.location.href = "/olc-result"
+                }
 			} else if (this.state.checkFinal.length > 1) {
 				await this.setState({
 					OLC1isTrue: OLC1isTrue2,
@@ -366,7 +372,6 @@ export default class olcScore extends Component {
 			console.log(OLC3Result2)
 			console.log(OLC4Result2)
 			console.log(OLC5Result2)
-		}
 		console.log(this.state.checkFinal)
 		console.log(finalScore)
 		localStorage.setItem('finalScoreOLC', JSON.stringify(finalScore))

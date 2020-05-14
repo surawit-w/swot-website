@@ -122,10 +122,17 @@ export default class strength3 extends Component {
             alreadyCheckText_arr: [],
             optionInfoArr: [],
             type: "strength",
-            color: "#f6f6f6",
+            color: "#f6f6f6"
         }
     }
     
+    componentDidMount = async() => {
+        console.log(this.props.swotolc)
+        localStorage.setItem('swotolcBoolean', false)
+        if(this.props.swotolc) {
+            localStorage.setItem('swotolcBoolean', true)
+        }
+    }
     // Function that handler when click button to check/uncheck box.
     handleClick = async (button) => {
         this.state.left_score_arr = []                                              // Left Choice Array.
