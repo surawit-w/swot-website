@@ -21,17 +21,18 @@ import preswotolcPage from "./js-file/pages/preswotolcPage";
 import swotolcPage from "./js-file/pages/swotolcPage";
 import swotolcPage2 from "./js-file/pages/swotolcPage2";
 import swotolcPage3 from "./js-file/pages/swotolcPage3";
-import scorePage3 from './js-file/pages/scorePage3';
-import resultPage3 from './js-file/pages/resultPage3';
+import scorePage3 from "./js-file/pages/scorePage3";
+import resultPage3 from "./js-file/pages/resultPage3";
+import olcResult from "./js-file/pages/olcResult";
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
   render() {
-    console.log(process.env.PUBLIC_URL + '/howto')
+    console.log(process.env.PUBLIC_URL + "/howto");
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <Route exact path='/' component={mainPage} />
-        <Route path={'/howto'} component={howtoPage} />
-        <Route path="/swot-analysis" component={swotPage}/>
+        <Route exact path="/" component={mainPage} />
+        <Route path={"/howto"} component={howtoPage} />
+        <Route path="/swot-analysis" component={swotPage} />
         <Route path="/swot-analysis2" component={swotPage2} />
         <Route path="/swot-analysis3" component={swotPage3} />
         <Route path="/swot-info" component={swotInfoPage} />
@@ -52,6 +53,7 @@ export default class route extends Component {
         <Route path="/swotolc-analysis3" component={swotolcPage3} />
         <Route path="/swot-result3" component={resultPage3} />
         <Route path="/swot-score3" component={scorePage3} />
+        <Route path="/olc-result" component={olcResult} />
       </Router>
     );
   }
