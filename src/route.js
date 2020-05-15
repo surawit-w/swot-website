@@ -28,12 +28,12 @@ import swotolcResult from './js-file/pages/swotolcResult';
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
   render() {
-    console.log(process.env.PUBLIC_URL + '/howto')
+    console.log(process.env.PUBLIC_URL + "/howto");
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <Route exact path='/' component={mainPage} />
-        <Route path={'/howto'} component={howtoPage} />
-        <Route path="/swot-analysis" component={swotPage}/>
+        <Route exact path="/" component={mainPage} />
+        <Route path={"/howto"} component={howtoPage} />
+        <Route path="/swot-analysis" component={swotPage} />
         <Route path="/swot-analysis2" component={swotPage2} />
         <Route path="/swot-analysis3" component={swotPage3} />
         <Route path="/swot-info" component={swotInfoPage} />

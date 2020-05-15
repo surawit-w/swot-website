@@ -93,7 +93,7 @@ export default class olcResult extends Component {
                   fontFamily: "light",
                   color: "#f16f20",
                   fontSize: "1.8em",
-                  textAlign: "justify",
+                  textAlign: "left",
                   margin: "0",
                 }}
               >
@@ -153,6 +153,7 @@ export default class olcResult extends Component {
             ทำแบบประเมินSWOT+OLC
           </button>
         </div>
+        <Footer />
       </div>
     );
   }
