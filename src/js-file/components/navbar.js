@@ -15,8 +15,8 @@ class navbar extends Component {
     }
     
     render() {
-        let { btnActive } = this.state;
-        let { home, swot } = this.props;
+        let { btnActive } = this.state
+        let { home, swot } = this.props
         return (
             <div className="navbar-container">
                 <Container fluid={true}>
