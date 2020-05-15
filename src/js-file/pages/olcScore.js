@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import "../../stylesheets/pages/swotPage.css";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 class olcScore extends Component {
   constructor(props) {
@@ -131,7 +131,14 @@ class olcScore extends Component {
       <div style={{ flex: "0 0 80%" }}>
         <p>{e.optionText}</p>
       </div>
-      <div style={{ flex: "0 0 10%" }}>
+      <div
+        style={{
+          flex: "0 0 10%",
+          color: "#e8b278",
+          opacity: "0.5",
+          marginRight: "5%",
+        }}
+      >
         <p>{parseFloat(e.optionScore).toFixed(2)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
@@ -156,7 +163,14 @@ class olcScore extends Component {
       <div style={{ flex: "0 0 80%" }}>
         <p>{e.optionText}</p>
       </div>
-      <div style={{ flex: "0 0 10%" }}>
+      <div
+        style={{
+          flex: "0 0 10%",
+          color: "#e8b278",
+          opacity: "0.5",
+          marginRight: "5%",
+        }}
+      >
         <p>{parseFloat(e.optionScore).toFixed(2)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
@@ -215,7 +229,14 @@ class olcScore extends Component {
       <div style={{ flex: "0 0 80%" }}>
         <p>{e.optionText}</p>
       </div>
-      <div style={{ flex: "0 0 10%" }}>
+      <div
+        style={{
+          flex: "0 0 10%",
+          color: "#e8b278",
+          opacity: "0.5",
+          marginRight: "5%",
+        }}
+      >
         <p>{parseFloat(e.optionScore).toFixed(2)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
@@ -240,7 +261,14 @@ class olcScore extends Component {
       <div style={{ flex: "0 0 80%" }}>
         <p>{e.optionText}</p>
       </div>
-      <div style={{ flex: "0 0 10%" }}>
+      <div
+        style={{
+          flex: "0 0 10%",
+          color: "#e8b278",
+          opacity: "0.5",
+          marginRight: "5%",
+        }}
+      >
         <p>{parseFloat(e.optionScore).toFixed(2)}</p>
       </div>
       <div style={{ flex: "0 0 10%" }}>
@@ -438,12 +466,12 @@ class olcScore extends Component {
       if (localStorage.getItem("swotolcBoolean") === "true") {
         console.log("1");
         await localStorage.setItem("swotolcBoolean", false);
-        this.props.history.push('/swotolc-result')
-         window.scrollTo(0, 0)
+        this.props.history.push("/swotolc-result");
+        window.scrollTo(0, 0);
       } else if (localStorage.getItem("swotolcBoolean") === "false") {
         console.log("2");
-        this.props.history.push('/olc-result')
-        window.scroll(0,0)
+        this.props.history.push("/olc-result");
+        window.scroll(0, 0);
       }
     } else if (this.state.checkFinal.length > 1) {
       await this.setState({
@@ -557,4 +585,4 @@ class olcScore extends Component {
   }
 }
 
-export default withRouter(olcScore)
+export default withRouter(olcScore);
