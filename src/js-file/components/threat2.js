@@ -4,7 +4,7 @@ import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 export default class threat2 extends Component {
   constructor(props) {
@@ -110,14 +110,13 @@ export default class threat2 extends Component {
     localStorage.setItem("strength_result2", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result2"));
     console.log(details); // ได้ค่ามาละ 5555
-    if(details.length === 0) {
+    if (details.length === 0) {
       Swal.fire({
-        icon: 'error',
-        title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
+        icon: "error",
+        title: "เลือกคำตอบอย่างน้อยหนึ่งข้อ",
         timer: 1500,
-        showConfirmButton: false
-      }).then((result) => {
-      })
+        showConfirmButton: false,
+      }).then((result) => {});
     } else if (details.length > 0) {
       this.props.callbackFromParent(details);
       window.scrollTo(0, 0);
@@ -136,7 +135,7 @@ export default class threat2 extends Component {
       >
         <h2 style={{ fontFamily: "regular" }}>Threat (อุปสรรค)</h2>
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
-          <Form style={{ fontFamily: "light" }}>
+          <Form style={{ fontFamily: "exlight" }}>
             <fieldset>
               <Form.Group as={Row} style={{ fontSize: "1.5em" }}>
                 <Form.Label
@@ -155,7 +154,11 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(1) สถานการณ์ทางการเมืองที่ไม่แน่นอนในปัจจุบัน ทำให้ความเชื่อมั่นของผู้บริโภคลดลง เนื่องจากต้องเตรียมตัวตอบรับสถานการณ์ต่าง ๆ  </p>
+                    <p>
+                      (1) สถานการณ์ทางการเมืองที่ไม่แน่นอนในปัจจุบัน
+                      ทำให้ความเชื่อมั่นของผู้บริโภคลดลง
+                      เนื่องจากต้องเตรียมตัวตอบรับสถานการณ์ต่าง ๆ{" "}
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -167,7 +170,10 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(2) มีการแข่งขันค่อนข้างสูง เพราะเป็นธุรกิจที่มีความนิยมสูง </p>
+                    <p>
+                      (2) มีการแข่งขันค่อนข้างสูง
+                      เพราะเป็นธุรกิจที่มีความนิยมสูง{" "}
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -179,7 +185,9 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(3) ในปัจจุบันประสบปัญหาเศรษฐกิจตกต่ำ ทำให้การลงทุนชะลอตัว</p>
+                    <p>
+                      (3) ในปัจจุบันประสบปัญหาเศรษฐกิจตกต่ำ ทำให้การลงทุนชะลอตัว
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -191,7 +199,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(4) อำนาจการต่อรองของลูกค้าสูง  </p>
+                    <p>(4) อำนาจการต่อรองของลูกค้าสูง </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -203,7 +211,9 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(5) ปัญหาภัยพิบัติในพื้นที่ ที่ส่งผลกระทบโดยตรงต่อธุรกิจ</p>
+                    <p>
+                      (5) ปัญหาภัยพิบัติในพื้นที่ ที่ส่งผลกระทบโดยตรงต่อธุรกิจ
+                    </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -216,8 +226,8 @@ export default class threat2 extends Component {
                       <div class="box" />
                     </label>
                     <p>
-                      (6)
-                      สถานการณ์โรคระบาด เชื้อไวรัส COVID-19 ทำให้ผู้บริโภคไม่กล้าออกนอกบ้านไปในพื้นที่คนพลุกพล่าน{" "}
+                      (6) สถานการณ์โรคระบาด เชื้อไวรัส COVID-19
+                      ทำให้ผู้บริโภคไม่กล้าออกนอกบ้านไปในพื้นที่คนพลุกพล่าน{" "}
                     </p>
                   </div>
 
@@ -230,7 +240,10 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(7) สถานการณ์ความรุนแรงที่เกิดขึ้นในห้างสรรพสินค้าชื่อดัง ทำให้ผู้บริโภคตื่นกลัวในการออกไปในพื้นที่คนพลุกพล่าน </p>
+                    <p>
+                      (7) สถานการณ์ความรุนแรงที่เกิดขึ้นในห้างสรรพสินค้าชื่อดัง
+                      ทำให้ผู้บริโภคตื่นกลัวในการออกไปในพื้นที่คนพลุกพล่าน{" "}
+                    </p>
                   </div>
                 </Col>
               </Form.Group>

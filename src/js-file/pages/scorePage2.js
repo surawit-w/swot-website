@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import "../../stylesheets/pages/swotPage.css";
-
+import Footer from "../components/footer";
 export default class scorePage2 extends Component {
   constructor(props) {
     super(props);
@@ -320,14 +320,14 @@ export default class scorePage2 extends Component {
     }
     console.log(finalScore);
     localStorage.setItem("finalScore2", JSON.stringify(finalScore));
-    if (localStorage.getItem('swotolcBoolean') === 'true') {
-      console.log("1")
-      localStorage.setItem('swot-result-page', 2)
-      this.props.history.push('/olc-analysis');
-      window.scrollTo(0, 0)
-    } else if(localStorage.getItem('swotolcBoolean') === 'false') {
-      console.log("2")
-      this.props.history.push('/swot-result2');
+    if (localStorage.getItem("swotolcBoolean") === "true") {
+      console.log("1");
+      localStorage.setItem("swot-result-page", 2);
+      this.props.history.push("/olc-analysis");
+      window.scrollTo(0, 0);
+    } else if (localStorage.getItem("swotolcBoolean") === "false") {
+      console.log("2");
+      this.props.history.push("/swot-result2");
       window.scrollTo(0, 0);
     }
   };
@@ -363,6 +363,10 @@ export default class scorePage2 extends Component {
                 justifyContent: "center",
               }}
             >
+              <p style={{ color: "#e8b278" }}>
+                ให้ท่านกำหนดคะแนนปัจจัยต่อไปนี้ โดยค่าคะแนนอยู่ที่ 1-5
+                ตามระดับผลกระทบที่เกิดขึ้นภายในธุรกิจของท่าน
+              </p>
               <p style={{ color: "#e8b278" }}>Strength(จุดแข็ง)</p>
               {strengthResult.map(this.renderStrengthResult)}
 
@@ -385,13 +389,14 @@ export default class scorePage2 extends Component {
               <button
                 onClick={this.handleSubmit}
                 id="buttonNext"
-                style={{ marginBottom: "5%", width: "30%" }}
+                style={{ marginBottom: "5%" }}
               >
                 ส่งแบบประเมิน
               </button>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

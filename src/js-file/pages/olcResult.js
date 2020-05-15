@@ -92,9 +92,10 @@ export default class olcResult extends Component {
                 style={{
                   fontFamily: "light",
                   color: "#f16f20",
-                  fontSize: "1.8em",
+
                   textAlign: "left",
                   margin: "0",
+                  padding: "0",
                 }}
               >
                 {this.state.modeOlc}
@@ -104,54 +105,39 @@ export default class olcResult extends Component {
           </div>
         </div>
 
-        <div id="buttonNextCenter" style={{}}>
-          <button
-            onClick={() => {
-              this.props.history.push("/swot-info");
-              window.scrollTo(0, 0);
-            }}
-            // onClick={(event) => (window.location.href = "/swot-info")}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
-            }}
-          >
-            ทำแบบประเมินSWOT
-          </button>
-
-          <button
-            onClick={() => {
-              this.props.history.push("/olc-info");
-              window.scrollTo(0, 0);
-            }}
-            // onClick={(event) => (window.location.href = "/swot-info")}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
-            }}
-          >
-            ทำแบบประเมินOLC
-          </button>
-
-          <button
-            onClick={() => {
-              this.props.history.push("/pre-swotolc");
-              window.scrollTo(0, 0);
-            }}
-            // onClick={(event) => (window.location.href = "/swot-info")}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
-            }}
-          >
-            ทำแบบประเมินSWOT+OLC
-          </button>
+        <div className="home-button" style={{ padding: "5%" }}>
+          <div className="buttons">
+            <button
+              className="button-swot "
+              id="button-swot"
+              onClick={() => {
+                this.props.history.push("/swot-info");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน SWOT
+            </button>
+            <button
+              className="button-olc"
+              id="button-olc"
+              onClick={() => {
+                this.props.history.push("/olc-info");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน OLC
+            </button>
+            <button
+              className="button-both"
+              id="button-both"
+              onClick={() => {
+                this.props.history.push("/pre-swotolc");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน SWOT และ OLC
+            </button>
+          </div>
         </div>
         <Footer />
       </div>

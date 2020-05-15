@@ -24,7 +24,7 @@ div.form-check {
   margin: 60px;
 }
 select {
-    background-color: white;
+  background-color: white;
 }
 .wrapper-swot-form.strength {
   background-color: #363c54;
@@ -64,12 +64,69 @@ select {
 .option-checkbox > p {
   margin-left: 16px;
 }
+.resultpage > p {
+  font-size: 1.5em;
+}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
   .graph-swot {
     width: 100% !important;
   }
+
+  .resultpage > p {
+    font-size: 0.9em;
+  }
+  .wrapper-swot-form.strength {
+    background-color: #363c54;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    color: #f6f6f6;
+    font-size: 0.7em;
+    font-family: "light";
+    margin: 5% !important;
+    padding: 5% !important;
+    text-align: left;
+  }
+
+  .wrapper-swot-form.weakness {
+    background-color: #363c54;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    color: #f6f6f6;
+    font-size: 0.7em;
+    font-family: "light";
+    margin: 5% !important;
+    padding: 5% !important;
+    text-align: left;
+  }
+  .wrapper-swot-form.opportunity {
+    background-color: #363c54;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    color: #f6f6f6;
+    font-size: 0.7em;
+    font-family: "light";
+    margin: 5% !important;
+    padding: 5% !important;
+    text-align: left;
+  }
+
+  .wrapper-swot-form.threat {
+    background-color: #363c54;
+    box-shadow: 0 0 5px rgb(216, 216, 216);
+    color: #f6f6f6;
+    font-size: 0.7em;
+    font-family: "light";
+    margin: 5% !important;
+    padding: 5% !important;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  .div.col {
+    padding: 0% !important;
+  }
 }
+
 @media only screen and (min-width: 768px) {
   .graph-swot {
     width: 80% !important;

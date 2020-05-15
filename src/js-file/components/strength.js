@@ -4,7 +4,7 @@ import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 export default class strength extends Component {
   constructor(props) {
@@ -171,13 +171,13 @@ export default class strength extends Component {
       color: "#f6f6f6",
     };
   }
-  componentDidMount = async() => {
-        console.log(this.props.swotolc)
-        localStorage.setItem('swotolcBoolean', false)
-        if(this.props.swotolc) {
-            localStorage.setItem('swotolcBoolean', true)
-        }
+  componentDidMount = async () => {
+    console.log(this.props.swotolc);
+    localStorage.setItem("swotolcBoolean", false);
+    if (this.props.swotolc) {
+      localStorage.setItem("swotolcBoolean", true);
     }
+  };
   handleClick = async (button) => {
     this.state.left_score_arr = [];
     let checkedArr = this.state.alreadyChecked_arr;
@@ -248,14 +248,13 @@ export default class strength extends Component {
     localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result"));
     console.log(details); // ได้ค่ามาละ 5555
-    if(details.length === 0) {
+    if (details.length === 0) {
       Swal.fire({
-        icon: 'error',
-        title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
+        icon: "error",
+        title: "เลือกคำตอบอย่างน้อยหนึ่งข้อ",
         timer: 1500,
-        showConfirmButton: false
-      }).then((result) => {
-      })
+        showConfirmButton: false,
+      }).then((result) => {});
     } else if (details.length > 0) {
       this.props.callbackFromParent(details);
       window.scrollTo(0, 0);
@@ -270,7 +269,7 @@ export default class strength extends Component {
       >
         <h2 style={{ fontFamily: "regular" }}>Strength (จุดแข็ง)</h2>
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
-          <Form style={{ fontFamily: "light" }}>
+          <Form style={{ fontFamily: "exlight" }}>
             <fieldset>
               <Form.Group as={Row} style={{ fontSize: "1.5em" }}>
                 <Form.Label

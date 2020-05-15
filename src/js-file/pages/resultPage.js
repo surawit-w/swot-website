@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Strength from "../components/strength";
 import "../../stylesheets/pages/swotPage.css";
 import { Bubble, Line } from "react-chartjs-2";
+import Footer from "../components/footer";
 
 const options = {
   tooltips: {
@@ -203,13 +204,13 @@ export default class resultPage extends Component {
             ผลลัพธ์การประเมินSWOT ธุรกิจผลิต
           </h1>
           <p
+            className="resultpage"
             style={{
-              marginLeft: "100px",
-              marginRight: "100px",
+              marginLeft: "10%",
+              marginRight: "10%",
               marginTop: "50px",
               fontFamily: "light",
               color: "#f16f20",
-              fontSize: "1.5em",
             }}
           >
             {this.state.mode}
@@ -279,43 +280,87 @@ export default class resultPage extends Component {
         {/* แสดงไว้ใต้กราฟ */}
         {/* <div>{this.state.mode}</div> */}
 
-        <div id="buttonNextCenter" style={{ marginTop: "100px" }}>
+        {/* <div id="buttonNextCenter" style={{ marginTop: "10%" }}>
           <button
-            onClick={(event) => { this.props.history.push('/swot-info'); window.scrollTo(0, 0) }}
+            onClick={(event) => {
+              this.props.history.push("/swot-info");
+              window.scrollTo(0, 0);
+            }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
+
+              fontSize: "1em",
             }}
           >
             ทำแบบประเมินSWOT
           </button>
 
           <button
-            onClick={(event) => { this.props.history.push('/olc-info'); window.scrollTo(0, 0) }}
+            onClick={(event) => {
+              this.props.history.push("/olc-info");
+              window.scrollTo(0, 0);
+            }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
+
+              fontSize: "1em",
             }}
           >
             ทำแบบประเมินOLC
           </button>
 
           <button
-            onClick={(event) => { this.props.history.push('/pre-swotolc'); window.scrollTo(0, 0) }}
+            onClick={(event) => {
+              this.props.history.push("/pre-swotolc");
+              window.scrollTo(0, 0);
+            }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
+
+              fontSize: "1em",
             }}
           >
             ทำแบบประเมินSWOT+OLC
           </button>
+        </div> */}
+        <div className="home-button" style={{ padding: "5%" }}>
+          <div className="buttons">
+            <button
+              className="button-swot "
+              id="button-swot"
+              onClick={() => {
+                this.props.history.push("/swot-info");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน SWOT
+            </button>
+            <button
+              className="button-olc"
+              id="button-olc"
+              onClick={() => {
+                this.props.history.push("/olc-info");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน OLC
+            </button>
+            <button
+              className="button-both"
+              id="button-both"
+              onClick={() => {
+                this.props.history.push("/pre-swotolc");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน SWOT และ OLC
+            </button>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
