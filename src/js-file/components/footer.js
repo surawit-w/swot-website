@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import contactPic from "../../images/logoMGT.ico";
-import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 
 export default class footer extends Component {
