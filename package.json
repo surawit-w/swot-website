@@ -1,7 +1,7 @@
 {
   "name": "swot-website",
   "version": "0.1.0",
-  "homepage": "https://sirapobjar.github.io/swot-website/",
+  "homepage": "https://surawit-w.github.io/swot-website",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
