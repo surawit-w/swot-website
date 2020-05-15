@@ -185,7 +185,7 @@ export default class resultPage3 extends Component {
         <Navbar swot={btnActive} />
         <div style={{ width: "100%", textAlign: "center", marginTop: "5%" }}>
           <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "2em" }}>
-            ผลลัพธ์การประเมินSWOT ธุรกิจการค้า
+            ผลลัพธ์การประเมินSWOT ธุรกิจผลิต
           </h1>
           <p
             style={{
@@ -266,7 +266,7 @@ export default class resultPage3 extends Component {
 
         <div id="buttonNextCenter" style={{ marginTop: "100px" }}>
           <button
-            onClick={(event) => (window.location.href = "/swot-info")}
+            onClick={(event) => { this.props.history.push('/swot-info'); window.scrollTo(0, 0) }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
@@ -278,7 +278,7 @@ export default class resultPage3 extends Component {
           </button>
 
           <button
-            onClick={(event) => (window.location.href = "/swot-info")}
+            onClick={(event) => { this.props.history.push('/olc-info'); window.scrollTo(0, 0) }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
@@ -290,7 +290,7 @@ export default class resultPage3 extends Component {
           </button>
 
           <button
-            onClick={(event) => (window.location.href = "/swot-info")}
+            onClick={(event) => { this.props.history.push('/pre-swotolc'); window.scrollTo(0, 0) }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",

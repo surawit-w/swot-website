@@ -23,6 +23,8 @@ import swotolcPage2 from "./js-file/pages/swotolcPage2";
 import swotolcPage3 from "./js-file/pages/swotolcPage3";
 import scorePage3 from './js-file/pages/scorePage3';
 import resultPage3 from './js-file/pages/resultPage3';
+import olcResult from './js-file/pages/olcResult'
+import swotolcResult from './js-file/pages/swotolcResult';
 // PUBLIC STATIC MAIN CLASS AS ROUTER
 export default class route extends Component {
   render() {
@@ -52,6 +54,8 @@ export default class route extends Component {
         <Route path="/swotolc-analysis3" component={swotolcPage3} />
         <Route path="/swot-result3" component={resultPage3} />
         <Route path="/swot-score3" component={scorePage3} />
+        <Route path="/olc-result" component={olcResult} />
+        <Route path="/swotolc-result" component={swotolcResult} />
       </Router>
     );
   }
