@@ -8,6 +8,7 @@ import "../../stylesheets/pages/swotPage.css";
 import { ProgressBar } from "react-bootstrap";
 import Footer from "../components/footer";
 import { withRouter } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 class swotPage extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class swotPage extends Component {
       progressColor: "warning",
     });
     await this.state.result_arr.push(dataFromChild);
+    console.log(dataFromChild)
   };
   myWeaknessCallback = async (dataFromChild) => {
     console.log(dataFromChild);
