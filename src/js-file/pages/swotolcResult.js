@@ -179,8 +179,21 @@ export default class resultPage extends Component {
 
   // Before render
   componentDidMount = async () => {
-    let details = JSON.parse(localStorage.getItem("finalScore"));
     let detailsArr = [];
+    let details
+    let swotResultPage = parseInt(localStorage.getItem('swot-result-page'))
+    switch(swotResultPage) {
+      case 1:
+        details = JSON.parse(localStorage.getItem("finalScore"));
+        break;
+      case 2:
+        details = JSON.parse(localStorage.getItem("finalScore2"));
+        break;
+      case 3:
+        details = JSON.parse(localStorage.getItem("finalScore3"));
+        break;
+      default:
+    }
     detailsArr.push(
       {
         name: "strength",
@@ -283,7 +296,6 @@ export default class resultPage extends Component {
       default:
     }
     console.log(this.state)
-    let swotResultPage = parseInt(localStorage.getItem('swot-result-page'))
     let finalOLC = JSON.parse(localStorage.getItem('finalScoreOLC'))
     switch(swotResultPage) {
         case 1: // ธุรกิจผลิต
