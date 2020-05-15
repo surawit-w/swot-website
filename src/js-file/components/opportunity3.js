@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
+import Swal from 'sweetalert2';
 
 export default class opportunity3 extends Component {
     constructor(props) {
@@ -144,8 +145,18 @@ export default class opportunity3 extends Component {
         localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
         let details = JSON.parse(localStorage.getItem("strength_result"));
         console.log(details)
-        this.props.callbackFromParent(details)
-        window.scrollTo(0, 0)
+        if(details.length === 0) {
+          Swal.fire({
+            icon: 'error',
+            title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
+            timer: 1500,
+            showConfirmButton: false
+          }).then((result) => {
+          })
+        } else if (details.length > 0) {
+          this.props.callbackFromParent(details);
+          window.scrollTo(0, 0);
+        }
     }
     
     // Render each of question in Array to html.

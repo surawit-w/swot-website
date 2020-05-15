@@ -4,6 +4,7 @@ import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
+import Swal from 'sweetalert2';
 
 export default class threat extends Component {
   constructor(props) {
@@ -141,9 +142,18 @@ export default class threat extends Component {
     localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result"));
     console.log(details); // ได้ค่ามาละ 5555
-    this.props.callbackFromParent(details);
-    window.scrollTo(0, 0);
-    // document.location.href = '/swot-analysis-weakness'
+    if(details.length === 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
+        timer: 1500,
+        showConfirmButton: false
+      }).then((result) => {
+      })
+    } else if (details.length > 0) {
+      this.props.callbackFromParent(details);
+      window.scrollTo(0, 0);
+    }
   };
 
   render() {

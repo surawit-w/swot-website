@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
+import Swal from 'sweetalert2';
 
 export default class olcPhrase1 extends Component {
   constructor(props) {
@@ -112,8 +113,18 @@ export default class olcPhrase1 extends Component {
     localStorage.setItem("olcPhrase1_score", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("olcPhrase1_score"));
     console.log(details); // ได้ค่ามาละ 5555
-    this.props.callbackFromParent(details, this.state.totalScore);
-    window.scrollTo(0, 0);
+    if(details.length === 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
+        timer: 1500,
+        showConfirmButton: false
+      }).then((result) => {
+      })
+    } else if (details.length > 0) {
+      this.props.callbackFromParent(details, this.state.totalScore);
+      window.scrollTo(0, 0);
+    }
   };
   renderOLCForm = (e, i) => (
     <div className="option-checkbox">
