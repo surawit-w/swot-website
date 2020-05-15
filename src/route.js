@@ -25,9 +25,9 @@ import swotolcPage3 from "./js-file/pages/swotolcPage3";
 export default class route extends Component {
   render() {
     return (
-      <Router basename="/swot-website">
-        <Route exact path="/" component={mainPage} />
-        <Route exact path="/howto" component={howtoPage} />
+      <Router basename={process.env.PUBLIC_URL}>
+        <Route exact path={process.env.PUBLIC_URL + '/'} component={mainPage} />
+        <Route exact path={process.env.PUBLIC_URL + '/howto'} component={howtoPage} />
         <Route exact path="/swot-analysis" component={swotPage} />
         <Route path="/swot-analysis2" component={swotPage2} />
         <Route path="/swot-analysis3" component={swotPage3} />

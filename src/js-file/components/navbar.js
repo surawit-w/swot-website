@@ -4,6 +4,9 @@ import logoIcon from "../../images/iconMGT.ico";
 import "../../stylesheets/components/navbar.css";
 import "../../stylesheets/components/font.css";
 import { Link } from "react-router-dom";
+import {
+  withRouter
+} from 'react-router-dom'
 
 import {
   FaUserCircle,
@@ -18,7 +21,7 @@ import {
   FaList,
 } from "react-icons/fa";
 
-export default class navbar extends Component {
+class navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,6 +41,7 @@ export default class navbar extends Component {
                 <img
                   className="jk-icon"
                   src={logoIcon}
+                  alt=""
                   onClick={() => {
                     window.location.href = "/";
                   }}
@@ -168,3 +172,5 @@ export default class navbar extends Component {
     );
   }
 }
+
+export default withRouter(navbar)
