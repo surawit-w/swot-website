@@ -43,7 +43,7 @@ class navbar extends Component {
                   src={logoIcon}
                   alt=""
                   onClick={() => {
-                    window.location.href = "/";
+                    this.props.history.push('/')
                   }}
                 ></img>
                 <p
@@ -73,7 +73,8 @@ class navbar extends Component {
                 <ul className="menu-list-container">
                   <li
                     className="menu-list"
-                    onClick={() => (window.location.href = "/")}
+                    onClick={() => 
+                      this.props.history.push('/')}
                     style={
                       home === 1 && btnActive === 0
                         ? { color: "#f16f20" }
@@ -84,7 +85,8 @@ class navbar extends Component {
                   </li>
                   <li
                     className="menu-list"
-                    onClick={() => (window.location.href = "/howto")}
+                    onClick={() => 
+                      this.props.history.push('/howto')}
                     style={
                       home === 2 && btnActive === 0
                         ? { color: "#f16f20" }
