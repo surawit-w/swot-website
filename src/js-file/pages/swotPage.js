@@ -7,8 +7,9 @@ import Threat from "../components/threat";
 import "../../stylesheets/pages/swotPage.css";
 import { ProgressBar } from "react-bootstrap";
 import Footer from "../components/footer";
-import { withRouter } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { withRouter } from "react-router-dom";
+import "../../stylesheets/pages/swotForm.css";
+import Swal from "sweetalert2";
 
 class swotPage extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class swotPage extends Component {
       progressColor: "warning",
     });
     await this.state.result_arr.push(dataFromChild);
-    console.log(dataFromChild)
+    console.log(dataFromChild);
   };
   myWeaknessCallback = async (dataFromChild) => {
     console.log(dataFromChild);
@@ -78,7 +79,7 @@ class swotPage extends Component {
     });
     await this.state.result_arr.push(dataFromChild);
     localStorage.setItem("swot-result", JSON.stringify(this.state.result_arr));
-    this.props.history.push('/swot-score');
+    this.props.history.push("/swot-score");
     window.scrollTo(0, 0);
   };
 
@@ -136,4 +137,4 @@ class swotPage extends Component {
   }
 }
 
-export default withRouter(swotPage)
+export default withRouter(swotPage);

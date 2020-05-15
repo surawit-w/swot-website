@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import "../../stylesheets/pages/swotPage.css";
-import { withRouter } from 'react-router-dom';
-
+import { withRouter } from "react-router-dom";
+import Footer from "../components/footer";
 export default class scorePage extends Component {
   constructor(props) {
     super(props);
@@ -24,9 +24,10 @@ export default class scorePage extends Component {
     };
   }
   componentDidMount = async () => {
-    if(Boolean(localStorage.getItem('swotolcBoolean'))) {
-      await this.setState({ btnActive: 4 })
+    if (Boolean(localStorage.getItem("swotolcBoolean")) == true) {
+      await this.setState({ btnActive: 4 });
     }
+
     let {
       strengthResult,
       weaknessResult,
@@ -81,7 +82,7 @@ export default class scorePage extends Component {
             );
           }
           break;
-        default :
+        default:
       }
     }
     console.log(strengthScore, weaknessScore, opportunityScore, threatScore);
@@ -130,9 +131,7 @@ export default class scorePage extends Component {
   renderWeaknessResult = (e, i) => (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <div style={{ flex: "0 0 70%", marginBottom: "20px" }}>
-        <p>
-          {e.optionText}
-        </p>
+        <p>{e.optionText}</p>
       </div>
 
       <div
@@ -321,21 +320,21 @@ export default class scorePage extends Component {
           }
           finalScore.push(totalScoreThreat);
           break;
-        default :
+        default:
       }
     }
     console.log(finalScore);
     localStorage.setItem("finalScore", JSON.stringify(finalScore));
     // console.log(localStorage.getItem('swotolcBoolean'))
-    if (localStorage.getItem('swotolcBoolean') === 'true') {
-      console.log("1")
-      localStorage.setItem('swot-result-page', 1)
-      this.props.history.push('/olc-analysis');
-      window.scrollTo(0, 0)
-    } else if(localStorage.getItem('swotolcBoolean') === 'false') {
-      console.log("2")
-      this.props.history.push('/swot-result');
-      window.scrollTo(0, 0)
+    if (localStorage.getItem("swotolcBoolean") === "true") {
+      console.log("1");
+      localStorage.setItem("swot-result-page", 1);
+      this.props.history.push("/olc-analysis");
+      window.scrollTo(0, 0);
+    } else if (localStorage.getItem("swotolcBoolean") === "false") {
+      console.log("2");
+      this.props.history.push("/swot-result");
+      window.scrollTo(0, 0);
     }
   };
 
@@ -355,11 +354,11 @@ export default class scorePage extends Component {
         <div style={{ justifyContent: "center" }}>
           <div
             style={{
-              margin: "10%",
+              margin: "5%",
               backgroundColor: "#363c54",
               border: "solid 2px #363c54",
               boxShadow: "0 0 5px rgb(216, 216, 216)",
-              borderRadius: "8px",
+              borderRadius: "10px",
               fontFamily: "regular",
               color: "#f6f6f6",
             }}
@@ -370,6 +369,11 @@ export default class scorePage extends Component {
                 justifyContent: "center",
               }}
             >
+              <p style={{ color: "#e8b278" }}>
+                ให้ท่านกำหนดคะแนนปัจจัยต่อไปนี้ โดยค่าคะแนนอยู่ที่ 1-5
+                ตามระดับผลกระทบที่เกิดขึ้นภายในธุรกิจของท่าน
+              </p>
+              <br />
               <p style={{ color: "#e8b278" }}>Strength(จุดแข็ง)</p>
               {strengthResult.map(this.renderStrengthResult)}
 
@@ -392,13 +396,14 @@ export default class scorePage extends Component {
               <button
                 onClick={this.handleSubmit}
                 id="buttonNext"
-                style={{ marginBottom: "5%", width: "30%" }}
+                style={{ marginBottom: "5%" }}
               >
                 ส่งแบบประเมิน
               </button>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import teamPic from "../../images/team.png";
 import "../../stylesheets/components/footer.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "../../stylesheets/components/checkbox.scss";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 export default class weakness extends Component {
   constructor(props) {
@@ -197,14 +197,13 @@ export default class weakness extends Component {
     localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result"));
     console.log(details); // ได้ค่ามาละ 5555
-    if(details.length === 0) {
+    if (details.length === 0) {
       Swal.fire({
-        icon: 'error',
-        title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
+        icon: "error",
+        title: "เลือกคำตอบอย่างน้อยหนึ่งข้อ",
         timer: 1500,
-        showConfirmButton: false
-      }).then((result) => {
-      })
+        showConfirmButton: false,
+      }).then((result) => {});
     } else if (details.length > 0) {
       this.props.callbackFromParent(details);
       window.scrollTo(0, 0);
@@ -223,7 +222,7 @@ export default class weakness extends Component {
       >
         <h2 style={{ fontFamily: "regular" }}>Weakness (จุดอ่อน)</h2>
         <div className="form-wrapper" style={{ padding: "16px 20px" }}>
-          <Form style={{ fontFamily: "light" }}>
+          <Form style={{ fontFamily: "exlight" }}>
             <fieldset>
               <Form.Group as={Row} style={{ fontSize: "1.5em" }}>
                 <Form.Label

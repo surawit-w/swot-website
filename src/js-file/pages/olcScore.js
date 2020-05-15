@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import "../../stylesheets/pages/swotPage.css";
 import { withRouter } from "react-router-dom";
+import Footer from "../components/footer";
 
 class olcScore extends Component {
   constructor(props) {
@@ -522,7 +523,7 @@ class olcScore extends Component {
             borderRadius: "20px",
             color: "#f6f6f6",
             fontFamily: "light",
-            fontSize: "1.5em",
+            fontSize: "1em",
           }}
         >
           <p style={{ color: "#e8b278" }}>
@@ -574,7 +575,7 @@ class olcScore extends Component {
             <button
               onClick={this.handleSubmit}
               id="buttonNext"
-              style={{ marginBottom: "5%", width: "30%" }}
+              style={{ marginBottom: "5%" }}
             >
               ส่งแบบประเมิน
             </button>

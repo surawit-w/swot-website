@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .progressBarInfo {
+    font-size: 0.7em;
+  }
+  .wrapper-swot-form.strength {
+    margin: "20px";
+    padding: "20px";
+  }
+}

@@ -320,16 +320,16 @@ export default class scorePage3 extends Component {
     }
     console.log(finalScore);
     localStorage.setItem("finalScore3", JSON.stringify(finalScore));
-    if (localStorage.getItem('swotolcBoolean') === 'true') {
-        console.log("1")
-        localStorage.setItem('swot-result-page', 3)
-        this.props.history.push('/olc-analysis');
-        window.scrollTo(0, 0)
-      } else if(localStorage.getItem('swotolcBoolean') === 'false') {
-        console.log("2")
-        this.props.history.push('/swot-result3');
-        window.scrollTo(0, 0);
-      }
+    if (localStorage.getItem("swotolcBoolean") === "true") {
+      console.log("1");
+      localStorage.setItem("swot-result-page", 3);
+      this.props.history.push("/olc-analysis");
+      window.scrollTo(0, 0);
+    } else if (localStorage.getItem("swotolcBoolean") === "false") {
+      console.log("2");
+      this.props.history.push("/swot-result3");
+      window.scrollTo(0, 0);
+    }
   };
 
   // Render elements
@@ -393,7 +393,7 @@ export default class scorePage3 extends Component {
               <button
                 onClick={this.handleSubmit}
                 id="buttonNext"
-                style={{ marginBottom: "5%", width: "30%" }}
+                style={{ marginBottom: "5%" }}
               >
                 ส่งแบบประเมิน
               </button>
