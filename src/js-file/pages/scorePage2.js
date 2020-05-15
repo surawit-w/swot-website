@@ -320,7 +320,15 @@ export default class scorePage2 extends Component {
     }
     console.log(finalScore);
     localStorage.setItem("finalScore2", JSON.stringify(finalScore));
-    document.location.href = "/swot-result2";
+    if (localStorage.getItem('swotolcBoolean') === 'true') {
+      console.log("1")
+      this.props.history.push('/olc-analysis');
+      window.scrollTo(0, 0)
+    } else if(localStorage.getItem('swotolcBoolean') === 'false') {
+      console.log("2")
+      this.props.history.push('/swot-result');
+      window.scrollTo(0, 0);
+    }
   };
 
   // Render elements

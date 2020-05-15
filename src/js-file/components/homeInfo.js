@@ -1,72 +1,48 @@
 import React, { Component } from "react";
 import "../../stylesheets/components/font.css";
 import "../../stylesheets/components/homeInfo.css";
-import swotPic from "../../images/swot-analysis.jpg";
-import olcPic from "../../images/olc-pic.jpg";
 import manualPic from "../../images/manual.jpg";
 import kkbsLogo from "../../images/kkbs-logo.png";
-import { FacebookProvider, Page } from "react-facebook";
-import { Transition } from "semantic-ui-react";
+import { withRouter } from 'react-router-dom';
 
-export default class homeInfo extends Component {
-  state = { visible: true };
-  render() {
-    const { visible } = this.state;
-
-    return (
-      <div className="all">
-        {/* left column */}
-        <div className="left-column">
-          <div className="about">
-            <h1>เกี่ยวกับเรา</h1>
-
-            <div className="about-info">
-              <p>
-                โปรแกรมวิเคราะห์สิ่งแวดล้อมและศักยภาพขององค์กรด้วยเครื่องมือทางการจัดการเพื่อพัฒนาการดำเนินธุรกิจขององค์กรและพัฒนากลยุทธ์ทางการตลาดเป็นโปรแกรมที่สร้างขึ้นเพื่อช่วยให้ผู้ประกอบการธุรกิจ
-                SMEs สามารถเข้าถึงการใช้เครื่องมือทางการจัดการ (Swot Analysis
-                ,Organization Life Cycle)
-                เข้ามาช่วยวิเคราะห์ธุรกิจของตนเองได้อย่างมีหลักการโดยใช้โปรแกรมสำเร็จรูป
-                ส่งผลให้ผู้ประกอบการสามารถทราบถึงแนวทางในการแก้ไขปัญหาที่องค์กรกำลังประสบอยู่
-                รวมถึงแนวทางในการพัฒนาองค์กรในด้านต่างๆให้มีประสิทธิภาพมากยิ่งขึ้น
-              </p>
-            </div>
-          </div>
-          <div className="home-button">
-            <div className="buttons">
-              <button
-                className="button-swot "
-                id="button-swot"
-                onClick={() => (window.location = "/swot-info")}
-              >
-                แบบประเมิน SWOT
-              </button>
-              <button
-                className="button-olc"
-                id="button-olc"
-                onClick={() => (window.location = "/olc-info")}
-              >
-                แบบประเมิน OLC
-              </button>
-              <button className="button-both" id="button-both">
-                แบบประเมิน SWOTและOLC
-              </button>
-            </div>
-          </div>
-          <div className="info">
-            <div className="swot-info">
-              <p>
-                <span
-                  style={{
-                    textAlign: "center",
-                    fontSize: "2em",
-                    color: "#f16f20",
-                    justifyContent: "center",
-                  }}
-                >
-                  คู่มือการทำ Swot Analysis
-                  <br />
-                </span>
-                <br /> 1. เมื่อเข้าสู้หน้าของเครื่องมือแล้ว
+class homeInfo extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            visible: true
+        }
+    }
+    
+    render() {
+        return (
+            <div className="all">
+                {/* left column */}
+                <div className="left-column">
+                    <div className="about">
+                        <h1>เกี่ยวกับเรา</h1>
+                        <div className="about-info">
+                            <p>
+                                โปรแกรมวิเคราะห์สิ่งแวดล้อมและศักยภาพขององค์กรด้วยเครื่องมือทางการจัดการเพื่อพัฒนาการดำเนินธุรกิจขององค์กรและพัฒนากลยุทธ์ทางการตลาดเป็นโปรแกรมที่สร้างขึ้นเพื่อช่วยให้ผู้ประกอบการธุรกิจ
+                                SMEs สามารถเข้าถึงการใช้เครื่องมือทางการจัดการ (Swot Analysis
+                                ,Organization Life Cycle)
+                                เข้ามาช่วยวิเคราะห์ธุรกิจของตนเองได้อย่างมีหลักการโดยใช้โปรแกรมสำเร็จรูป
+                                ส่งผลให้ผู้ประกอบการสามารถทราบถึงแนวทางในการแก้ไขปัญหาที่องค์กรกำลังประสบอยู่
+                                รวมถึงแนวทางในการพัฒนาองค์กรในด้านต่างๆให้มีประสิทธิภาพมากยิ่งขึ้น
+                            </p>
+                        </div>
+                    </div>
+                <div className="home-button">
+                    <div className="buttons">
+                        <button className="button-swot " id="button-swot" onClick={() => {this.props.history.push('/swot-info'); window.scrollTo(0, 0);}}>แบบประเมิน SWOT</button>
+                        <button className="button-olc" id="button-olc" onClick={() => {this.props.history.push('/olc-info'); window.scrollTo(0, 0);}}>แบบประเมิน OLC</button>
+                        <button className="button-both" id="button-both" onClick={() => {this.props.history.push('/pre-swotolc'); window.scrollTo(0, 0);}}>แบบประเมิน SWOT และ OLC</button>
+                    </div>
+                </div>
+                <div className="info">
+                    <div className="swot-info">
+                        <p>
+                            <span style={{ textAlign: "center", fontSize: "2em", color: "#f16f20", justifyContent: "center" }}>คู่มือการทำ Swot Analysis<br/></span>
+                <br/> 1. เมื่อเข้าสู้หน้าของเครื่องมือแล้ว
                 จะพบกับหน้าแรกให้เลือกประเภทของธุรกิจของธุรกิจของท่าน <br />
                 <br />
                 2. เมื่อเลือกประเภทธุรกิจของท่านแล้วหน้าเว็บจะไปที่หน้าถัดไป
@@ -205,7 +181,8 @@ export default class homeInfo extends Component {
                 <div className="card1-pic">
                   <img
                     src={manualPic}
-                    onClick={() => (window.location = "/howto")}
+                    alt=''
+                    onClick={() => {this.props.history.push('/howto'); window.scrollTo(0, 0);}}
                     style={{ cursor: "pointer" }}
                   />
                   <h2>คู่มือการใช้</h2>
@@ -215,7 +192,7 @@ export default class homeInfo extends Component {
               <div className="card2">
                 <div className="card2-pic">
                   <a href="https://kkbs.kku.ac.th/" target="_blank">
-                    <img src={kkbsLogo} />
+                    <img src={kkbsLogo} alt=''/>
                   </a>
                   <h2>ไปที่ website</h2>
                 </div>
@@ -281,3 +258,5 @@ export default class homeInfo extends Component {
     );
   }
 }
+
+export default withRouter(homeInfo)

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../../stylesheets/pages/swotInfoPage.css";
+import { withRouter } from 'react-router-dom';
 
-export default class olcInfoPage extends Component {
+class olcInfoPage extends Component {
   constructor(props) {
     super(props);
     // State
@@ -20,13 +21,10 @@ export default class olcInfoPage extends Component {
       <div>
         <Navbar swot={btnActive} />
         <div className="linkback">
-          <p>
+          <p onClick={() => {this.props.history.push('/'); window.scrollTo(0, 0);}}>
             HOME >{" "}
             <span
               style={{ color: "#f16f20" }}
-              onClick={() => {
-                document.location.href = "/";
-              }}
             >
               OLC
             </span>
@@ -125,7 +123,10 @@ export default class olcInfoPage extends Component {
             </p>
             <button
               className="button"
-              onClick={() => (window.location = "/olc-analysis")}
+              onClick={() => {
+                this.props.history.push('/olc-analysis')
+                window.scrollTo(0, 0);
+              }}
             >
               <span>เริ่มการวิเคราะห์</span>
             </button>
@@ -136,3 +137,5 @@ export default class olcInfoPage extends Component {
     );
   }
 }
+
+export default withRouter(olcInfoPage)

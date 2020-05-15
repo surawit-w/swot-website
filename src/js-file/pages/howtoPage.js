@@ -3,9 +3,7 @@ import "../../stylesheets/components/font.css";
 import "../../stylesheets/components/homeInfo.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import {
-  withRouter
-} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 class howtoPage extends Component {
   constructor(props) {
     super(props);
@@ -32,10 +30,9 @@ class howtoPage extends Component {
             <div className="linkback">
               <p
                 onClick={() => {
-                  document.location.href = "/swot-info";
+                  {this.props.history.push('/'); window.scrollTo(0, 0);}
                 }}
-              >
-                HOME > <span style={{ color: "#f16f20" }}>คู่มือ</span>
+              >HOME > <span style={{ color: "#f16f20" }}>คู่มือ</span>
               </p>
             </div>
 

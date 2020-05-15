@@ -189,7 +189,8 @@ export default class olcPage extends Component {
         "optionResult",
         JSON.stringify(this.state.optionResult)
       );
-      document.location.href = "/olc-score";
+      this.props.history.push('/olc-score')
+      window.scrollTo(0, 0)
     } else if (this.state.totalResult.length === 1) {
       localStorage.setItem(
         "totalResult",
@@ -199,7 +200,8 @@ export default class olcPage extends Component {
         "optionResult",
         JSON.stringify(this.state.optionResult)
       );
-      document.location.href = "/olc-result";
+      this.props.history.push('/olc-result')
+      window.scrollTo(0, 0)
     }
   };
 

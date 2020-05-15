@@ -24,14 +24,16 @@ export default class swotInfoPage extends Component {
         <div className="linkback">
           <p
             onClick={() => {
-              document.location.href = "/";
+              this.props.history.push('/');
+              window.scrollTo(0, 0);
             }}
           >
             HOME >{" "}
             <span
               style={{ color: "#f16f20" }}
               onClick={() => {
-                document.location.href = "/";
+                this.props.history.push('/swot-result');
+                window.scrollTo(0, 0);
               }}
             >
               SWOT
@@ -139,7 +141,9 @@ export default class swotInfoPage extends Component {
             </p>
             <button
               className="button"
-              onClick={() => (window.location = "/pre-swot")}
+              onClick={() => {
+                this.props.history.push('/pre-swot');
+                window.scrollTo(0, 0);}}
             >
               <span>เริ่มการวิเคราะห์</span>
             </button>

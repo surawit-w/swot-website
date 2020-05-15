@@ -3,7 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import logoIcon from "../../images/iconMGT.ico";
 import "../../stylesheets/components/navbar.css";
 import "../../stylesheets/components/font.css";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 import { FaList } from "react-icons/fa";
 
 class navbar extends Component {
@@ -35,9 +35,9 @@ class navbar extends Component {
                                 <ul className="menu-list-container">
                                     <li className="menu-list" onClick={() => this.props.history.push('/')} style={ home === 1 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }> HOME </li>
                                     <li className="menu-list" onClick={() => this.props.history.push('/howto')} style={ home === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>HOW TO USE</li>
-                                    <li className="menu-list" onClick={() => (window.location.href = "/swot-info")} style={ swot === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>SWOT</li>
-                                    <li className="menu-list" onClick={() => (window.location.href = "/olc-info")} style={ swot === 3 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>OLC</li>
-                                    <li className="menu-list" onClick={() => (window.location.href = "/pre-swotolc")} style={ swot === 4 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>{"SWOT & OLC"}</li>
+                                    <li className="menu-list" onClick={() => this.props.history.push('/swot-info')} style={ swot === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>SWOT</li>
+                                    <li className="menu-list" onClick={() => this.props.history.push('/olc-info')} style={ swot === 3 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>OLC</li>
+                                    <li className="menu-list" onClick={() => this.props.history.push('/pre-swotolc')} style={ swot === 4 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>{"SWOT & OLC"}</li>
                                 </ul>
                             </div>
                         </Col>

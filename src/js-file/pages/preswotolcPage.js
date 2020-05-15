@@ -22,20 +22,20 @@ export default class preswotolcPage extends Component {
             <div>
                 <Navbar swot={btnActive} />
                 <div className="linkback">
-                    <p onClick={() => { document.location.href = "/swot-info" }}>HOME > SWOT > {" "}
+                    <p onClick={() => { this.props.history.push('/'); window.scrollTo(0, 0) }}>HOME > SWOT > {" "}
                         <span style={{ color: "#f16f20" }}>เลือกประเภทธุรกิจ</span>
                     </p>
                 </div>
                 <div className="whole">
                     <div className="swot-infobox">
                         <h1>เลือกประเภทของธุรกิจ</h1>
-                        <button className="button" onClick={() => (window.location = "/swotolc-analysis")}>
+                        <button className="button" onClick={() => { this.props.history.push('/swotolc-analysis'); window.scrollTo(0, 0) }}>
                             <span>ธุรกิจผลิต</span>
                         </button>
-                        <button className="button" onClick={() => (window.location = "/swotolc-analysis2")}>
+                        <button className="button" onClick={() => { this.props.history.push('/swotolc-analysis2'); window.scrollTo(0, 0) }}>
                             <span>ธุรกิจบริการ</span>
                         </button>
-                        <button className="button" onClick={() => (window.location = "/swotolc-analysis3")}>
+                        <button className="button" onClick={() => { this.props.history.push('/swotolc-analysis3'); window.scrollTo(0, 0) }}>
                             <span>ธุรกิจการค้า</span>
                         </button>
                         <p style={{ marginTop: "10%" }}>

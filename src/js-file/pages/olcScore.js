@@ -344,10 +344,12 @@ export default class olcScore extends Component {
                 if (localStorage.getItem('swotolcBoolean') === 'true') {
                     console.log("1")
                     await localStorage.setItem('swotolcBoolean', false)
-                    document.location.href = "/swotolc-result"
+                    this.props.history.push('/swotolc-result')
+                    window.scrollTo(0, 0)
                 } else if(localStorage.getItem('swotolcBoolean') === 'false') {
                     console.log("2")
-                    document.location.href = "/olc-result"
+                    this.props.history.push('/olc-result')
+                    window.scrollTo(0, 0)
                 }
 			} else if (this.state.checkFinal.length > 1) {
 				await this.setState({

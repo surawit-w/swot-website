@@ -328,10 +328,12 @@ export default class scorePage extends Component {
     // console.log(localStorage.getItem('swotolcBoolean'))
     if (localStorage.getItem('swotolcBoolean') === 'true') {
       console.log("1")
-      document.location.href = "/olc-analysis"
+      this.props.history.push('/olc-analysis');
+      window.scrollTo(0, 0)
     } else if(localStorage.getItem('swotolcBoolean') === 'false') {
       console.log("2")
-      document.location.href = "/swot-result"
+      this.props.history.push('/swot-result');
+      window.scrollTo(0, 0)
     }
   };
 

@@ -70,7 +70,8 @@ export default class swotolcPage extends Component {
         console.log(dataFromChild)
         await this.state.result_arr.push(dataFromChild)
         localStorage.setItem('swot-result', JSON.stringify(this.state.result_arr))
-        document.location.href = '/swot-score'
+        this.props.history.push('/swot-score');
+        window.scrollTo(0, 0);
     }
     
     // Render all component in this page.

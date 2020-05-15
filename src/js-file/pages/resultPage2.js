@@ -266,7 +266,7 @@ export default class resultPage extends Component {
 
         <div id="buttonNextCenter" style={{ marginTop: "100px" }}>
           <button
-            onClick={(event) => (window.location.href = "/swot-info")}
+            onClick={(event) => { this.props.history.push('/swot-info'); window.scrollTo(0, 0) }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
@@ -278,7 +278,7 @@ export default class resultPage extends Component {
           </button>
 
           <button
-            onClick={(event) => (window.location.href = "/swot-info")}
+            onClick={(event) => { this.props.history.push('/olc-info'); window.scrollTo(0, 0) }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",
@@ -290,7 +290,7 @@ export default class resultPage extends Component {
           </button>
 
           <button
-            onClick={(event) => (window.location.href = "/swot-info")}
+            onClick={(event) => { this.props.history.push('/pre-swotolc'); window.scrollTo(0, 0) }}
             id="buttonNext2"
             style={{
               marginBottom: "5%",

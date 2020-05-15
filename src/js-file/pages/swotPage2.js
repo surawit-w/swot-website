@@ -74,8 +74,8 @@ export default class swotPage2 extends Component {
     });
     await this.state.result_arr.push(dataFromChild);
     localStorage.setItem("swot-result2", JSON.stringify(this.state.result_arr));
-
-    document.location.href = "/swot-score2";
+        this.props.history.push('/swot-score2');
+        window.scrollTo(0, 0);
   };
 
   // Render elements
