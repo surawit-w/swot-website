@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import "../../stylesheets/pages/swotPage.css";
 
-export default class scorePage2 extends Component {
+export default class scorePage3 extends Component {
   constructor(props) {
     super(props);
     // State
     this.state = {
-      swotQuizResult: JSON.parse(localStorage.getItem("swot-result2")),
-      strengthResult: JSON.parse(localStorage.getItem("swot-result2"))[0],
-      weaknessResult: JSON.parse(localStorage.getItem("swot-result2"))[1],
-      opportunityResult: JSON.parse(localStorage.getItem("swot-result2"))[2],
-      threatResult: JSON.parse(localStorage.getItem("swot-result2"))[3],
+      swotQuizResult: JSON.parse(localStorage.getItem("swot-result3")),
+      strengthResult: JSON.parse(localStorage.getItem("swot-result3"))[0],
+      weaknessResult: JSON.parse(localStorage.getItem("swot-result3"))[1],
+      opportunityResult: JSON.parse(localStorage.getItem("swot-result3"))[2],
+      threatResult: JSON.parse(localStorage.getItem("swot-result3"))[3],
       strengthScore: [],
       weaknessScore: [],
       opportunityScore: [],
@@ -34,8 +34,8 @@ export default class scorePage2 extends Component {
       threatScore,
     } = this.state;
     console.log(strengthResult);
-    console.log(JSON.parse(localStorage.getItem("swot-result2")));
-    let swotQuizResult = JSON.parse(localStorage.getItem("swot-result2"));
+    console.log(JSON.parse(localStorage.getItem("swot-result3")));
+    let swotQuizResult = JSON.parse(localStorage.getItem("swot-result3"));
     strengthResult = await swotQuizResult[0];
     weaknessResult = await swotQuizResult[1];
     opportunityResult = swotQuizResult[2];
@@ -319,17 +319,17 @@ export default class scorePage2 extends Component {
       }
     }
     console.log(finalScore);
-    localStorage.setItem("finalScore2", JSON.stringify(finalScore));
+    localStorage.setItem("finalScore3", JSON.stringify(finalScore));
     if (localStorage.getItem('swotolcBoolean') === 'true') {
-      console.log("1")
-      localStorage.setItem('swot-result-page', 2)
-      this.props.history.push('/olc-analysis');
-      window.scrollTo(0, 0)
-    } else if(localStorage.getItem('swotolcBoolean') === 'false') {
-      console.log("2")
-      this.props.history.push('/swot-result2');
-      window.scrollTo(0, 0);
-    }
+        console.log("1")
+        localStorage.setItem('swot-result-page', 3)
+        this.props.history.push('/olc-analysis');
+        window.scrollTo(0, 0)
+      } else if(localStorage.getItem('swotolcBoolean') === 'false') {
+        console.log("2")
+        this.props.history.push('/swot-result3');
+        window.scrollTo(0, 0);
+      }
   };
 
   // Render elements
@@ -363,6 +363,14 @@ export default class scorePage2 extends Component {
                 justifyContent: "center",
               }}
             >
+              <p style={{ color: "#e8b278", fontSize: "1.2em" }}>
+                {" "}
+                ให้ท่านกำหนดคะแนนปัจจัยต่อไปนี้ โดยค่าคะแนนอยู่ที่ 1-5
+                ตามระดับผลกระทบที่เกิดขึ้นภายในธุรกิจของท่าน
+                <br />
+                <br />
+              </p>
+
               <p style={{ color: "#e8b278" }}>Strength(จุดแข็ง)</p>
               {strengthResult.map(this.renderStrengthResult)}
 

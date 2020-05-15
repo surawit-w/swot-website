@@ -70,7 +70,7 @@ class swotPage3 extends Component {
     myThreatCallback = async (dataFromChild) => {
         console.log(dataFromChild)
         await this.state.result_arr.push(dataFromChild)
-        localStorage.setItem('swot-result', JSON.stringify(this.state.result_arr))
+        localStorage.setItem('swot-result3', JSON.stringify(this.state.result_arr))
         this.props.history.push('/swot-score3');
         window.scrollTo(0, 0);
     }

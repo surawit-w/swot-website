@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../components/navbar";
 import "../../stylesheets/pages/swotPage.css";
+import { withRouter } from 'react-router-dom';
 
 export default class scorePage extends Component {
   constructor(props) {
@@ -328,6 +329,7 @@ export default class scorePage extends Component {
     // console.log(localStorage.getItem('swotolcBoolean'))
     if (localStorage.getItem('swotolcBoolean') === 'true') {
       console.log("1")
+      localStorage.setItem('swot-result-page', 1)
       this.props.history.push('/olc-analysis');
       window.scrollTo(0, 0)
     } else if(localStorage.getItem('swotolcBoolean') === 'false') {

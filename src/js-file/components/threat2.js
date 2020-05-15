@@ -145,7 +145,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(1) ไม่ได้รับการสนับสนุนจากภาครัฐ </p>
+                    <p>(1) สถานการณ์ทางการเมืองที่ไม่แน่นอนในปัจจุบัน ทำให้ความเชื่อมั่นของผู้บริโภคลดลง เนื่องจากต้องเตรียมตัวตอบรับสถานการณ์ต่าง ๆ  </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -157,7 +157,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(2) สถานการณ์ทางการเมืองที่ไม่แน่นอน </p>
+                    <p>(2) มีการแข่งขันค่อนข้างสูง เพราะเป็นธุรกิจที่มีความนิยมสูง </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -169,7 +169,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(3) คู่แข่งขันหลายรายในตลาดประเภทเดียวกัน</p>
+                    <p>(3) ในปัจจุบันประสบปัญหาเศรษฐกิจตกต่ำ ทำให้การลงทุนชะลอตัว</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -181,7 +181,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(4) มีภัยคุกคามจากคู่แข่งขันรายใหม่เข้ามาในตลาดสูง </p>
+                    <p>(4) อำนาจการต่อรองของลูกค้าสูง  </p>
                   </div>
 
                   <div className="option-checkbox">
@@ -193,7 +193,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(5) สินค้าที่ผลิตสามารถเลียนแบบได้ง่าย</p>
+                    <p>(5) ปัญหาภัยพิบัติในพื้นที่ ที่ส่งผลกระทบโดยตรงต่อธุรกิจ</p>
                   </div>
 
                   <div className="option-checkbox">
@@ -207,8 +207,7 @@ export default class threat2 extends Component {
                     </label>
                     <p>
                       (6)
-                      สภาพเศรษฐกิจในปัจจุบันทำให้การดำเนินธุรกิจเป็นไปอย่างยากลำบาก
-                      เนื่องจากเศรษฐกิจส่งผลต่อการจับจ่ายใช้สอยของผู้บริโภค{" "}
+                      สถานการณ์โรคระบาด เชื้อไวรัส COVID-19 ทำให้ผู้บริโภคไม่กล้าออกนอกบ้านไปในพื้นที่คนพลุกพล่าน{" "}
                     </p>
                   </div>
 
@@ -221,106 +220,7 @@ export default class threat2 extends Component {
                       />
                       <div class="box" />
                     </label>
-                    <p>(7) ความผันผวนของราคาวัตถุดิบ </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option8"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(8) วัตถุดิบขาดตลาด </p>
-                  </div>
-
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option9"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(9) คู่แข่งมีการจัดลดราคาสินค้า </p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option10"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(10) แข่งขันมีประสิทธิภาพอย่างมาก </p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option11"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>
-                      (11) พฤติกรรมผู้บริโภคเปลี่ยนไป และมีทัศนคติที่เปลี่ยนไป{" "}
-                    </p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option12"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>
-                      (12)
-                      ปริมาณความต้องการของผู้บริโภคยังมีสูงกว่าความสามารถในการผลิต{" "}
-                    </p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option13"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(13) เทคโนโลยีมีข้อจำกัดในการใช้งาน </p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option14"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>
-                      (14) เกิดภัยพิบัติทางธรรมชาติบ่อยครั้ง
-                      และส่งผลกระทบต่อธุรกิจโดยตรง เช่น
-                      สถานการณ์อุทกภัยทำให้ต้องหยุดการผลิตชั่วคราว{" "}
-                    </p>
-                  </div>
-                  <div className="option-checkbox">
-                    <label class="check">
-                      <input
-                        type="checkbox"
-                        id="s-option15"
-                        onClick={(event) => this.handleClick(event)}
-                      />
-                      <div class="box" />
-                    </label>
-                    <p>(15) การเพิ่มอัตราการเก็บภาษี </p>
+                    <p>(7) สถานการณ์ความรุนแรงที่เกิดขึ้นในห้างสรรพสินค้าชื่อดัง ทำให้ผู้บริโภคตื่นกลัวในการออกไปในพื้นที่คนพลุกพล่าน </p>
                   </div>
                 </Col>
               </Form.Group>

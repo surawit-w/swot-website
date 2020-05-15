@@ -32,6 +32,9 @@ export default class olcPage extends Component {
 
   // Before render
   componentDidMount = async () => {
+    if (localStorage.getItem('swotolcBoolean') === 'true') {
+      await this.setState({ btnActive: 4 })
+    }
     await this.setState({
       isPhrase1: true,
       progressValue: 20,
