@@ -33,7 +33,7 @@ class navbar extends Component {
                         <Col className="menu-col" xs={8}>
                             <div className="menu-list-div">
                                 <ul className="menu-list-container">
-                                    <li className="menu-list" onClick={() => this.props.history.push('/')} style={ home === 1 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }> HOME </li>
+                                    <li className="menu-list" onClick={() => document.location.href='https://surawit-w.github.io/swot-website/'} style={ home === 1 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }> HOME </li>
                                     <li className="menu-list" onClick={() => this.props.history.push('/howto')} style={ home === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>HOW TO USE</li>
                                     <li className="menu-list" onClick={() => this.props.history.push('/swot-info')} style={ swot === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>SWOT</li>
                                     <li className="menu-list" onClick={() => this.props.history.push('/olc-info')} style={ swot === 3 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>OLC</li>

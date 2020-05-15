@@ -239,9 +239,9 @@ export default class opportunity2 extends Component {
               </Form.Group>
             </fieldset>
           </Form>
-          <p
+          {/* <p
             style={{ textAlign: "end" }}
-          >{`Total = ${this.state.totalScore}`}</p>
+          >{`Total = ${this.state.totalScore}`}</p> */}
         </div>
         <div id="buttonNextCenter">
           <button onClick={this.handleSubmit} id="buttonNext">

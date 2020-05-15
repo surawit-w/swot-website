@@ -6,8 +6,9 @@ import Opportunity from "../components/opportunity3"
 import Threat from "../components/threat3"
 import "../../stylesheets/pages/swotPage.css"
 import { ProgressBar } from "react-bootstrap"
+import { withRouter } from 'react-router-dom';
 
-export default class swotPage2 extends Component {
+class swotPage3 extends Component {
     constructor(props) {
         super(props)
         // State
@@ -100,3 +101,5 @@ export default class swotPage2 extends Component {
         );
     }
 }
+
+export default withRouter(swotPage3)

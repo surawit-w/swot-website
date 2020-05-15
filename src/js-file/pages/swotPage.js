@@ -7,8 +7,9 @@ import Threat from "../components/threat";
 import "../../stylesheets/pages/swotPage.css";
 import { ProgressBar } from "react-bootstrap";
 import Footer from "../components/footer";
+import { withRouter } from 'react-router-dom';
 
-export default class swotPage extends Component {
+class swotPage extends Component {
   constructor(props) {
     super(props);
     // State
@@ -132,3 +133,5 @@ export default class swotPage extends Component {
     );
   }
 }
+
+export default withRouter(swotPage)

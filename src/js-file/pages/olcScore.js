@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import Navbar from "../components/navbar"
 import "../../stylesheets/pages/swotPage.css"
+import { withRouter } from 'react-router-dom';
 
-export default class olcScore extends Component {
+class olcScore extends Component {
     constructor(props) {
         super(props);
         // State
@@ -415,3 +416,5 @@ export default class olcScore extends Component {
     );
   }
 }
+
+export default withRouter(olcScore)

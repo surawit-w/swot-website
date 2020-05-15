@@ -326,7 +326,7 @@ export default class scorePage2 extends Component {
       window.scrollTo(0, 0)
     } else if(localStorage.getItem('swotolcBoolean') === 'false') {
       console.log("2")
-      this.props.history.push('/swot-result');
+      this.props.history.push('/swot-result2');
       window.scrollTo(0, 0);
     }
   };
