@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/swot-website/static/css/main.b4ec5c38.chunk.css",
-    "main.js": "/swot-website/static/js/main.1bf70a6f.chunk.js",
-    "main.js.map": "/swot-website/static/js/main.1bf70a6f.chunk.js.map",
+    "main.js": "/swot-website/static/js/main.26d6f056.chunk.js",
+    "main.js.map": "/swot-website/static/js/main.26d6f056.chunk.js.map",
     "runtime-main.js": "/swot-website/static/js/runtime-main.0b656908.js",
     "runtime-main.js.map": "/swot-website/static/js/runtime-main.0b656908.js.map",
     "static/js/2.f180242f.chunk.js": "/swot-website/static/js/2.f180242f.chunk.js",
     "static/js/2.f180242f.chunk.js.map": "/swot-website/static/js/2.f180242f.chunk.js.map",
     "index.html": "/swot-website/index.html",
-    "precache-manifest.658e152612aef30baac8eb7a203de06b.js": "/swot-website/precache-manifest.658e152612aef30baac8eb7a203de06b.js",
+    "precache-manifest.9b6059f5d70b51dc2f72e5b3393164c7.js": "/swot-website/precache-manifest.9b6059f5d70b51dc2f72e5b3393164c7.js",
     "service-worker.js": "/swot-website/service-worker.js",
     "static/css/main.b4ec5c38.chunk.css.map": "/swot-website/static/css/main.b4ec5c38.chunk.css.map",
     "static/js/2.f180242f.chunk.js.LICENSE.txt": "/swot-website/static/js/2.f180242f.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.0b656908.js",
     "static/js/2.f180242f.chunk.js",
     "static/css/main.b4ec5c38.chunk.css",
-    "static/js/main.1bf70a6f.chunk.js"
+    "static/js/main.26d6f056.chunk.js"
   ]
 }
