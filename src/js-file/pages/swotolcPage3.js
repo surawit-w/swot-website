@@ -12,7 +12,7 @@ export default class swotolcPage extends Component {
         super(props)
         // State
         this.state = {
-            btnActive: 3,
+            btnActive: 4,
             style: { fontFamily: 'bold' },
             isStrength: false,
             isWeakness: false,

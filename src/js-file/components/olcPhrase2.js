@@ -110,18 +110,8 @@ export default class olcPhrase2 extends Component {
     localStorage.setItem("olcPhrase2_score", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("olcPhrase2_score"));
     console.log(details); // ได้ค่ามาละ 5555
-    if(details.length === 0) {
-      Swal.fire({
-        icon: 'error',
-        title: 'เลือกคำตอบอย่างน้อยหนึ่งข้อ',
-        timer: 1500,
-        showConfirmButton: false
-      }).then((result) => {
-      })
-    } else if (details.length > 0) {
-      this.props.callbackFromParent(details, this.state.totalScore);
-      window.scrollTo(0, 0);
-    }
+    this.props.callbackFromParent(details, this.state.totalScore);
+    window.scrollTo(0, 0);
   };
   renderOLCForm = (e, i) => (
     <div className="option-checkbox">

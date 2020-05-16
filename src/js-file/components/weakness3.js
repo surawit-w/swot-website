@@ -200,17 +200,8 @@ export default class weakness3 extends Component {
     localStorage.setItem("strength_result", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result"));
     console.log(details);
-    if (details.length === 0) {
-      Swal.fire({
-        icon: "error",
-        title: "เลือกคำตอบอย่างน้อยหนึ่งข้อ",
-        timer: 1500,
-        showConfirmButton: false,
-      }).then((result) => {});
-    } else if (details.length > 0) {
-      this.props.callbackFromParent(details);
-      window.scrollTo(0, 0);
-    }
+    this.props.callbackFromParent(details);
+    window.scrollTo(0, 0);
   };
 
   // Render each of question in Array to html.

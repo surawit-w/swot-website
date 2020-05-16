@@ -187,17 +187,8 @@ export default class weakness2 extends Component {
     localStorage.setItem("strength_result2", JSON.stringify(optionInfoArr));
     let details = JSON.parse(localStorage.getItem("strength_result2"));
     console.log(details); // ได้ค่ามาละ 5555
-    if (details.length === 0) {
-      Swal.fire({
-        icon: "error",
-        title: "เลือกคำตอบอย่างน้อยหนึ่งข้อ",
-        timer: 1500,
-        showConfirmButton: false,
-      }).then((result) => {});
-    } else if (details.length > 0) {
-      this.props.callbackFromParent(details);
-      window.scrollTo(0, 0);
-    }
+    this.props.callbackFromParent(details);
+    window.scrollTo(0, 0);
   };
 
   render() {
