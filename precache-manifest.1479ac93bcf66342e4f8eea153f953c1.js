@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d189beb2c477ffcee323cf5f5e4c45f6",
+    "revision": "d3091f3890625b3cfb5cd01406b5cf5e",
     "url": "/swot-website/index.html"
   },
   {
-    "revision": "6f0cbef306c7453d239b",
+    "revision": "65701b7296f7defb0289",
     "url": "/swot-website/static/css/main.416049ca.chunk.css"
   },
   {
-    "revision": "6452aa1247c2f6da4c5c",
-    "url": "/swot-website/static/js/2.511e8430.chunk.js"
+    "revision": "e36b86829f08a93bc6bb",
+    "url": "/swot-website/static/js/2.2f7fafc2.chunk.js"
   },
   {
     "revision": "77c52c67682ebaf3c87f021fd687577f",
-    "url": "/swot-website/static/js/2.511e8430.chunk.js.LICENSE.txt"
+    "url": "/swot-website/static/js/2.2f7fafc2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6f0cbef306c7453d239b",
-    "url": "/swot-website/static/js/main.c251dc55.chunk.js"
+    "revision": "65701b7296f7defb0289",
+    "url": "/swot-website/static/js/main.85ef9405.chunk.js"
   },
   {
     "revision": "b23e66bdf5f7823ef620",
