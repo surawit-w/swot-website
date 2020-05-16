@@ -13,7 +13,9 @@ export default class preswotolcPage extends Component {
     }
     
     // Before render
-    componentDidMount = async () => {};
+  componentDidMount = async () => {
+    localStorage.clear();
+  };
 
     // Render elements
     render() {

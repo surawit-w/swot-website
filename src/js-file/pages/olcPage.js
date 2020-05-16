@@ -35,6 +35,14 @@ export default class olcPage extends Component {
     if (localStorage.getItem('swotolcBoolean') === 'true') {
       await this.setState({ btnActive: 4 })
     }
+    if (localStorage.getItem('isFinished') === 'true') {
+      await localStorage.setItem('isFinished', false)
+      if(localStorage.getItem('swotolcBoolean') === 'false') {
+        this.props.history.push('/olc-info')
+      } else {
+        this.props.history.push('/pre-swotolc')
+      }
+    }
     await this.setState({
       isPhrase1: true,
       progressValue: 20,
@@ -130,7 +138,7 @@ export default class olcPage extends Component {
           this.state.allTotalScore[i].phraseScore
         );
         await this.state.totalResult.push({
-          phraseScore: this.state.allTotalScore[i].phraseScore,
+          phrase: this.state.allTotalScore[i].phraseScore,
           totalScore: this.state.allTotalScore[i].totalScore,
         });
         console.log(this.state.totalResult);
@@ -146,7 +154,7 @@ export default class olcPage extends Component {
       }
     }
     for (let i = 0; i < this.state.totalResult.length; i++) {
-      switch (this.state.totalResult[i].phraseScore) {
+      switch (this.state.totalResult[i].phrase) {
         case "OLC1":
           this.state.optionResult.push({
             phraseScore: "OLC1",
@@ -183,28 +191,32 @@ export default class olcPage extends Component {
     }
     console.log(this.state.optionResult);
     console.log(this.state.totalResult);
-    if (this.state.totalResult.length > 1) {
-      localStorage.setItem(
-        "totalResult",
-        JSON.stringify(this.state.totalResult)
-      );
-      localStorage.setItem(
-        "optionResult",
-        JSON.stringify(this.state.optionResult)
-      );
-      this.props.history.push('/olc-score')
-      window.scrollTo(0, 0)
-    } else if (this.state.totalResult.length === 1) {
-      localStorage.setItem(
-        "totalResult",
-        JSON.stringify(this.state.totalResult)
-      );
-      localStorage.setItem(
-        "optionResult",
-        JSON.stringify(this.state.optionResult)
-      );
-      this.props.history.push('/olc-result')
-      window.scrollTo(0, 0)
+    console.log(localStorage.getItem('swotolcBoolean'))
+    if(localStorage.getItem('olcPhrase1_score').length === 0) {
+      console.log("KUY")
+    }
+    if(localStorage.getItem('swotolcBoolean') === 'true') {
+      if (this.state.totalResult.length > 1) {
+        localStorage.setItem("totalResult",JSON.stringify(this.state.totalResult));
+        localStorage.setItem( "optionResult",JSON.stringify(this.state.optionResult));
+        this.props.history.push('/olc-score')
+        window.scrollTo(0, 0)
+      } else if (this.state.totalResult.length === 1) {
+        localStorage.setItem("finalScoreOLC", JSON.stringify(this.state.totalResult));
+        this.props.history.push('/swotolc-result')
+        window.scrollTo(0, 0)
+      }
+    } else if(localStorage.getItem('swotolcBoolean') === 'false') {
+      if (this.state.totalResult.length > 1) {
+        localStorage.setItem("totalResult",JSON.stringify(this.state.totalResult));
+        localStorage.setItem( "optionResult",JSON.stringify(this.state.optionResult));
+        this.props.history.push('/olc-score')
+        window.scrollTo(0, 0)
+      } else if (this.state.totalResult.length === 1) {
+        localStorage.setItem("finalScoreOLC", JSON.stringify(this.state.totalResult));
+        this.props.history.push('/olc-result')
+        window.scrollTo(0, 0)
+      }
     }
   };
 

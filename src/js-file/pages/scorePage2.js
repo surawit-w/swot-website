@@ -23,6 +23,14 @@ export default class scorePage2 extends Component {
     };
   }
   componentDidMount = async () => {
+    if (localStorage.getItem('isFinished') === 'true') {
+      await localStorage.setItem('isFinished', false)
+      await this.props.history.push('/swot-info')
+    } else {
+      
+    if (localStorage.getItem("swotolcBoolean") === "true") {
+      await this.setState({ btnActive: 4 });
+    }
     let {
       strengthResult,
       weaknessResult,
@@ -81,6 +89,7 @@ export default class scorePage2 extends Component {
       }
     }
     console.log(strengthScore, weaknessScore, opportunityScore, threatScore);
+    }
   };
 
   renderStrengthResult = (e, i) => (

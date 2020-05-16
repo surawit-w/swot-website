@@ -92,6 +92,7 @@ export default class resultPage3 extends Component {
   // Before render
   componentDidMount = async () => {
     let details = JSON.parse(localStorage.getItem("finalScore3"));
+    await localStorage.setItem('isFinished', true)
     let detailsArr = [];
     detailsArr.push(
       {
@@ -185,7 +186,7 @@ export default class resultPage3 extends Component {
         <Navbar swot={btnActive} />
         <div style={{ width: "100%", textAlign: "center", marginTop: "5%" }}>
           <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "2em" }}>
-            ผลลัพธ์การประเมินSWOT ธุรกิจผลิต
+            ผลลัพธ์การประเมิน SWOT ธุรกิจการค้า
           </h1>
           <p
             style={{

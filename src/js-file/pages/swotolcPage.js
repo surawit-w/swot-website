@@ -80,7 +80,7 @@ export default class swotolcPage extends Component {
         return (
             <div>
                 <Navbar swot={btnActive} />
-                <div className="header"><h1 style={{ fontFamily: "bold" }}>วิเคราะห์ SWOT ธุรกิจบริการ</h1></div>
+                <div className="header"><h1 style={{ fontFamily: "bold" }}>วิเคราะห์ SWOT ธุรกิจผลิต</h1></div>
                 <div className="progressBarDiv">
                     <div className="progressBarInfoDiv">
                         <div className="progressBarInfo"><span style={isStrength ? this.state.style : {}}>Strength</span></div>

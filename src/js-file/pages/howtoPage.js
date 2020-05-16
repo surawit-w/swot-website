@@ -13,6 +13,11 @@ class howtoPage extends Component {
     };
   }
 
+  // Before render
+  componentDidMount = async () => {
+    localStorage.clear();
+  };
+
   render() {
     let { btnActive } = this.state;
     return (

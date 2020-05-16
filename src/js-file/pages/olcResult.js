@@ -30,6 +30,7 @@ export default class olcResult extends Component {
   // Before render
   componentDidMount = async () => {
     let details = JSON.parse(localStorage.getItem("finalScoreOLC"));
+    await localStorage.setItem('isFinished', true)
     console.log("detailllllslslslslssl:", details);
     let phraseResult = details[0].phrase;
 

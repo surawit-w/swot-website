@@ -14,7 +14,9 @@ export default class mainPage extends Component {
   }
 
   // Before render
-  componentDidMount = async () => {};
+  componentDidMount = async () => {
+    localStorage.clear();
+  };
 
   // Render elements
   render() {

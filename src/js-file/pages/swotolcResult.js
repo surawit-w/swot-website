@@ -172,13 +172,15 @@ export default class resultPage extends Component {
         ],
         finalResult: [],
         categoryResult: '',
-        olcPhraseResult: ''
+        olcPhraseResult: '',
+        businessResult: ''
 
     };
   }
 
   // Before render
   componentDidMount = async () => {
+    await localStorage.setItem('isFinished', true)
     let detailsArr = [];
     let details
     let swotResultPage = parseInt(localStorage.getItem('swot-result-page'))
@@ -300,6 +302,7 @@ export default class resultPage extends Component {
     switch(swotResultPage) {
         case 1: // ธุรกิจผลิต
             // console.log("1ค้าบ")
+            await this.setState({ businessResult: 'ธุรกิจผลิต' })
             switch(true) {
                 case this.state.isSO:
                     await this.setState({ categoryResult: 'SO'})
@@ -405,6 +408,7 @@ export default class resultPage extends Component {
             }
             break;
         case 2: // ธุรกิจบริการ
+          await this.setState({ businessResult: 'ธุรกิจบริการ' })
             switch(true) {
                 case this.state.isSO:
                     await this.setState({ categoryResult: 'SO'})
@@ -510,6 +514,7 @@ export default class resultPage extends Component {
             }
             break;
         case 3: // ธุรกิจพาณิชย์
+          await this.setState({ businessResult: 'ธุรกิจการค้า' })
             switch(true) {
                 case this.state.isSO:
                     await this.setState({ categoryResult: 'SO'})
@@ -625,7 +630,7 @@ export default class resultPage extends Component {
         <Navbar swot={btnActive} />
         <div style={{ width: "100%", textAlign: "center", marginTop: "5%" }}>
           <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "1.8em" }}>
-            ผลลัพธ์การประเมิน SWOT และ OLC ของ ธุรกิจผลิต
+            ผลลัพธ์การประเมิน SWOT และ OLC ของ {this.state.businessResult}
           </h1>
           <br/>
           <h1 style={{ fontFamily: "bold", color: "#f16f20", fontSize: "1.8em" }}>

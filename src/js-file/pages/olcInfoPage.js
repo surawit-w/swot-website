@@ -12,7 +12,10 @@ class olcInfoPage extends Component {
   }
 
   // Before render
-  componentDidMount = async () => {};
+  componentDidMount = async () => {
+    localStorage.clear();
+    localStorage.setItem('swotolcBoolean', false)
+  };
 
   // Render elements
   render() {

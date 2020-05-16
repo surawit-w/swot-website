@@ -24,68 +24,73 @@ export default class scorePage extends Component {
     };
   }
   componentDidMount = async () => {
-    if (Boolean(localStorage.getItem("swotolcBoolean")) == true) {
-      await this.setState({ btnActive: 4 });
-    }
-
-    let {
-      strengthResult,
-      weaknessResult,
-      opportunityResult,
-      threatResult,
-      strengthScore,
-      weaknessScore,
-      opportunityScore,
-      threatScore,
-    } = this.state;
-    console.log(strengthResult);
-    console.log(JSON.parse(localStorage.getItem("swot-result")));
-    let swotQuizResult = JSON.parse(localStorage.getItem("swot-result"));
-    strengthResult = await swotQuizResult[0];
-    weaknessResult = await swotQuizResult[1];
-    opportunityResult = swotQuizResult[2];
-    threatResult = swotQuizResult[3];
-    console.log(
-      strengthResult,
-      weaknessResult,
-      opportunityResult,
-      threatResult
-    );
-
-    for (let i = 0; i < swotQuizResult.length; i++) {
-      switch (i) {
-        case 0:
-          for (let j = 0; j < strengthResult.length; j++) {
-            await strengthScore.push(
-              parseFloat(strengthResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        case 1:
-          for (let j = 0; j < weaknessResult.length; j++) {
-            await weaknessScore.push(
-              parseFloat(weaknessResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        case 2:
-          for (let j = 0; j < opportunityResult.length; j++) {
-            await opportunityScore.push(
-              parseFloat(opportunityResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        case 3:
-          for (let j = 0; j < threatResult.length; j++) {
-            await threatScore.push(
-              parseFloat(threatResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        default:
+    if (localStorage.getItem('isFinished') === 'true') {
+      await localStorage.setItem('isFinished', false)
+      await this.props.history.push('/swot-info')
+    } else {
+      
+      if (localStorage.getItem("swotolcBoolean") === "true") {
+        await this.setState({ btnActive: 4 });
       }
+      let {
+        strengthResult,
+        weaknessResult,
+        opportunityResult,
+        threatResult,
+        strengthScore,
+        weaknessScore,
+        opportunityScore,
+        threatScore,
+      } = this.state;
+      console.log(strengthResult);
+      console.log(JSON.parse(localStorage.getItem("swot-result")));
+      let swotQuizResult = JSON.parse(localStorage.getItem("swot-result"));
+      strengthResult = await swotQuizResult[0];
+      weaknessResult = await swotQuizResult[1];
+      opportunityResult = swotQuizResult[2];
+      threatResult = swotQuizResult[3];
+      console.log(
+        strengthResult,
+        weaknessResult,
+        opportunityResult,
+        threatResult
+      );
+
+      for (let i = 0; i < swotQuizResult.length; i++) {
+        switch (i) {
+          case 0:
+            for (let j = 0; j < strengthResult.length; j++) {
+              await strengthScore.push(
+                parseFloat(strengthResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          case 1:
+            for (let j = 0; j < weaknessResult.length; j++) {
+              await weaknessScore.push(
+                parseFloat(weaknessResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          case 2:
+            for (let j = 0; j < opportunityResult.length; j++) {
+              await opportunityScore.push(
+                parseFloat(opportunityResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          case 3:
+            for (let j = 0; j < threatResult.length; j++) {
+              await threatScore.push(
+                parseFloat(threatResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          default:
+        }
+      }
+      console.log(strengthScore, weaknessScore, opportunityScore, threatScore);
     }
-    console.log(strengthScore, weaknessScore, opportunityScore, threatScore);
   };
 
   renderStrengthResult = (e, i) => (
