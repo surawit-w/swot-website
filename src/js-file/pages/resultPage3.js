@@ -92,7 +92,7 @@ export default class resultPage3 extends Component {
   // Before render
   componentDidMount = async () => {
     let details = JSON.parse(localStorage.getItem("finalScore3"));
-    await localStorage.setItem('isFinished', true)
+    await localStorage.setItem("isFinished", true);
     let detailsArr = [];
     detailsArr.push(
       {
@@ -185,7 +185,7 @@ export default class resultPage3 extends Component {
       <div style={{ fontFamily: "bold" }}>
         <Navbar swot={btnActive} />
         <div style={{ width: "100%", textAlign: "center", marginTop: "5%" }}>
-          <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "2em" }}>
+          {/* <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "2em" }}>
             ผลลัพธ์การประเมิน SWOT ธุรกิจการค้า
           </h1>
           <p
@@ -259,10 +259,85 @@ export default class resultPage3 extends Component {
               </div>
             </div>
           </div>
+        </div> */}
+          <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "2em" }}>
+            ผลลัพธ์การประเมิน SWOT ธุรกิจการค้า
+          </h1>
+
+          <div
+            style={{
+              padding: "24px",
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "2%",
+            }}
+          >
+            <div
+              className="graph-swot"
+              style={{
+                padding: "24px",
+                borderRadius: "8px",
+                boxShadow: "0px 4px 10px rgba(94, 92, 92, 0.336)",
+              }}
+            >
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>ST</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>SO</p>
+                </div>
+              </div>
+              <Bubble data={this.state.data} options={options} />
+
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>WT</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>WO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            className="resultpage"
+            style={{
+              marginLeft: "10%",
+              marginRight: "10%",
+              marginTop: "50px",
+              fontFamily: "light",
+              color: "#f16f20",
+            }}
+          >
+            {this.state.mode}
+          </p>
         </div>
 
-        {/* แสดงไว้ใต้กราฟ */}
-        {/* <div>{this.state.mode}</div> */}
         <div className="home-button" style={{ padding: "5%" }}>
           <div className="buttons">
             <button
@@ -298,43 +373,6 @@ export default class resultPage3 extends Component {
           </div>
         </div>
         <Footer />
-        {/* <div id="buttonNextCenter" style={{ marginTop: "100px" }}>
-          <button
-            onClick={(event) => { this.props.history.push('/swot-info'); window.scrollTo(0, 0) }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
-            }}
-          >
-            ทำแบบประเมินSWOT
-          </button>
-
-          <button
-            onClick={(event) => { this.props.history.push('/olc-info'); window.scrollTo(0, 0) }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
-            }}
-          >
-            ทำแบบประเมินOLC
-          </button>
-
-          <button
-            onClick={(event) => { this.props.history.push('/pre-swotolc'); window.scrollTo(0, 0) }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "20px",
-            }}
-          >
-            ทำแบบประเมินSWOT+OLC
-          </button>
-        </div> */}
       </div>
     );
   }

@@ -93,7 +93,7 @@ export default class resultPage extends Component {
   // Before render
   componentDidMount = async () => {
     let details = JSON.parse(localStorage.getItem("finalScore"));
-    await localStorage.setItem('isFinished', true)
+    await localStorage.setItem("isFinished", true);
     let detailsArr = [];
     detailsArr.push(
       {
@@ -204,6 +204,67 @@ export default class resultPage extends Component {
           <h1 style={{ fontFamily: "bold", color: "#363c54", fontSize: "2em" }}>
             ผลลัพธ์การประเมิน SWOT ธุรกิจผลิต
           </h1>
+
+          <div
+            style={{
+              padding: "24px",
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "2%",
+            }}
+          >
+            <div
+              className="graph-swot"
+              style={{
+                padding: "24px",
+                borderRadius: "8px",
+                boxShadow: "0px 4px 10px rgba(94, 92, 92, 0.336)",
+              }}
+            >
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>ST</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>SO</p>
+                </div>
+              </div>
+              <Bubble data={this.state.data} options={options} />
+
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>WT</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    flex: "0 0 50%",
+                  }}
+                >
+                  <p>WO</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <p
             className="resultpage"
             style={{
@@ -217,116 +278,7 @@ export default class resultPage extends Component {
             {this.state.mode}
           </p>
         </div>
-        <div
-          style={{
-            padding: "24px",
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "2%",
-          }}
-        >
-          <div
-            className="graph-swot"
-            style={{
-              padding: "24px",
-              borderRadius: "8px",
-              boxShadow: "0px 4px 10px rgba(94, 92, 92, 0.336)",
-            }}
-          >
-            <div style={{ display: "flex" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  flex: "0 0 50%",
-                }}
-              >
-                <p>ST</p>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  flex: "0 0 50%",
-                }}
-              >
-                <p>SO</p>
-              </div>
-            </div>
-            <Bubble data={this.state.data} options={options} />
 
-            <div style={{ display: "flex" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  flex: "0 0 50%",
-                }}
-              >
-                <p>WT</p>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  flex: "0 0 50%",
-                }}
-              >
-                <p>WO</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* แสดงไว้ใต้กราฟ */}
-        {/* <div>{this.state.mode}</div> */}
-
-        {/* <div id="buttonNextCenter" style={{ marginTop: "10%" }}>
-          <button
-            onClick={(event) => {
-              this.props.history.push("/swot-info");
-              window.scrollTo(0, 0);
-            }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-
-              fontSize: "1em",
-            }}
-          >
-            ทำแบบประเมินSWOT
-          </button>
-
-          <button
-            onClick={(event) => {
-              this.props.history.push("/olc-info");
-              window.scrollTo(0, 0);
-            }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-
-              fontSize: "1em",
-            }}
-          >
-            ทำแบบประเมินOLC
-          </button>
-
-          <button
-            onClick={(event) => {
-              this.props.history.push("/pre-swotolc");
-              window.scrollTo(0, 0);
-            }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-
-              fontSize: "1em",
-            }}
-          >
-            ทำแบบประเมินSWOT+OLC
-          </button>
-        </div> */}
         <div className="home-button" style={{ padding: "5%" }}>
           <div className="buttons">
             <button
