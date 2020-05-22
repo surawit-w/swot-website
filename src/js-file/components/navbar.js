@@ -51,7 +51,7 @@ class navbar extends Component {
                                             <div class="res-menu-list-btn" id="categoryBtn"><a onClick={() => this.props.history.push('/howto')} id="homeLink">วิธีการใช้งาน</a></div>
                                             <div class="res-menu-list-btn" id="categoryBtn"><a onClick={() => this.props.history.push('/swot-info')} id="homeLink">SWOT</a></div>
                                             <div class="res-menu-list-btn" id="categoryBtn"><a onClick={() => this.props.history.push('/olc-info')} id="homeLink">OLC</a></div>
-                                            <div class="res-menu-list-btn last" id="categoryBtn"><a onClick={() => this.props.history.push('/pre-swotolc')} id="homeLink">{"SWOT & OLC"}</a></div>
+                                            <div class="res-menu-list-btn last" id="categoryBtn"><a onClick={() => this.props.history.push('/swotolc-info')} id="homeLink">{"SWOT & OLC"}</a></div>
                                         </div>
                                     </div>
                                 </div>
