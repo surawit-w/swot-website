@@ -37,7 +37,7 @@ class navbar extends Component {
                                     <li className="menu-list" onClick={() => this.props.history.push('/howto')} style={ home === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>HOW TO USE</li>
                                     <li className="menu-list" onClick={() => this.props.history.push('/swot-info')} style={ swot === 2 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>SWOT</li>
                                     <li className="menu-list" onClick={() => this.props.history.push('/olc-info')} style={ swot === 3 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>OLC</li>
-                                    <li className="menu-list" onClick={() => this.props.history.push('/pre-swotolc')} style={ swot === 4 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>{"SWOT & OLC"}</li>
+                                    <li className="menu-list" onClick={() => this.props.history.push('/swotolc-info')} style={ swot === 4 && btnActive === 0 ? { color: "#f16f20" } : { color: "#F3B06E" } }>{"SWOT & OLC"}</li>
                                 </ul>
                             </div>
                         </Col>

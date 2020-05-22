@@ -35,7 +35,7 @@ class homeInfo extends Component {
                     <div className="buttons">
                         <button className="button-swot " id="button-swot" onClick={() => {this.props.history.push('/swot-info'); window.scrollTo(0, 0);}}>แบบประเมิน SWOT</button>
                         <button className="button-olc" id="button-olc" onClick={() => {this.props.history.push('/olc-info'); window.scrollTo(0, 0);}}>แบบประเมิน OLC</button>
-                        <button className="button-both" id="button-both" onClick={() => {this.props.history.push('/pre-swotolc'); window.scrollTo(0, 0);}}>แบบประเมิน SWOT และ OLC</button>
+                        <button className="button-both" id="button-both" onClick={() => {this.props.history.push('/swotolc-info'); window.scrollTo(0, 0);}}>แบบประเมิน SWOT และ OLC</button>
                     </div>
                 </div>
                 <div className="info">

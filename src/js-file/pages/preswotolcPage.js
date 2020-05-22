@@ -24,7 +24,7 @@ export default class preswotolcPage extends Component {
             <div>
                 <Navbar swot={btnActive} />
                 <div className="linkback">
-                    <p onClick={() => { this.props.history.push('/'); window.scrollTo(0, 0) }}>HOME > SWOT > {" "}
+                    <p onClick={() => { this.props.history.push('/'); window.scrollTo(0, 0) }}>HOME > SWOT & OLC > {" "}
                         <span style={{ color: "#f16f20" }}>เลือกประเภทธุรกิจ</span>
                     </p>
                 </div>
