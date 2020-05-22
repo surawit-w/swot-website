@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "59f5201f1d851d223fe53eab2173e864",
+    "revision": "191519aa25c9bee140d9d1e771f1f12f",
     "url": "/swot-website/index.html"
   },
   {
-    "revision": "f3bc5164f26a5b38bb2b",
-    "url": "/swot-website/static/css/main.416049ca.chunk.css"
+    "revision": "0579b8cec9f81c714815",
+    "url": "/swot-website/static/css/main.f6991b2f.chunk.css"
   },
   {
-    "revision": "e36b86829f08a93bc6bb",
-    "url": "/swot-website/static/js/2.2f7fafc2.chunk.js"
+    "revision": "d13850a249b77feecdfa",
+    "url": "/swot-website/static/js/2.21793d46.chunk.js"
   },
   {
     "revision": "77c52c67682ebaf3c87f021fd687577f",
-    "url": "/swot-website/static/js/2.2f7fafc2.chunk.js.LICENSE.txt"
+    "url": "/swot-website/static/js/2.21793d46.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f3bc5164f26a5b38bb2b",
-    "url": "/swot-website/static/js/main.479ff5ab.chunk.js"
+    "revision": "0579b8cec9f81c714815",
+    "url": "/swot-website/static/js/main.182289a1.chunk.js"
   },
   {
     "revision": "b23e66bdf5f7823ef620",
