@@ -106,7 +106,10 @@ export default class olcResult extends Component {
           </div>
         </div>
 
-        <div className="home-button" style={{ padding: "5%" }}>
+        <div
+          className="home-button"
+          style={{ marginBottom: "5%", paddingLeft: "2%", paddingRight: "2%" }}
+        >
           <div className="buttons">
             <button
               className="button-swot "
