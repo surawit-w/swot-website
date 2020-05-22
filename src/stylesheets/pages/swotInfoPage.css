@@ -150,3 +150,5 @@ body {
     display: none;
   }
 }
+
+.links:hover { color: #9b4c1b !important; cursor: pointer;}
