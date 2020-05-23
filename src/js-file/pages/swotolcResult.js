@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Strength from "../components/strength";
 import "../../stylesheets/pages/swotPage.css";
 import { Bubble, Line } from "react-chartjs-2";
+import Footer from "../components/footer";
 
 const options = {
   tooltips: {
@@ -809,13 +810,21 @@ export default class resultPage extends Component {
         <Navbar swot={btnActive} />
         <div style={{ width: "100%", textAlign: "center", marginTop: "5%" }}>
           <h1
-            style={{ fontFamily: "bold", color: "#363c54", fontSize: "1.8em" }}
+            style={{
+              fontFamily: "medium",
+              color: "#363c54",
+              fontSize: "1.5em",
+            }}
           >
             ผลลัพธ์การประเมิน SWOT และ OLC ของ {this.state.businessResult}
           </h1>
           <br />
           <h1
-            style={{ fontFamily: "bold", color: "#f16f20", fontSize: "1.8em" }}
+            style={{
+              fontFamily: "medium",
+              color: "#f16f20",
+              fontSize: "1.5em",
+            }}
           >
             ผลลัพธ์ธุรกิจของคุณคือ {this.state.categoryResult} ใน{" "}
             {this.state.olcPhraseResult}
@@ -823,7 +832,7 @@ export default class resultPage extends Component {
         </div>
         <div
           style={{
-            padding: "24px",
+            padding: "5%",
             display: "flex",
             justifyContent: "center",
             marginTop: "2%",
@@ -832,7 +841,7 @@ export default class resultPage extends Component {
           <div
             className="graph-swot"
             style={{
-              padding: "24px",
+              padding: "5%",
               borderRadius: "8px",
               boxShadow: "0px 4px 10px rgba(94, 92, 92, 0.336)",
             }}
@@ -885,70 +894,52 @@ export default class resultPage extends Component {
         {/* แสดงไว้ใต้กราฟ */}
         <p
           style={{
-            marginLeft: "10%",
-            marginRight: "10%",
-            marginTop: "50px",
-            fontFamily: "light",
+            marginLeft: "5%",
+            marginRight: "5%",
+            fontFamily: "exlight",
             color: "#f16f20",
-            fontSize: "1.5em",
+            fontSize: "1.2em",
             textAlign: "left",
           }}
         >
           {this.state.finalResult}
         </p>
 
-        <div
-          id="buttonNextCenter"
-          style={{
-            marginTop: "100px",
-            maxWidth: "100%",
-          }}
-        >
-          <button
-            onClick={(event) => {
-              this.props.history.push("/swot-info");
-              window.scrollTo(0, 0);
-            }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "0.7em",
-            }}
-          >
-            ทำแบบประเมินSWOT
-          </button>
-
-          <button
-            onClick={(event) => {
-              this.props.history.push("/olc-info");
-              window.scrollTo(0, 0);
-            }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "0.7em",
-            }}
-          >
-            ทำแบบประเมินOLC
-          </button>
-
-          <button
-            onClick={(event) => {
-              this.props.history.push("/pre-swotolc");
-              window.scrollTo(0, 0);
-            }}
-            id="buttonNext2"
-            style={{
-              marginBottom: "5%",
-              width: "30%",
-              fontSize: "0.7em",
-            }}
-          >
-            ทำแบบประเมินSWOT+OLC
-          </button>
+        <div className="home-button" style={{ padding: "5%" }}>
+          <div className="buttons">
+            <button
+              className="button-swot "
+              id="button-swot"
+              onClick={() => {
+                this.props.history.push("/swot-info");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน SWOT
+            </button>
+            <button
+              className="button-olc"
+              id="button-olc"
+              onClick={() => {
+                this.props.history.push("/olc-info");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน OLC
+            </button>
+            <button
+              className="button-both"
+              id="button-both"
+              onClick={() => {
+                this.props.history.push("/pre-swotolc");
+                window.scrollTo(0, 0);
+              }}
+            >
+              แบบประเมิน SWOT และ OLC
+            </button>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }

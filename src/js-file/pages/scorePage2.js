@@ -23,72 +23,71 @@ export default class scorePage2 extends Component {
     };
   }
   componentDidMount = async () => {
-    if (localStorage.getItem('isFinished') === 'true') {
-      await localStorage.setItem('isFinished', false)
-      await this.props.history.push('/swot-info')
+    if (localStorage.getItem("isFinished") === "true") {
+      await localStorage.setItem("isFinished", false);
+      await this.props.history.push("/swot-info");
     } else {
-      
-    if (localStorage.getItem("swotolcBoolean") === "true") {
-      await this.setState({ btnActive: 4 });
-    }
-    let {
-      strengthResult,
-      weaknessResult,
-      opportunityResult,
-      threatResult,
-      strengthScore,
-      weaknessScore,
-      opportunityScore,
-      threatScore,
-    } = this.state;
-    console.log(strengthResult);
-    console.log(JSON.parse(localStorage.getItem("swot-result2")));
-    let swotQuizResult = JSON.parse(localStorage.getItem("swot-result2"));
-    strengthResult = await swotQuizResult[0];
-    weaknessResult = await swotQuizResult[1];
-    opportunityResult = swotQuizResult[2];
-    threatResult = swotQuizResult[3];
-    console.log(
-      strengthResult,
-      weaknessResult,
-      opportunityResult,
-      threatResult
-    );
-
-    for (let i = 0; i < swotQuizResult.length; i++) {
-      switch (i) {
-        case 0:
-          for (let j = 0; j < strengthResult.length; j++) {
-            await strengthScore.push(
-              parseFloat(strengthResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        case 1:
-          for (let j = 0; j < weaknessResult.length; j++) {
-            await weaknessScore.push(
-              parseFloat(weaknessResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        case 2:
-          for (let j = 0; j < opportunityResult.length; j++) {
-            await opportunityScore.push(
-              parseFloat(opportunityResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        case 3:
-          for (let j = 0; j < threatResult.length; j++) {
-            await threatScore.push(
-              parseFloat(threatResult[j].optionScore).toFixed(3)
-            );
-          }
-          break;
-        default:
+      if (localStorage.getItem("swotolcBoolean") === "true") {
+        await this.setState({ btnActive: 4 });
       }
-    }
-    console.log(strengthScore, weaknessScore, opportunityScore, threatScore);
+      let {
+        strengthResult,
+        weaknessResult,
+        opportunityResult,
+        threatResult,
+        strengthScore,
+        weaknessScore,
+        opportunityScore,
+        threatScore,
+      } = this.state;
+      console.log(strengthResult);
+      console.log(JSON.parse(localStorage.getItem("swot-result2")));
+      let swotQuizResult = JSON.parse(localStorage.getItem("swot-result2"));
+      strengthResult = await swotQuizResult[0];
+      weaknessResult = await swotQuizResult[1];
+      opportunityResult = swotQuizResult[2];
+      threatResult = swotQuizResult[3];
+      console.log(
+        strengthResult,
+        weaknessResult,
+        opportunityResult,
+        threatResult
+      );
+
+      for (let i = 0; i < swotQuizResult.length; i++) {
+        switch (i) {
+          case 0:
+            for (let j = 0; j < strengthResult.length; j++) {
+              await strengthScore.push(
+                parseFloat(strengthResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          case 1:
+            for (let j = 0; j < weaknessResult.length; j++) {
+              await weaknessScore.push(
+                parseFloat(weaknessResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          case 2:
+            for (let j = 0; j < opportunityResult.length; j++) {
+              await opportunityScore.push(
+                parseFloat(opportunityResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          case 3:
+            for (let j = 0; j < threatResult.length; j++) {
+              await threatScore.push(
+                parseFloat(threatResult[j].optionScore).toFixed(3)
+              );
+            }
+            break;
+          default:
+        }
+      }
+      console.log(strengthScore, weaknessScore, opportunityScore, threatScore);
     }
   };
 
@@ -376,6 +375,20 @@ export default class scorePage2 extends Component {
                 ให้ท่านกำหนดคะแนนปัจจัยต่อไปนี้ โดยค่าคะแนนอยู่ที่ 1-5
                 ตามระดับผลกระทบที่เกิดขึ้นภายในธุรกิจของท่าน
               </p>
+              <p style={{ color: "#e8b278" }}>
+                การกำหนดค่าคะแนนให้ 1 – 5 โดย
+                <br />
+                &emsp;1 หมายถึง &emsp;น้อยมาก
+                <br />
+                &emsp;2 หมายถึง &emsp;น้อย
+                <br />
+                &emsp;3 หมายถึง &emsp;ปานกลาง
+                <br />
+                &emsp;4 หมายถึง &emsp;มาก
+                <br />
+                &emsp;5 หมายถึง &emsp;มากที่สุด
+              </p>
+              <br />
               <p style={{ color: "#e8b278" }}>Strength(จุดแข็ง)</p>
               {strengthResult.map(this.renderStrengthResult)}
 

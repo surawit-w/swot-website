@@ -24,11 +24,10 @@ export default class scorePage extends Component {
     };
   }
   componentDidMount = async () => {
-    if (localStorage.getItem('isFinished') === 'true') {
-      await localStorage.setItem('isFinished', false)
-      await this.props.history.push('/swot-info')
+    if (localStorage.getItem("isFinished") === "true") {
+      await localStorage.setItem("isFinished", false);
+      await this.props.history.push("/swot-info");
     } else {
-      
       if (localStorage.getItem("swotolcBoolean") === "true") {
         await this.setState({ btnActive: 4 });
       }
@@ -377,6 +376,19 @@ export default class scorePage extends Component {
               <p style={{ color: "#e8b278" }}>
                 ให้ท่านกำหนดคะแนนปัจจัยต่อไปนี้ โดยค่าคะแนนอยู่ที่ 1-5
                 ตามระดับผลกระทบที่เกิดขึ้นภายในธุรกิจของท่าน
+              </p>
+              <p style={{ color: "#e8b278" }}>
+                การกำหนดค่าคะแนนให้ 1 – 5 โดย
+                <br />
+                &emsp;1 หมายถึง &emsp;น้อยมาก
+                <br />
+                &emsp;2 หมายถึง &emsp;น้อย
+                <br />
+                &emsp;3 หมายถึง &emsp;ปานกลาง
+                <br />
+                &emsp;4 หมายถึง &emsp;มาก
+                <br />
+                &emsp;5 หมายถึง &emsp;มากที่สุด
               </p>
               <br />
               <p style={{ color: "#e8b278" }}>Strength(จุดแข็ง)</p>
