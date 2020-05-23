@@ -46,7 +46,7 @@ body {
   font-family: "exlight";
   color: #f16f20;
   max-width: 70%;
-  text-align: justify;
+  text-align: left;
   font-size: 2rem;
 }
 .swot-infobox > button {
@@ -94,7 +94,7 @@ body {
   font-family: "exlight";
   color: #f16f20;
   max-width: 70%;
-  text-align: justify;
+  text-align: left;
   font-size: 2rem;
 }
 .footer {
