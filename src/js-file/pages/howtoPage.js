@@ -3,7 +3,7 @@ import "../../stylesheets/components/font.css";
 import "../../stylesheets/components/homeInfo.css";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 class howtoPage extends Component {
   constructor(props) {
     super(props);
@@ -35,9 +35,13 @@ class howtoPage extends Component {
             <div className="linkback">
               <p
                 onClick={() => {
-                  {this.props.history.push('/'); window.scrollTo(0, 0);}
+                  {
+                    this.props.history.push("/");
+                    window.scrollTo(0, 0);
+                  }
                 }}
-              >HOME > <span style={{ color: "#f16f20" }}>คู่มือ</span>
+              >
+                HOME > <span style={{ color: "#f16f20" }}>คู่มือ</span>
               </p>
             </div>
 
@@ -93,7 +97,7 @@ class howtoPage extends Component {
                       justifyContent: "center",
                     }}
                   >
-                    คู่มือการทำ OLC Analysis
+                    คู่มือการทำ Organization Life Cycle (OLC)
                     <br />
                   </span>
                   <br />
@@ -189,4 +193,4 @@ class howtoPage extends Component {
     );
   }
 }
-export default withRouter(howtoPage)
+export default withRouter(howtoPage);
